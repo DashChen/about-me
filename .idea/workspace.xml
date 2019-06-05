@@ -2,36 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5b72f5a-7781-41c9-a2f3-b2eedc1a414d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/about-me/generateFileInfos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/locales/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/locales/zh-TW.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/pages/about.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/pages/articles/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/pages/contact.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/pages/project/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/pages/project/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/plugins/i18n.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about-me/store/me.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/ava.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/ava.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/components/Logo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/components/Logo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/components/VuetifyLogo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/components/VuetifyLogo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/generateFileInfos.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/generateFileInfos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/inspire.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/inspire.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/pages/html/HttpHeader.md" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/articles/html/HttpHeader.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/vuetify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/test/helpers/setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/test/helpers/setup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/test/specs/Logo.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/test/specs/Logo.spec.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,11 +22,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/about-me/generateFileInfos.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+            <state relative-caret-position="1962">
+              <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/about-me/layouts/default.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/plugins/vuetify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/pages/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#1919#1959#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/pages/about.vue">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/pages/inspire.vue">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/pages/articles/html/HttpHeader.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="108">
+                <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -71,18 +112,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/about-me/pages/README.md" />
+        <option value="$PROJECT_DIR$/about-me/pages/html/HttpHeader.md" />
         <option value="$PROJECT_DIR$/about-me/generateFileInfos.js" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/about-me.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/about-me/plugins/vuetify.js" />
+        <option value="$PROJECT_DIR$/about-me/layouts/default.vue" />
       </list>
     </option>
   </component>
@@ -98,7 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,6 +142,12 @@
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
@@ -153,9 +191,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/about-me" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -164,8 +204,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Visual-AMP-x64\www\about-me\about-me\pages\articles\html" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Visual-AMP-x64\www\about-me\about-me" />
       <recent name="D:\Visual-AMP-x64\www\about-me\about-me\plugins" />
@@ -197,16 +241,19 @@
       <updated>1559659559582</updated>
       <workItem from="1559659562190" duration="1303000" />
       <workItem from="1559684195264" duration="2858000" />
+      <workItem from="1559732487829" duration="6223000" />
+      <workItem from="1559770560034" duration="541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4161000" />
+    <option name="totallyTimeSpent" value="10925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2600536" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -246,8 +293,51 @@
     <entry file="file://$PROJECT_DIR$/about-me/locales/en.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/generateFileInfos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1962">
+          <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/articles.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="60" selection-start-column="60" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#1919#1959#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/about-me/pages/about.vue">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/inspire.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/articles/html/HttpHeader.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="108">
+            <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/about-me/pages/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -259,10 +349,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/generateFileInfos.js">
+    <entry file="file://$PROJECT_DIR$/about-me/plugins/vuetify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+        <state relative-caret-position="162">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/layouts/default.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
         </state>
       </provider>
     </entry>

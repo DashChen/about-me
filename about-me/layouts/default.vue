@@ -71,20 +71,35 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'apps',
-          title: 'Welcome',
+          icon: 'fas fa-home',
+          title: '首頁',
           to: '/'
         },
         {
-          icon: 'bubble_chart',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'fas fa-address-card',
+          title: '關於',
+          to: '/about'
+        },
+        {
+          icon: 'far fa-newspaper',
+          title: '文章',
+          to: '/articles'
+        },
+        {
+          icon: 'fas fa-project-diagram',
+          title: '專案',
+          to: '/project'
+        },
+        {
+          icon: 'fas fa-id-card',
+          title: '聯絡我',
+          to: '/contact'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'Dash Chen'
     }
   }
 }
