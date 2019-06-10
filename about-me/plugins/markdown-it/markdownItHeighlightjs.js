@@ -1,4 +1,4 @@
-import hljs from './hljs'
+const hljs = require('./hljs')
 
 const maybe = f => {
   try {
@@ -43,4 +43,4 @@ highlightjs.defaults = {
   code: true
 }
 
-export default highlightjs
+module.exports = highlightjs

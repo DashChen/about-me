@@ -1,5 +1,22 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+
+const MarkdownIt = require('markdown-it')
+// https://www.npmjs.com/package/markdown-it-attrs
+const MarkdownItAttrs = require('markdown-it-attrs')
 const pkg = require('./package')
+// https://highlightjs.org/
+const MarkdownItHighlightjs = require('./plugins/markdown-it/markdownItHeighlightjs')
+
+const md = new MarkdownIt({
+  html: true,
+  linkify: true,
+  typographer: true,
+  langPrefix: 'ht-' // 預設為 'language'
+})
+// 可以使用 classes, identifiers and attributes 用 {.class #identifier attr=value attr2="spaced value"}
+md.use(MarkdownItAttrs)
+// code 部分可以高亮顯示，有支持自訂的語言
+md.use(MarkdownItHighlightjs)
 
 module.exports = {
   mode: 'universal',
@@ -76,6 +93,20 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
+        })
+
+        config.module.rules.push({
+          test: /\.md$/,
+          // https://www.npmjs.com/package/frontmatter-markdown-loader
+          loader: 'frontmatter-markdown-loader',
+          options: {
+            // 使用 markdown-it 去渲染
+            markdown: body => {
+              return md.render(body)
+            },
+            // 可以使用 vue-components
+            vue: true
+          },
         })
       }
     }
