@@ -32,16 +32,20 @@
 </template>
 
 <script>
+  const fm = require("frontmatter-markdown-loader")
+  var md = require("markdown-it")({
+    html: true,
+    typographer: true
+  })
 export default {
   name: 'Slug',
   async asyncData({ params, error }) {
-    const { html, body, attributes } = await import(`~/content/blogs/${params.slug}.md`)
-    const length = body.replace(
-      /<s*[^>]*>|<\/s*[^>]*>|[#*`>\-~![]]/g,
-      ''
-    ).length
-
-    console.log(attributes)
+    const fileContent = await import(`~/content/blogs/${params.slug}.md`)
+    const res = fm(fileContent.default)
+    const length = res.body.replace(/<s*[^>]*>|<\/s*[^>]*>|[#*`>\-~![]]/g, '')
+      .length
+    const attributes = res.attributes
+    // console.log(attributes)
     return {
       infos: [
         {
@@ -61,13 +65,8 @@ export default {
           content: Math.ceil(length / 300)
         }
       ],
-      html
+      html: md.render(res.body)
     }
-    // try {
-    //
-    // } catch (e) {
-    //   error({ statusCode: 404, message: 'Post not found' })
-    // }
   }
 }
 </script>

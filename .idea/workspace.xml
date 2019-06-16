@@ -2,17 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5b72f5a-7781-41c9-a2f3-b2eedc1a414d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/about-me/contents/blogs/zh-tw/HttpHeader.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/about-me/pages/blog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/LotteryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/LotteryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Palace/indexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Palace/indexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/TransactionLogsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/TransactionLogsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/VoyagerAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/VoyagerAuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Lottery.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Lottery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/TransactionLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/TransactionLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Observers/TransactionLogObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Observers/TransactionLogObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Providers/ViewServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Providers/ViewServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/public/css/palace/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/public/css/palace/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/public/js/common/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/public/js/common/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/public/js/palace/master.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/public/js/palace/master.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/lottery.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/lottery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/member.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/member.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/verifiedemail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/verifiedemail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/includes/palace/meta.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/includes/palace/meta.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/palace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/palace.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/member/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/member/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app01.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app01.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app02.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app02.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app03.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app03.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app04.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app04.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app05.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app05.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app06.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app06.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app07.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app07.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/contace03.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/contace04.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/nopay.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/nopay.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/lotteries/edit-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/lotteries/edit-add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/about-me.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/about-me.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/articles.json" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/articles.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/generateFileInfos.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/generateFileInfos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/html/HttpHeader.md" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/articles/html/HttpHeader.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/vuetify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/pages/articles/_slug.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/blog/_post/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/pages/articles/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,87 +80,56 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about-me/generateFileInfos.js">
+        <entry file="file://$PROJECT_DIR$/about-me/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1962">
-              <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+            <state relative-caret-position="306">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/pages/blog.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_post/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/about-me/layouts/default.vue">
+        <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about-me/plugins/vuetify.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about-me/pages/index.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="126">
+              <caret line="7" column="53" lean-forward="true" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
               <folding>
-                <element signature="e#1919#1959#0" expanded="true" />
+                <element signature="e#1890#2803#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about-me/pages/about.vue">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about-me/pages/inspire.vue">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about-me/pages/articles/html/HttpHeader.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="108">
-                <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about-me/pages/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret selection-end-line="7" selection-end-column="36" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>has</find>
+      <find>checkedIndex</find>
+      <find>col-xs-12</find>
+      <find>re_pay</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>col-12</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -113,9 +139,34 @@
       <list>
         <option value="$PROJECT_DIR$/about-me/pages/README.md" />
         <option value="$PROJECT_DIR$/about-me/pages/html/HttpHeader.md" />
-        <option value="$PROJECT_DIR$/about-me/generateFileInfos.js" />
         <option value="$PROJECT_DIR$/about-me/plugins/vuetify.js" />
         <option value="$PROJECT_DIR$/about-me/layouts/default.vue" />
+        <option value="$PROJECT_DIR$/about-me/generateFileInfos.js" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/2019_06_08_143245_add_customers_period.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/2019_06_08_143744_create_periods_table.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_06_08_143744_create_periods_table.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/member/profile.blade.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/member.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/2019_06_09_165834_add_transaction_logs_field.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_06_09_165834_add_transaction_logs_field.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Period.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/nopay.blade.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/TransactionLog.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/TransactionLogsController.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/ResetPasswordController.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/passwords/reset.blade.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Observers/TransactionLogObserver.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/HomeController.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Customer.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/show.blade.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/LotteryController.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/IndexController.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" />
+        <option value="$PROJECT_DIR$/about-me/pages/blog.vue" />
+        <option value="$PROJECT_DIR$/about-me/pages/articles/_slug.vue" />
+        <option value="$PROJECT_DIR$/about-me/pages/blog/_post/index.vue" />
+        <option value="$PROJECT_DIR$/about-me/nuxt.config.js" />
       </list>
     </option>
   </component>
@@ -147,13 +198,14 @@
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="locales" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="blogs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
@@ -166,26 +218,15 @@
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="articles" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="markdown-it" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="_post" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -197,7 +238,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/about-me" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Beitunzhaoshun" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -207,14 +248,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Visual-AMP-x64\www\about-me\about-me\pages\articles\html" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Visual-AMP-x64\www\about-me\about-me" />
       <recent name="D:\Visual-AMP-x64\www\about-me\about-me\plugins" />
       <recent name="D:\Visual-AMP-x64\www\about-me\about-me\store" />
       <recent name="D:\Visual-AMP-x64\www\about-me\about-me\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Visual-AMP-x64\www\about-me\about-me\pages\blog\_post" />
+      <recent name="D:\Visual-AMP-x64\www\Beitunzhaoshun\database\migrations\financial" />
+      <recent name="D:\Visual-AMP-x64\www\about-me\about-me\pages\articles\html" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -243,29 +286,48 @@
       <workItem from="1559684195264" duration="2858000" />
       <workItem from="1559732487829" duration="6223000" />
       <workItem from="1559770560034" duration="541000" />
+      <workItem from="1559857542967" duration="933000" />
+      <workItem from="1559975353135" duration="5778000" />
+      <workItem from="1560036539403" duration="32112000" />
+      <workItem from="1560206041446" duration="4949000" />
+      <workItem from="1560258512378" duration="7431000" />
+      <workItem from="1560293593431" duration="983000" />
+      <workItem from="1560341374848" duration="95000" />
+      <workItem from="1560378842711" duration="161000" />
+      <workItem from="1560650923324" duration="563000" />
+      <workItem from="1560726801514" duration="2628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10925000" />
+    <option name="totallyTimeSpent" value="66558000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2600536" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29825738" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32960895" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32960895" />
       <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32960895" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -277,26 +339,22 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/LotteryController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../AboutMe12/dashchen/layouts/default.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AboutMe12/dashchen/server/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/articles/index.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/locales/en.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/about-me/generateFileInfos.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1962">
-          <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+        <state relative-caret-position="1980">
+          <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -304,6 +362,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="60" selection-start-column="60" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/layouts/default.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1818">
+          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -316,20 +381,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/about-me/pages/about.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/about-me/pages/inspire.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/articles/html/HttpHeader.md">
+    <entry file="file://$PROJECT_DIR$/about-me/contents/blogs/zh-tw/HttpHeader.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="108">
@@ -349,17 +407,316 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/plugins/vuetify.js">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_05_20_230504_add_lotterys_field.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="72">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/layouts/default.vue">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_05_12_173608_add_customer_number.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+        <state relative-caret-position="268">
+          <caret line="31" column="11" selection-start-line="29" selection-start-column="8" selection-end-line="31" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_03_03_111614_create_elf_talkings_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_01_12_014727_create_points_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="23" column="71" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="23" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_01_12_195970_create_lotterys_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Point.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_06_08_143744_create_periods_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/LotteryType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Observers/CustomerObserver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#33#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/lottery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Lottery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="31" />
+          <folding>
+            <element signature="e#36#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_06_08_143245_add_customers_period.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_06_09_165834_add_transaction_logs_field.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="65" lean-forward="true" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_01_12_231112_create_transaction_logs_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="19" column="82" lean-forward="true" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/member.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/remind.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Notifications/SendRemittanceNotification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/.env">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/member/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="95" column="63" selection-start-line="95" selection-start-column="63" selection-end-line="95" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/ResetPasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/CustomerLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Notifications/SendOpenNotification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/TransactionLogsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/passwords/reset.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="14" column="57" lean-forward="true" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/nopay.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="116" selection-start-line="35" selection-start-column="116" selection-end-line="35" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="33" column="78" selection-start-line="33" selection-start-column="78" selection-end-line="33" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="111" column="21" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
+          <folding>
+            <element signature="e#23#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+          <folding>
+            <element signature="e#50#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Period.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="180" column="79" selection-start-line="180" selection-start-column="79" selection-end-line="180" selection-end-column="79" />
+          <folding>
+            <element signature="e#50#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="94" column="25" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Observers/TransactionLogObserver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="63" column="77" selection-start-line="63" selection-start-column="77" selection-end-line="63" selection-end-column="77" />
+          <folding>
+            <element signature="e#33#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/TransactionLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/LotteryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="102" column="127" selection-start-line="102" selection-start-column="127" selection-end-line="102" selection-end-column="127" />
+          <folding>
+            <element signature="e#50#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/blog.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_post/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="53" lean-forward="true" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+          <folding>
+            <element signature="e#1890#2803#0" />
+          </folding>
         </state>
       </provider>
     </entry>
