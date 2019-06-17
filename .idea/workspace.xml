@@ -2,54 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5b72f5a-7781-41c9-a2f3-b2eedc1a414d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/yii2settings.xml" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/assets/bookingFacility/bookingModalAsset.php" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/assets/bookingFacility/bookingModalAsset.php" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/components/faceCapture/assets/css/main.css" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/components/faceCapture/assets/css/main.css" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/components/faceCapture/assets/js/main.js" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/components/faceCapture/assets/js/main.js" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/components/faceCapture/views/main.php" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/components/faceCapture/views/main.php" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/components/floatNews/assets/css/news.css" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/components/floatNews/assets/css/news.css" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/components/floatNews/assets/js/news.js" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/components/floatNews/assets/js/news.js" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/components/floatNews/views/news.php" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/components/floatNews/views/news.php" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/controllers/MailPackageController.php" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/controllers/MailPackageController.php" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/messages/zh-TW/transBooking.php" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/messages/zh-TW/transBooking.php" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/package-lock.json" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/package-lock.json" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/package.json" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/package.json" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/views/booking-facility/calendar.php" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/views/booking-facility/calendar.php" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/views/inhabitant-info/choiceInhabitantName.php" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/views/inhabitant-info/choiceInhabitantName.php" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/web/css/bookingFacility/bookingModal.css" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/web/css/bookingFacility/bookingModal.css" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/web/css/mailPackage/list.css" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/web/css/mailPackage/list.css" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/web/js/bookingFacility/bookingFacility.js" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/web/js/bookingFacility/bookingFacility.js" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/web/js/inhabitant/choiceInhabitantName.js" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/web/js/inhabitant/choiceInhabitantName.js" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/web/js/plugin/vue.js" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/web/js/plugin/vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/about-me.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/about-me.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/about-me/static/dash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/LotteryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/LotteryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Palace/indexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Palace/indexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/TransactionLogsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/TransactionLogsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/VoyagerAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/VoyagerAuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Lottery.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Lottery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/TransactionLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/TransactionLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Observers/TransactionLogObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Observers/TransactionLogObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Providers/ViewServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Providers/ViewServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/public/css/palace/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/public/css/palace/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/public/js/common/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/public/js/common/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/public/js/palace/master.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/public/js/palace/master.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/lottery.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/lottery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/member.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/member.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/verifiedemail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/verifiedemail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/includes/palace/meta.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/includes/palace/meta.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/palace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/palace.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/member/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/member/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app01.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app01.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app02.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app02.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app03.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app03.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app04.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app04.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app05.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app05.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app06.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app06.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app07.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/app07.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/contace03.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/contace04.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/palace/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/nopay.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/nopay.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/lotteries/edit-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/lotteries/edit-add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/webpack.mix.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/ava.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/ava.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/components/Logo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/components/Logo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/components/VuetifyLogo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/components/VuetifyLogo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/content/blogs/http-header.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/contents/blogs/zh-tw/HttpHeader.md" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/articles/http-header.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/generateFileInfos.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/generateFileInfos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/layouts/default.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/pages/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/about.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/blog.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/pages/blog/_post/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/blog/_post/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/contact.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/inspire.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/inspire.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/project/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/project/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/project/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/project/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/plugins/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/i18n.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/vuetify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/test/helpers/setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/test/helpers/setup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/test/specs/Logo.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/test/specs/Logo.spec.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,29 +72,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_post/index.vue">
+        <entry file="file://$PROJECT_DIR$/about-me/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1121">
-              <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+            <state relative-caret-position="558">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about-me/articles/http-header.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_post/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/pages/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="61" column="54" lean-forward="true" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
+              <folding>
+                <element signature="e#1919#1959#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
+        <entry file="file://$PROJECT_DIR$/about-me/layouts/default.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+            <state relative-caret-position="126">
+              <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -110,7 +133,6 @@
         <option value="$PROJECT_DIR$/about-me/pages/README.md" />
         <option value="$PROJECT_DIR$/about-me/pages/html/HttpHeader.md" />
         <option value="$PROJECT_DIR$/about-me/plugins/vuetify.js" />
-        <option value="$PROJECT_DIR$/about-me/layouts/default.vue" />
         <option value="$PROJECT_DIR$/about-me/generateFileInfos.js" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/2019_06_08_143245_add_customers_period.php" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/2019_06_08_143744_create_periods_table.php" />
@@ -139,6 +161,8 @@
         <option value="C:/Visual-AMP-x64/www/Apps/icmc/controllers/MailPackageController.php" />
         <option value="$PROJECT_DIR$/about-me/pages/blog/_post/index.vue" />
         <option value="$PROJECT_DIR$/about-me/nuxt.config.js" />
+        <option value="$PROJECT_DIR$/about-me/pages/about.vue" />
+        <option value="$PROJECT_DIR$/about-me/layouts/default.vue" />
       </list>
     </option>
   </component>
@@ -148,46 +172,70 @@
     <option name="width" value="1440" />
     <option name="height" value="780" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="添加" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="_post" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/about-me/articles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/about-me/static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -197,18 +245,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Visual-AMP-x64\www\about-me\about-me\static" />
+      <recent name="D:\about-me\about-me\articles" />
+      <recent name="D:\Visual-AMP-x64\www\about-me\about-me" />
+      <recent name="D:\Visual-AMP-x64\www\about-me\about-me\plugins" />
+      <recent name="D:\Visual-AMP-x64\www\about-me\about-me\store" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\about-me\about-me\articles" />
       <recent name="D:\Visual-AMP-x64\www\about-me\about-me\pages\blog\_post" />
       <recent name="D:\Visual-AMP-x64\www\Beitunzhaoshun\database\migrations\financial" />
       <recent name="D:\Visual-AMP-x64\www\about-me\about-me\pages\articles\html" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\about-me\about-me\articles" />
-      <recent name="D:\Visual-AMP-x64\www\about-me\about-me" />
-      <recent name="D:\Visual-AMP-x64\www\about-me\about-me\plugins" />
-      <recent name="D:\Visual-AMP-x64\www\about-me\about-me\store" />
-      <recent name="D:\Visual-AMP-x64\www\about-me\about-me\pages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,7 +301,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72530000" />
+    <option name="totallyTimeSpent" value="75973000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -265,10 +313,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30490404" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30227882" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -281,7 +329,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32960895" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32960895" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Migrations" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -305,15 +353,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/about-me/pages/about.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/inspire.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_05_20_230504_add_lotterys_field.php" />
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_05_12_173608_add_customer_number.php" />
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_03_03_111614_create_elf_talkings_table.php" />
     <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_01_12_014727_create_points_table.php" />
     <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_01_12_195970_create_lotterys_table.php" />
     <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Post.php" />
@@ -352,16 +391,10 @@
     <entry file="file://$PROJECT_DIR$/about-me/.eslintrc.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/blog.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/blog.vue" />
     <entry file="file://$PROJECT_DIR$/about-me/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
+        <state relative-caret-position="558">
           <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
         </state>
       </provider>
@@ -376,14 +409,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/content/blogs/http-header.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/content/blogs/http-header.md" />
     <entry file="file://$PROJECT_DIR$/about-me/articles/http-header.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -392,34 +418,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/config/params.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/controllers/MailPackageController.php">
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/config/params.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/controllers/MailPackageController.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/controllers/api/MailRegController.php" />
+    <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1502">
-          <caret line="384" column="78" lean-forward="true" selection-start-line="384" selection-start-column="78" selection-end-line="384" selection-end-column="78" />
+        <state relative-caret-position="-576">
+          <caret line="46" column="27" lean-forward="true" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/controllers/api/MailRegController.php">
+    <entry file="file://$PROJECT_DIR$/about-me/static/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/static/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/about.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="863" column="142" selection-start-line="863" selection-start-column="137" selection-end-line="863" selection-end-column="142" />
+        <state relative-caret-position="232">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#v-card-title#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_post/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+        <state relative-caret-position="394">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
+    <entry file="file://$PROJECT_DIR$/about-me/pages/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+        <state relative-caret-position="288">
+          <caret line="61" column="54" lean-forward="true" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
+          <folding>
+            <element signature="e#1919#1959#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/layouts/default.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
         </state>
       </provider>
     </entry>
