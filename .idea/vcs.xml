@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="C:/Visual-AMP-x64/www/Apps/icmc" vcs="Git" />
+    <mapping directory="C:/Visual-AMP-x64/www/apiDoc" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Beitunzhaoshun" vcs="Git" />
   </component>
 </project>

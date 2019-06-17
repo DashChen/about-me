@@ -6,5 +6,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="AboutMe" />
     <orderEntry type="module" module-name="Beitunzhaoshun" />
+    <orderEntry type="module" module-name="datadisk" />
+    <orderEntry type="module" module-name="icmc" />
+    <orderEntry type="module" module-name="apiDoc" />
   </component>
 </module>

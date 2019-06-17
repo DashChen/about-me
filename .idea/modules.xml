@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/../AboutMe12/.idea/AboutMe.iml" filepath="$PROJECT_DIR$/../AboutMe12/.idea/AboutMe.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Beitunzhaoshun/.idea/Beitunzhaoshun.iml" filepath="$PROJECT_DIR$/../Beitunzhaoshun/.idea/Beitunzhaoshun.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/about-me.iml" filepath="$PROJECT_DIR$/.idea/about-me.iml" />
+      <module fileurl="file://C:/Visual-AMP-x64/www/apiDoc/.idea/apiDoc.iml" filepath="C:/Visual-AMP-x64/www/apiDoc/.idea/apiDoc.iml" />
+      <module fileurl="file://C:/Visual-AMP-x64/www/Apps/datadisk/.idea/datadisk.iml" filepath="C:/Visual-AMP-x64/www/Apps/datadisk/.idea/datadisk.iml" />
+      <module fileurl="file://C:/Visual-AMP-x64/www/Apps/icmc/.idea/icmc.iml" filepath="C:/Visual-AMP-x64/www/Apps/icmc/.idea/icmc.iml" />
     </modules>
   </component>
 </project>
