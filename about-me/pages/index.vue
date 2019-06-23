@@ -1,70 +1,58 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <div class="text-xs-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline"
-          >Welcome to the Vuetify + Nuxt.js template</v-card-title
-        >
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a href="https://vuetifyjs.com" target="_blank">documentation</a>.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a href="https://chat.vuetifyjs.com/" target="_blank" title="chat"
-              >discord</a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-              >issue board</a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a href="https://nuxtjs.org/" target="_blank">Nuxt Documentation</a>
-          <br />
-          <a href="https://github.com/nuxt/nuxt.js" target="_blank"
-            >Nuxt GitHub</a
-          >
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" flat nuxt to="/inspire">Continue</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
+  <v-layout>
+    <v-card v-for="(a, index) in $store.state.articles" :key="index" dark>
+      <v-card-title>
+        <v-flex xs12 tag="h1" class="display-1 text-xs-center">
+          {{ a.data.subject }}
+        </v-flex>
+        <v-layout justify-center align-center row wrap>
+          <v-btn disabled flat>
+            <v-icon small left>calendar_today</v-icon>
+            發表於{{ a.data.created_at.toString().substring(0, 10) }}
+          </v-btn>
+          <v-divider vertical></v-divider>
+          <v-btn disabled flat>
+            <v-icon small left>update</v-icon>
+            更新於{{ a.data.updated_at.toString().substring(0, 10) }}
+          </v-btn>
+          <v-divider vertical></v-divider>
+          <v-btn disabled flat>
+            <v-icon small left>tab</v-icon>
+            分類於{{ a.data.type }}
+          </v-btn>
+          <v-divider vertical></v-divider>
+          <v-btn disabled flat>
+            <v-icon small left>far fa-file-word</v-icon>
+            字數統計{{ a.data.wordLength }}
+          </v-btn>
+          <v-divider vertical></v-divider>
+          <v-btn disabled flat>
+            <v-icon small flat>access_time</v-icon>
+            閱讀時間 ≒ {{ readTime(a.data.wordLength) }}
+          </v-btn>
+        </v-layout>
+      </v-card-title>
+      <v-card-text v-html="render(a.data.bodySummary)" />
+      <v-card-actions>
+        <v-btn class="mx-auto" :to="a.url" nuxt>
+          <v-icon>chrome_reader_mode</v-icon>
+          閱讀全文
+        </v-btn>
+      </v-card-actions>
+    </v-card>
   </v-layout>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
 export default {
-  components: {
-    Logo,
-    VuetifyLogo
+  name: 'Index',
+  methods: {
+    readTime(len) {
+      return Math.floor(len / 3)
+    },
+    render(md) {
+      return this.$md.render(md)
+    }
   }
 }
 </script>

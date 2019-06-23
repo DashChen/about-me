@@ -73,7 +73,7 @@ export default {
         {
           icon: 'far fa-newspaper',
           title: '文章',
-          to: '/articles'
+          to: '/blog'
         },
         {
           icon: 'fas fa-project-diagram',
