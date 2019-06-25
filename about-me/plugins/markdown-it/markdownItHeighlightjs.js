@@ -43,4 +43,4 @@ highlightjs.defaults = {
   code: true
 }
 
-export default highlightjs
+module.exports = highlightjs

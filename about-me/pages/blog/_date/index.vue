@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'date',
+  name: 'Date',
   asyncData({ error }) {
     error({ statusCode: 404, message: 'Post not found' })
   }

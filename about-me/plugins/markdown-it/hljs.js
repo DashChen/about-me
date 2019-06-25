@@ -16,4 +16,4 @@ hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('python', python)
 hljs.registerLanguage('cs', cs)
 
-export default hljs
+module.exports = hljs

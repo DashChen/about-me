@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import md from './markdownit'
+const md = require('./markdownit')
 
 Vue.use({
   install(Vue, options) {

@@ -1,6 +1,6 @@
-import MarkdownIt from 'markdown-it'
-import MarkdownItAttrs from 'markdown-it-attrs'
-import MarkdownItHighlightjs from './markdown-it/markdownItHeighlightjs'
+const MarkdownIt = require('markdown-it')
+const MarkdownItAttrs = require('markdown-it-attrs')
+const MarkdownItHighlightjs = require('./markdown-it/markdownItHeighlightjs')
 
 const md = new MarkdownIt({
   html: true,
@@ -12,4 +12,4 @@ const md = new MarkdownIt({
 md.use(MarkdownItAttrs)
 md.use(MarkdownItHighlightjs)
 
-export default md
+module.exports = md

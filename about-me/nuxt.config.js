@@ -4,12 +4,7 @@ const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 // a filtered file list
 const glob = require('glob')
 
-const MarkdownIt = require('markdown-it')
-// https://www.npmjs.com/package/markdown-it-attrs
-const MarkdownItAttrs = require('markdown-it-attrs')
-
-// https://highlightjs.org/
-const MarkdownItHighlightjs = require('./plugins/markdown-it/markdownItHeighlightjs')
+const md = require('./plugins/markdownit')
 
 // we acquire an array containing the filenames
 // in the articles directory
@@ -23,17 +18,6 @@ function getSlugs(post, _) {
   const slug = post.substr(0, post.lastIndexOf('.'))
   return `/blog/${slug}`
 }
-
-const md = new MarkdownIt({
-  html: true,
-  linkify: true,
-  typographer: true,
-  langPrefix: 'ht-' // 預設為 'language'
-})
-// 可以使用 classes, identifiers and attributes 用 {.class #identifier attr=value attr2="spaced value"}
-md.use(MarkdownItAttrs)
-// code 部分可以高亮顯示，有支持自訂的語言
-md.use(MarkdownItHighlightjs)
 
 module.exports = {
   mode: 'universal',
