@@ -55,7 +55,11 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/vuetify', '@/plugins/markdown-it'],
+  plugins: [
+    '@/plugins/vuetify',
+    '@/plugins/markdown-it',
+    '@/plugins/firebase.js'
+  ],
 
   /*
    ** Nuxt.js modules
@@ -63,8 +67,12 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv'
   ],
+  router: {
+    middleware: 'router-auth'
+  },
   /*
    ** Axios module configuration
    */

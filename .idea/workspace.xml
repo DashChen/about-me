@@ -2,24 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5b72f5a-7781-41c9-a2f3-b2eedc1a414d" name="Default Changelist" comment="">
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/views/newsletter/list.php" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/views/newsletter/list.php" afterDir="false" />
-      <change beforePath="C:/Visual-AMP-x64/www/Apps/icmc/web/js/newsletter/list.js" beforeDir="false" afterPath="C:/Visual-AMP-x64/www/Apps/icmc/web/js/newsletter/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/bread/browse.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/CustomersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/config/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/config/voyager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/generateManifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/generateManifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/layouts/default.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/about.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/pages/blog/_date/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/blog/_date/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/blog/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/blog/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/contact.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/plugins/markdownit.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdownit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/store/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,11 +27,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/newsletter/list.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="1328" column="47" lean-forward="true" selection-start-line="1328" selection-start-column="47" selection-end-line="1328" selection-end-column="47" />
+            <state relative-caret-position="162">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/bread/browse.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2214">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/test.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="130" column="49" lean-forward="true" selection-start-line="130" selection-start-column="49" selection-end-line="130" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/formfields/relationship.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="64" column="68" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -71,6 +96,9 @@
       <find>muiltSignature</find>
       <find>error_card_text</find>
       <find>signSwal</find>
+      <find>browseRows</find>
+      <find>details</find>
+      <find>$dataContent</find>
     </findStrings>
     <replaceStrings>
       <replace>col-12</replace>
@@ -80,14 +108,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="C:/Visual-AMP-x64/www/Apps/icmc" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Beitunzhaoshun" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/lang/zh_TW/member.php" />
-        <option value="$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/2019_06_09_165834_add_transaction_logs_field.php" />
-        <option value="$PROJECT_DIR$/../Beitunzhaoshun/database/migrations/financial/2019_06_09_165834_add_transaction_logs_field.php" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Period.php" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/nopay.blade.php" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/TransactionLog.php" />
@@ -136,14 +161,17 @@
         <option value="C:/Visual-AMP-x64/www/Apps/icmc/web/js/newsletter/list.js" />
         <option value="C:/Visual-AMP-x64/www/Apps/icmc/assets/MenuAsset.php" />
         <option value="C:/Visual-AMP-x64/www/Apps/icmc/views/layouts/signText.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/config/voyager.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/test.blade.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/bread/browse.blade.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="240" />
-    <option name="y" value="130" />
-    <option name="width" value="1440" />
-    <option name="height" value="780" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-2037" />
+    <option name="y" value="107" />
+    <option name="width" value="1940" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="添加" />
@@ -153,78 +181,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="newsletter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="newsletter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icmc" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-components" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile-scroller" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Visual-AMP-x64/www/Apps/icmc/web/vue-components/mobile-scroller" />
+    <property name="last_opened_file_path" value="D:/接包工作/20190628自助點餐機/project/self-service-ordering-machine" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -299,11 +263,14 @@
       <workItem from="1561152836720" duration="7813000" />
       <workItem from="1561279951245" duration="17337000" />
       <workItem from="1561423274687" duration="24953000" />
+      <workItem from="1561757652200" duration="2535000" />
+      <workItem from="1561768686288" duration="18329000" />
+      <workItem from="1561880812948" duration="1651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173109000" />
+    <option name="totallyTimeSpent" value="195842000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -315,13 +282,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23987207" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2841823" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -332,9 +297,10 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32960895" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23101953" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23044693" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Migrations" order="12" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -361,35 +327,47 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/about-me/generateManifest.js">
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/layout/signSwal.js" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/FirstAsset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bootstrap3Asset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/common/signature/signature.js" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/feeAsset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/househodeIndexAsset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/houseThingAsset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/MenuAsset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bootstrap4Asset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/plugin/bootstrapFileinputMasterAsset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bookingFacility/bookingFacilityAsset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bookingFacility/bookingModalAsset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/CommonAsset.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/views/layouts/signText.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/views/layouts/menu.php" />
+    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/newsletter/list.js" />
+    <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="52" column="61" lean-forward="true" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
+        <state relative-caret-position="378">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_date/index.vue">
+    <entry file="file://$PROJECT_DIR$/about-me/pages/contact.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/blog/index.vue">
+    <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        <state relative-caret-position="54">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/about.vue">
+    <entry file="file://$PROJECT_DIR$/about-me/pages/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#v-card-title#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="465">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -400,343 +378,193 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/store/articles.json">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/stubs/controller.stub">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/index.vue">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Helpers/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="37" column="45" lean-forward="true" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
-        </state>
+        <state relative-caret-position="-162" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-703">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/static/coding.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/store/me.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/contact.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="n#a#0;n#v-flex#1;n#v-layout#0;n#v-container#0;n#v-img#0;n#v-card#0;n#template#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/datadisk/takepicturevue/.gitignore">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Helpers/helpersi18n.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/views/inhabitant-info/index.php">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Helpers/helperSlugify.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/formfields/rich_text_box.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/routes/voyager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="71" column="51" lean-forward="true" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
+        <state relative-caret-position="-2073" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Voyager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4953">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/inhabitant/hidModal.js">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Models/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="196" column="40" selection-start-line="196" selection-start-column="40" selection-end-line="196" selection-end-column="40" />
-          <folding>
-            <element signature="e#21#1851#0" />
-            <element signature="e#1886#4921#0" />
-            <element signature="e#4960#5139#0" />
-            <element signature="e#7052#11797#0" />
-            <element signature="e#11836#26760#0" />
-          </folding>
+        <state relative-caret-position="-3">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/inhabitant/index.js">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Http/Controllers/ContentTypes/Checkbox.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="275" column="60" selection-start-line="275" selection-start-column="60" selection-end-line="275" selection-end-column="60" />
-          <folding>
-            <element signature="e#3566#4902#0" />
-            <element signature="e#4932#5020#0" />
-            <element signature="e#5037#5088#0" />
-            <element signature="e#5105#5537#0" />
-            <element signature="e#5571#6049#0" />
-            <element signature="e#6071#7108#0" />
-            <element signature="e#7275#7405#0" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/css/inhabitant/index.css">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/FormFields/CheckboxHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+        <state relative-caret-position="72">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/bookingFacility/bookingModal.js">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Facades/Voyager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="19" />
+        <state relative-caret-position="108">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/datadisk/mobile-scroller/src/main.js">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/tools/database/vue-components/database-column.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="1638">
+          <caret line="91" column="59" lean-forward="true" selection-start-line="91" selection-start-column="59" selection-end-line="91" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/inhabitant/choiceInhabitantName.js">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/publishable/config/voyager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="277" column="19" selection-start-line="277" selection-start-column="8" selection-end-line="277" selection-end-column="19" />
+        <state relative-caret-position="213">
+          <caret line="198" column="25" lean-forward="true" selection-start-line="198" selection-start-column="25" selection-end-line="198" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/views/booking-facility/calendar.php">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/bread/browse.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-158" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/views/booking-facility/modal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="213" column="240" selection-start-line="213" selection-start-column="240" selection-end-line="213" selection-end-column="240" />
+        <state relative-caret-position="6102">
+          <caret line="339" column="83" selection-end-line="383" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/plugins/markdown-it.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="34" lean-forward="true" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/bread/partials/actions.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/tools/database/edit-add.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/plugins/markdownit.js">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Http/Controllers/VoyagerBreadController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/plugin/fullCalendar/fullcalendar.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/components/ApiComponent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="676" column="8" selection-start-line="676" selection-start-column="8" selection-end-line="676" selection-end-column="84" />
-          <folding>
-            <element signature="e#33#41#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/bookingFacility/modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="509" column="53" lean-forward="true" selection-start-line="509" selection-start-column="53" selection-end-line="509" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/datadisk/mobile-scroller/src/components/ScrollerWheel.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="68" column="60" lean-forward="true" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/vue-components/mobile-scroller/mobilescroller.umd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="93" selection-start-line="9" selection-start-column="93" selection-end-line="9" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/views/newsletter/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="182" column="33" selection-start-line="182" selection-start-column="26" selection-end-line="182" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/controllers/BookingFacilityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="233" column="97" lean-forward="true" selection-start-line="233" selection-start-column="59" selection-end-line="233" selection-end-column="97" />
-          <folding>
-            <element signature="e#2900#6620#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/layout/cardWebsocket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="81" column="39" lean-forward="true" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/bookingFacility/bookingFacility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="207" column="43" selection-start-line="207" selection-start-column="34" selection-end-line="207" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/layout/signSwal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3342">
-          <caret line="403" column="3" selection-start-line="403" selection-start-column="3" selection-end-line="403" selection-end-column="3" />
-          <folding>
-            <element signature="e#6728#6742#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/FirstAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
+        <state relative-caret-position="-3887">
           <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bootstrap3Asset.php">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="156">
+          <caret line="60" column="39" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/common/signature/signature.js">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Http/Controllers/VoyagerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding>
-            <element signature="e#591#3031#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/feeAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/househodeIndexAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/houseThingAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/MenuAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bootstrap4Asset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/plugin/bootstrapFileinputMasterAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="108">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bookingFacility/bookingFacilityAsset.php">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Http/Controllers/VoyagerBaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+        <state relative-caret-position="156">
+          <caret line="240" column="72" selection-start-line="240" selection-start-column="65" selection-end-line="240" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bookingFacility/bookingModalAsset.php">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Providers/VoyagerEventServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/CommonAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/views/layouts/signText.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="52" column="126" selection-start-line="52" selection-start-column="126" selection-end-line="52" selection-end-column="126" />
+        <state relative-caret-position="123">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding>
-            <element signature="e#6#27#0#PHP" expanded="true" />
+            <element signature="e#41#125#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/views/layouts/menu.php">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Providers/VoyagerDummyServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1027">
+        <state relative-caret-position="-525">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
-            <element signature="e#99#121#0#PHP" expanded="true" />
+            <element signature="e#41#102#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/newsletter/list.js">
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="1328" column="47" lean-forward="true" selection-start-line="1328" selection-start-column="47" selection-end-line="1328" selection-end-column="47" />
+        <state relative-caret-position="162">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/config/voyager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="166" column="48" selection-start-line="166" selection-start-column="48" selection-end-line="166" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Policies/BasePolicy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-291">
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <element signature="e#40#88#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/VoyagerServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1746">
+          <caret line="241" column="5" lean-forward="true" selection-start-line="241" selection-start-column="5" selection-end-line="241" selection-end-column="5" />
+          <folding>
+            <element signature="e#31#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/formfields/relationship.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="64" column="68" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/test.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="130" column="49" lean-forward="true" selection-start-line="130" selection-start-column="49" selection-end-line="130" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/bread/browse.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2214">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
