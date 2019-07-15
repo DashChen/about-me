@@ -1,5 +1,5 @@
 <template>
-  #firebaseui-auth-container
+  <div id="firebaseui-auth-container"></div>
 </template>
 
 <script>
@@ -22,11 +22,11 @@ export default {
           ],
           callbacks: {
             signInSuccessWithAuthResult: authResult => {
-              window.location.href = '/'
+              console.log(authResult)
               return false
             }
           },
-          signInSuccessUrl: '/',
+          signInSuccessUrl: '/admin',
           signInFlow: 'popup'
         }
 

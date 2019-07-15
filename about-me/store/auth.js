@@ -1,8 +1,13 @@
 import { auth } from '@/server/fireinit'
 
+let token = ''
+if (process.browser) {
+  token = localStorage.getItem('token')
+}
+
 export const state = () => ({
   status: '',
-  token: localStorage.getItem('token') || '',
+  token: token,
   username: ''
 })
 
@@ -11,12 +16,12 @@ export const getters = {
 }
 
 export const actions = {
-  gotUser({ comit }, user) {
+  gotUser({ commit }, user) {
     commit('setUser', user)
   },
-  logout({ comit }) {
+  logout({ commit }) {
     auth.signOut().then(() => {
-      comit('logout')
+      commit('logout')
     })
   }
 }

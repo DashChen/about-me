@@ -1,15 +1,31 @@
 <template>
-  firebase-auth
+  <v-btn outline fab color="#4285F4" @click="googleSignIn"
+    ><v-icon>fab fa-google</v-icon></v-btn
+  >
 </template>
 
 <script>
-import FirebaseAuth from '@/components/FirebaseAuth'
-import { mapState, mapGetters, mapActions } from 'vuex'
-
 export default {
   name: 'Login',
-  components: {
-    FirebaseAuth
+  data: function() {
+    return {
+      provider: null
+    }
+  },
+  created() {
+    console.log(this.$firestore)
+  },
+  mounted() {
+    this.$AUTH().onAuthStateChanged(user => {
+      console.log(user)
+
+    })
+  },
+  methods: {
+    googleSignIn() {
+      this.$auth()
+        .signInWithRedirect(new this.$AUTH.GoogleAuthProvider())
+    }
   }
 }
 </script>
