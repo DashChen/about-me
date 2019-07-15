@@ -50,7 +50,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['~/assets/style/app.styl'],
+  css: ['~/assets/style/app.styl', 'firebaseur/dist/firebaseui.css'],
 
   /*
    ** Plugins to load before mounting the App

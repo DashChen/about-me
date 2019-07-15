@@ -1,7 +1,7 @@
-import {auth} from "@/server/fireinit";
+import { auth } from '@/server/fireinit'
 
 export default context => {
-  const {store} = context
+  const { store } = context
   return new Promise((resolve, reject) => {
     auth.onAuthStateChanged(user => {
       if (user) {
