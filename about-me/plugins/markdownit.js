@@ -1,6 +1,7 @@
-const MarkdownIt = require('markdown-it')
-const MarkdownItAttrs = require('markdown-it-attrs')
-const MarkdownItHighlightjs = require('./markdown-it/markdownItHeighlightjs')
+import Vue from 'vue'
+import MarkdownIt from 'markdown-it'
+import MarkdownItAttrs from 'markdown-it-attrs'
+import MarkdownItHighlightjs from './markdown-it/markdownItHeighlightjs'
 
 const md = new MarkdownIt({
   html: true,
@@ -12,4 +13,8 @@ const md = new MarkdownIt({
 md.use(MarkdownItAttrs)
 md.use(MarkdownItHighlightjs)
 
-module.exports = md
+Vue.use({
+  install(Vue, options) {
+    Vue.prototype.$md = md
+  }
+})

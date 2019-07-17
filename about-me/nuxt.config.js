@@ -4,8 +4,6 @@ const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 // a filtered file list
 const glob = require('glob')
 
-const md = require('./plugins/markdownit')
-
 // we acquire an array containing the filenames
 // in the articles directory
 const files = glob.sync('**/*.md', { cwd: 'articles' })
@@ -57,7 +55,7 @@ module.exports = {
    */
   plugins: [
     '@/plugins/vuetify',
-    '@/plugins/markdown-it',
+    '@/plugins/markdownit',
     '@/plugins/firebase.js'
   ],
 
@@ -108,10 +106,7 @@ module.exports = {
         // https://www.npmjs.com/package/frontmatter-markdown-loader
         loader: 'frontmatter-markdown-loader',
         options: {
-          vue: true,
-          markdown: body => {
-            return md.render(body)
-          }
+          vue: true
         }
       })
     }

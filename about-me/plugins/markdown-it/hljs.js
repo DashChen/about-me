@@ -1,12 +1,12 @@
-const hljs = require('highlight.js/lib/highlight')
+import hljs from 'highlight.js/lib/highlight'
 
-const xml = require('highlight.js/lib/languages/xml')
-const bash = require('highlight.js/lib/languages/bash')
-const css = require('highlight.js/lib/languages/css')
-const scss = require('highlight.js/lib/languages/scss')
-const javascript = require('highlight.js/lib/languages/javascript')
-const python = require('highlight.js/lib/languages/python')
-const cs = require('highlight.js/lib/languages/cs')
+import xml from 'highlight.js/lib/languages/xml'
+import bash from 'highlight.js/lib/languages/bash'
+import css from 'highlight.js/lib/languages/css'
+import scss from 'highlight.js/lib/languages/scss'
+import javascript from 'highlight.js/lib/languages/javascript'
+import python from 'highlight.js/lib/languages/python'
+import cs from 'highlight.js/lib/languages/cs'
 
 hljs.registerLanguage('xml', xml)
 hljs.registerLanguage('bash', bash)
@@ -16,4 +16,4 @@ hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('python', python)
 hljs.registerLanguage('cs', cs)
 
-module.exports = hljs
+export default hljs
