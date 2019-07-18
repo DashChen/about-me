@@ -1,5 +1,5 @@
-const pkg = require('./package')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+const pkg = require('./package')
 
 // glob is a small module to read 'globs', useful to get
 // a filtered file list
@@ -115,7 +115,7 @@ module.exports = {
   },
   generate: {
     routes: function() {
-      return files.map(getSlugs)
+      // return files.map(getSlugs)
     }
   }
 }

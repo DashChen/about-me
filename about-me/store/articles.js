@@ -3,16 +3,45 @@
  * typeList:  combobox 類型列表，建議單選
  * urlList:   驗證 url 是否重複
  * articles:  所有文章列表
- * @returns {{tagList: Array, typeList: Array, urlList: Array, articles: Array}}
+ * choiceIndex: 被選中的文章索引值
+ * @returns {{tagList: Array, typeList: Array, urlList: Array, articles: Array, choiceIndex: Number}}
  */
 export const state = () => ({
   articles: [],
   typeList: [],
   tagList: [],
-  urlList: []
+  urlList: [],
+  choiceIndex: -1
 })
 
 export const actions = {
+  async getList({ commit }, $firestore) {
+    await $firestore
+      .collection('articles')
+      .get()
+      .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+          if (doc.id !== 'list') {
+            commit('changeState', {
+              key: 'articles',
+              data: doc.data(),
+              index: -1
+            })
+          } else {
+            Object.keys(doc.data()).forEach(function(key) {
+              commit('changeState', {
+                key: key,
+                data: doc.data()[key],
+                index: -1
+              })
+            })
+          }
+        })
+      })
+      .catch(function(error) {
+        console.log('Error getting documents: ', error)
+      })
+  },
   async updateList({ dispatch, commit, state }, { index, data, vm }) {
     console.log(index, data, vm)
     commit('changeState', { key: 'articles', data: data, index: index })
@@ -53,9 +82,11 @@ export const mutations = {
     }
     if (index > -1) {
       state[key][index] = data
-      return true
+    } else if (Array.isArray(state[key])) {
+      state[key].push(data)
+    } else {
+      state[key] = data
     }
-    state[key].push(data)
     return true
   }
 }

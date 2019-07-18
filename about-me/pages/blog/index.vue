@@ -1,17 +1,17 @@
 <template>
   <v-timeline>
     <v-timeline-item
-      v-for="(a, index) in $store.state.articles"
+      v-for="(a, index) in $store.state.articles.articles"
       :key="index"
       color="red lighten-2"
       large
     >
       <template v-slot:opposite>
-        <span>{{ a.data.created_at.toString().substring(0, 10) }}</span>
+        <span>{{ a.created_at }}</span>
       </template>
-      <v-card nuxt :to="a.url" class="elevation-2">
-        <v-card-title class="headline">{{ a.data.subject }}</v-card-title>
-        <v-card-text v-text="a.data.summary" />
+      <v-card nuxt :to="go(a, index)" class="elevation-2">
+        <v-card-title class="headline">{{ a.subject }}</v-card-title>
+        <v-card-text v-text="a.summary" />
       </v-card>
     </v-timeline-item>
   </v-timeline>
@@ -23,6 +23,15 @@ export default {
   methods: {
     render(md) {
       return this.$md.render(md)
+    },
+    go(item, index) {
+      // 先確認使用到哪一個
+      this.$store.commit('articles/changeState', {
+        key: 'choiceIndex',
+        data: index,
+        index: -1
+      })
+      return `/blog/${item.created_at}/${item.url}`
     }
   }
 }

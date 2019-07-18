@@ -34,7 +34,7 @@
       </v-flex>
       <v-flex d-flex xs7>
         <v-card light>
-          <v-card-text v-html="html"></v-card-text>
+          <v-card-text v-html="render(content)"></v-card-text>
         </v-card>
       </v-flex>
     </v-layout>
@@ -44,33 +44,44 @@
 <script>
 export default {
   name: 'Slug',
-  async asyncData({ params, error }) {
-    const fileContent = await import(`~/articles/${params.post}.md`)
-    const length = fileContent.body.replace(
-      /<s*[^>]*>|<\/s*[^>]*>|[#*`>\-~![]]/g,
-      ''
-    ).length
-    const attributes = fileContent.attributes
-    return {
-      infos: [
-        {
-          title: '標籤',
-          content: attributes.tag
-        },
-        {
-          title: '類型',
-          content: attributes.type
-        },
-        {
-          title: '長度',
-          content: length + '字'
-        },
-        {
-          title: '建議閱讀時間',
-          content: Math.ceil(length / 300)
-        }
-      ],
-      html: fileContent.html
+  data: () => ({
+    infos: []
+  }),
+  asyncData({ store }) {
+    console.log(store)
+    return store.state.articles.articles[store.state.articles.choiceIndex]
+  },
+  mounted() {
+    this.infos = [
+      {
+        title: '標籤',
+        content: this.tag.join('、')
+      },
+      {
+        title: '類型',
+        content: this.type
+      },
+      {
+        title: '長度',
+        content: this.wordLength(this.content) + '字'
+      },
+      {
+        title: '建議閱讀時間',
+        content: this.readTime(this.content)
+      }
+    ]
+  },
+  methods: {
+    wordLength(content) {
+      return content
+        .replace(/\s/g, '')
+        .replace(/<s*[^>]*>|<\/s*[^>]*>|[#*`>\-~![\]]/g, '').length
+    },
+    readTime(content) {
+      return Math.ceil(this.wordLength(content) / 300)
+    },
+    render(md) {
+      return this.$md.render(md)
     }
   }
 }

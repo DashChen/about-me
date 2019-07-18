@@ -197,9 +197,6 @@
 export default {
   name: 'Admin',
   layout: 'admin',
-  asyncData({ store }) {
-    return store.state.articles
-  },
   data() {
     return {
       window: 1,
@@ -369,6 +366,9 @@ export default {
 
       return Math.ceil(this.pagination.totalItems / this.pagination.rowsPerPage)
     }
+  },
+  asyncData({ store }) {
+    return store.state.articles
   },
   mounted() {
     this.items = this.$_.map(this.articles, this.$_clone)

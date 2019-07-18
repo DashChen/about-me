@@ -2,22 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5b72f5a-7781-41c9-a2f3-b2eedc1a414d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/bread/browse.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/test.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/CustomersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/config/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/config/voyager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/member/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/member/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/components/FirebaseAuth.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/components/FirebaseAuth.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/layouts/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/layouts/admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/middleware/router-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/middleware/router-auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/pages/blog/_date/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/blog/_date/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/pages/admin/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/admin/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/pages/admin/setting.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/admin/setting.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/pages/blog/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/blog/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/pages/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/plugins/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/plugins/firestore.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/firestore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/plugins/lodash.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/lodash.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it/hljs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/plugins/markdownit.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/plugins/markdownit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/server/fireinit.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/server/fireinit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/store/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/store/articles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/store/setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/store/setting.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,37 +43,70 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/assets/js/app.js">
+        <entry file="file://$PROJECT_DIR$/about-me/pages/admin/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            <state relative-caret-position="144">
+              <caret line="197" column="16" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/bread/browse.blade.php">
+        <entry file="file://$PROJECT_DIR$/about-me/pages/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2214">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="306">
+              <caret line="80" column="50" lean-forward="true" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/test.blade.php">
+        <entry file="file://$PROJECT_DIR$/about-me/store/articles.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="130" column="49" lean-forward="true" selection-start-line="130" selection-start-column="49" selection-end-line="130" selection-end-column="49" />
+            <state relative-caret-position="322">
+              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/formfields/relationship.blade.php">
+        <entry file="file://$PROJECT_DIR$/about-me/store/setting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="64" column="68" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="68" />
+            <state relative-caret-position="182">
+              <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/articles/http-header.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="198">
+                <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="80" column="54" lean-forward="true" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/plugins/firestore.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="24" column="7" selection-start-line="19" selection-start-column="6" selection-end-line="24" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,23 +147,22 @@
       <find>browseRows</find>
       <find>details</find>
       <find>$dataContent</find>
+      <find>a.data</find>
     </findStrings>
     <replaceStrings>
       <replace>col-12</replace>
+      <replace>a</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Visual-AMP-x64\www\Apps\icmc\assets</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Beitunzhaoshun" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/Period.php" />
-        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/nopay.blade.php" />
-        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Models/Admin/TransactionLog.php" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/TransactionLogsController.php" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/ResetPasswordController.php" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/auth/passwords/reset.blade.php" />
@@ -124,7 +171,6 @@
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/IndexController.php" />
         <option value="$PROJECT_DIR$/about-me/pages/blog.vue" />
         <option value="$PROJECT_DIR$/about-me/pages/articles/_slug.vue" />
-        <option value="$PROJECT_DIR$/about-me/articles/http-header.md" />
         <option value="C:/Visual-AMP-x64/www/Apps/icmc/controllers/MailPackageController.php" />
         <option value="$PROJECT_DIR$/about-me/pages/about.vue" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Auth/VerificationController.php" />
@@ -137,17 +183,13 @@
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" />
         <option value="$PROJECT_DIR$/about-me/generateFileInfos.js" />
         <option value="$PROJECT_DIR$/about-me/pages/blog/_post/index.vue" />
-        <option value="$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue" />
         <option value="$PROJECT_DIR$/about-me/layouts/default.vue" />
         <option value="$PROJECT_DIR$/about-me/generateManifest.js" />
         <option value="$PROJECT_DIR$/about-me/pages/blog/_date/index.vue" />
-        <option value="$PROJECT_DIR$/about-me/pages/index.vue" />
-        <option value="$PROJECT_DIR$/about-me/pages/blog/index.vue" />
         <option value="$PROJECT_DIR$/about-me/store/index.js" />
         <option value="$PROJECT_DIR$/about-me/pages/contact.vue" />
         <option value="C:/Visual-AMP-x64/www/Apps/icmc/views/newsletter/list.php" />
         <option value="C:/Visual-AMP-x64/www/Apps/icmc/views/booking-facility/modal.php" />
-        <option value="$PROJECT_DIR$/about-me/nuxt.config.js" />
         <option value="$PROJECT_DIR$/about-me/plugins/markdown-it.js" />
         <option value="$PROJECT_DIR$/about-me/plugins/markdownit.js" />
         <option value="$PROJECT_DIR$/about-me/plugins/markdown-it/markdownItHeighlightjs.js" />
@@ -164,6 +206,14 @@
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/config/voyager.php" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/test.blade.php" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/bread/browse.blade.php" />
+        <option value="$PROJECT_DIR$/about-me/nuxt.config.js" />
+        <option value="$PROJECT_DIR$/about-me/articles/http-header.md" />
+        <option value="$PROJECT_DIR$/about-me/plugins/firestore.js" />
+        <option value="$PROJECT_DIR$/about-me/pages/blog/index.vue" />
+        <option value="$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue" />
+        <option value="$PROJECT_DIR$/about-me/store/setting.js" />
+        <option value="$PROJECT_DIR$/about-me/store/articles.js" />
+        <option value="$PROJECT_DIR$/about-me/pages/index.vue" />
       </list>
     </option>
   </component>
@@ -181,7 +231,95 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="articles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="middleware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="_date" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="_date" type="462c0819:PsiDirectoryNode" />
+              <item name="_post" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="about-me" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -270,7 +408,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195842000" />
+    <option name="totallyTimeSpent" value="207950000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -284,7 +422,7 @@
   <component name="ToolWindowManager">
     <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2841823" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2191689" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -297,7 +435,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32960895" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23044693" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22905028" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Migrations" order="12" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.329718" />
@@ -327,47 +465,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/layout/signSwal.js" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/FirstAsset.php" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bootstrap3Asset.php" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/common/signature/signature.js" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/feeAsset.php" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/househodeIndexAsset.php" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/houseThingAsset.php" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/MenuAsset.php" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bootstrap4Asset.php" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/plugin/bootstrapFileinputMasterAsset.php" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bookingFacility/bookingFacilityAsset.php" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/bookingFacility/bookingModalAsset.php" />
-    <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/assets/CommonAsset.php" />
     <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/views/layouts/signText.php" />
     <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/views/layouts/menu.php" />
     <entry file="file://C:/Visual-AMP-x64/www/Apps/icmc/web/js/newsletter/list.js" />
-    <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/about-me/pages/contact.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/pages/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -565,6 +669,121 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2214">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/server/fireinit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/nuxt.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="118" column="5" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/plugins/lodash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/middleware/router-auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/generateManifest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="48" column="62" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="48" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_date/index.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/blog/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/plugins/firebase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/plugins/firestore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="7" selection-start-line="19" selection-start-column="6" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/articles/http-header.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="198">
+            <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/admin/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="197" column="16" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/blog/_date/_post/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="80" column="54" lean-forward="true" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/store/setting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/store/articles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/pages/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="80" column="50" lean-forward="true" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
         </state>
       </provider>
     </entry>
