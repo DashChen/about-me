@@ -20,7 +20,9 @@
     </v-navigation-drawer>
     <v-toolbar clipped-left fixed app>
       <v-toolbar-side-icon class="hidden-md-and-up" @click="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title>
+        <v-btn flat large nuxt to="/admin">{{ title }}</v-btn>
+      </v-toolbar-title>
       <v-spacer />
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn v-for="(item, i) in items" :key="i" :to="item.to" flat>
@@ -45,7 +47,7 @@
     </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
       <div class="mx-auto">
-        <span class="body-2 mr-2">Made: Nuxt + Vuetify</span>
+        <span class="body-2 mr-2">Made: Nuxt + Vuetify + Firebase</span>
         <span>&copy; 2019</span>
       </div>
     </v-footer>

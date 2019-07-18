@@ -10,7 +10,10 @@ export default function({ isServer, store, redirect, route, req, $AUTH }) {
     return
   }
   if (isAdminRoute(route)) {
-    console.log(store.state.auth)
-    // if (store.state.auth.status !== 'loggedIn') redirect('/login')
+    $AUTH.onAuthStateChanged(function(user) {
+      if (!user) {
+        redirect('/login')
+      }
+    })
   }
 }

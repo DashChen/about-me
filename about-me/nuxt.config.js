@@ -1,21 +1,21 @@
+const pkg = require('./package')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 // glob is a small module to read 'globs', useful to get
 // a filtered file list
-const glob = require('glob')
+// const glob = require('glob')
 
 // we acquire an array containing the filenames
 // in the articles directory
-const files = glob.sync('**/*.md', { cwd: 'articles' })
+// const files = glob.sync('**/*.md', { cwd: 'articles' })
 
-const pkg = require('./package')
 // We define a function to trim the '.md' from the filename
 // and return the correct path.
 // This function will be used later
-function getSlugs(post, _) {
-  const slug = post.substr(0, post.lastIndexOf('.'))
-  return `/blog/${slug}`
-}
+// function getSlugs(post, _) {
+//   const slug = post.substr(0, post.lastIndexOf('.'))
+//   return `/blog/${slug}`
+// }
 
 module.exports = {
   mode: 'universal',
@@ -56,7 +56,9 @@ module.exports = {
   plugins: [
     '@/plugins/vuetify',
     '@/plugins/markdownit',
-    '@/plugins/firebase.js'
+    '@/plugins/firebase.js',
+    '@/plugins/firestore.js',
+    '@/plugins/lodash.js'
   ],
 
   /*

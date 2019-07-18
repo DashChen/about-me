@@ -47,7 +47,7 @@
         </div>
       </v-window-item>
       <v-window-item :value="2">
-        <v-card>
+        <v-card class="elevation-0">
           <v-card-title>
             <v-flex
               v-for="(item, index) in headers"
@@ -61,13 +61,21 @@
                 :solo="item.option.solo"
                 :box="item.option.box"
                 :outline="item.option.outline"
+                :rules="
+                  item.value == 'url'
+                    ? [checkUrl]
+                    : item.option.rules
+                    ? item.option.rules
+                    : Array()
+                "
+                :disabled="item.value == 'url' && editedIndex != -1"
                 clearable
               ></v-text-field>
               <v-combobox
                 v-if="item.type == 'combobox'"
                 v-model="editedItem[item.value]"
                 :label="item.text"
-                :items="getComboboxItems(item)"
+                :items="getComboboxItems(item.namespaced, item.stateKey)"
                 :chips="item.option.chips"
                 :multiple="item.option.multiple"
                 :placeholder="item.option.placeholder"
@@ -189,8 +197,8 @@
 export default {
   name: 'Admin',
   layout: 'admin',
-  aysncData(ctx) {
-    console.log(ctx)
+  asyncData({ store }) {
+    return store.state.articles
   },
   data() {
     return {
@@ -244,12 +252,15 @@ export default {
           value: 'type',
           sortable: false,
           align: 'left',
-          type: 'text',
+          type: 'combobox',
+          namespaced: 'articles',
+          stateKey: 'typeList',
           colClass: 'xs12 sm4 pl-2 pr-1',
           option: {
             solo: false,
             box: false,
-            outline: false
+            outline: false,
+            multiple: false
           }
         },
         {
@@ -257,12 +268,15 @@ export default {
           value: 'tag',
           sortable: false,
           align: 'left',
-          type: 'text',
+          type: 'combobox',
+          namespaced: 'articles',
+          stateKey: 'tagList',
           colClass: 'xs12 sm4 px-1',
           option: {
             solo: false,
             box: false,
-            outline: false
+            outline: false,
+            multiple: true
           }
         },
         {
@@ -356,63 +370,27 @@ export default {
       return Math.ceil(this.pagination.totalItems / this.pagination.rowsPerPage)
     }
   },
+  mounted() {
+    this.items = this.$_.map(this.articles, this.$_clone)
+  },
   methods: {
-    getFromFirestore(collection) {
-      return this.$firestore
-        .collection(collection)
-        .get()
-        .then(querySnapshot => {
-          querySnapshot.forEach(doc => {
-            console.log(doc)
-          })
-        })
+    checkUrl(value) {
+      // 檢查是否有不合法字元
+      if (
+        value
+          .toString()
+          .split('')
+          .some(char => !char.match(/[a-z0-9-_.~]/g))
+      ) {
+        return `${value} has Illegal character`
+      }
+      if (this.$store.state.articles.urlList.includes(value)) {
+        return `${value} has used`
+      }
+      return true
     },
-    addItemToFirestore(collection, content) {
-      return this.$firestore
-        .collection(collection)
-        .add({
-          ...content,
-          createdAt: new Date()
-        })
-        .then(res => {
-          console.log('Add Document with ID:', res.id)
-          return res.id
-        })
-        .catch(err => {
-          console.error('Error: Add Document', err)
-          throw err
-        })
-    },
-    updateItemToFirestore(collection, content) {
-      return this.$firestore
-        .collection(collection)
-        .update({
-          ...content,
-          updatedAt: new Date()
-        })
-        .then(res => {
-          console.log('Document successfully updated!')
-        })
-        .catch(err => {
-          console.error('Error updating document: ', err)
-          throw err
-        })
-    },
-    setItemToFirestore(collection, content) {
-      return this.$firestore
-        .collection(collection)
-        .set({
-          ...content,
-          createdAt: new Date(),
-          updatedAt: new Date()
-        })
-        .then(res => {
-          console.log('Document successfully updated!')
-        })
-        .catch(err => {
-          console.error('Error updating document: ', err)
-          throw err
-        })
+    getComboboxItems(namespaced, key) {
+      return this.$store.state[namespaced][key]
     },
     editItem(item) {
       this.editedIndex = this.items.indexOf(item)
@@ -432,13 +410,18 @@ export default {
       }, 300)
     },
     save() {
+      let data
       if (this.editedIndex > -1) {
-        Object.assign(this.items[this.editedIndex], this.editedItem)
-        this.updateItemToFirestore('articles', this.items[this.editedIndex])
+        data = Object.assign(this.items[this.editedIndex], this.editedItem)
       } else {
+        data = this.editedItem
         this.items.push(this.editedItem)
-        this.addItemToFirestore('articles', this.editedItem)
       }
+      this.$store.dispatch('articles/updateList', {
+        index: this.editedIndex,
+        data: data,
+        vm: this
+      })
       this.close()
     },
     transMD(props) {

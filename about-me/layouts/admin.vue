@@ -37,7 +37,7 @@
             <v-list-tile
               v-for="(child, i) in item.children"
               :key="i"
-              @click="go(child)"
+              @click="go(child.url)"
             >
               <v-list-tile-action v-if="child.icon">
                 <v-icon>{{ child.icon }}</v-icon>
@@ -49,7 +49,7 @@
               </v-list-tile-content>
             </v-list-tile>
           </v-list-group>
-          <v-list-tile v-else :key="item.text" @click="go(child)">
+          <v-list-tile v-else :key="item.text" @click="go(item.url)">
             <v-list-tile-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>
@@ -73,16 +73,8 @@
         <v-toolbar-side-icon
           @click.stop="drawer = !drawer"
         ></v-toolbar-side-icon>
-        <span class="hidden-sm-and-down">Admin Control Panel</span>
+        <span class="hidden-sm-and-down">{{ header }}</span>
       </v-toolbar-title>
-      <v-text-field
-        flat
-        solo-inverted
-        hide-details
-        prepend-inner-icon="search"
-        label="Search"
-        class="hidden-sm-and-down"
-      ></v-text-field>
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>apps</v-icon>
@@ -104,42 +96,22 @@ export default {
   name: 'Admin',
   data: function() {
     return {
+      header: '後台管理',
       drawer: null,
       items: [
-        { icon: 'contacts', text: 'Contacts' },
-        { icon: 'history', text: 'Frequently contacted' },
-        { icon: 'content_copy', text: 'Duplicates' },
-        {
-          icon: 'keyboard_arrow_up',
-          'icon-alt': 'keyboard_arrow_down',
-          text: 'Labels',
-          model: true,
-          children: [{ icon: 'add', text: 'Create label' }]
-        },
-        {
-          icon: 'keyboard_arrow_up',
-          'icon-alt': 'keyboard_arrow_down',
-          text: 'More',
-          model: false,
-          children: [
-            { text: 'Import' },
-            { text: 'Export' },
-            { text: 'Print' },
-            { text: 'Undo changes' },
-            { text: 'Other contacts' }
-          ]
-        },
-        { icon: 'settings', text: 'Settings' },
-        { icon: 'chat_bubble', text: 'Send feedback' },
-        { icon: 'help', text: 'Help' },
-        { icon: 'phonelink', text: 'App downloads' },
-        { icon: 'keyboard', text: 'Go to the old version' }
+        { icon: 'table_chart', text: '文章', url: '/admin' },
+        { icon: 'settings', text: '設定', url: '/admin/setting' },
+        { icon: 'home', text: '回首頁', url: '/' },
+        { icon: 'exit_to_app', text: '登出', url: '/logout' }
       ]
     }
   },
   methods: {
-    go(item) {
-      console.log(item)
+    go(url) {
+      if (url === '/logout') {
+        this.dispatch('auth/logout')
+      }
+      this.$router.push(url)
     }
   }
 }

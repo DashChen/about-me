@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { DB, auth, storage, authProviders } from '@/server/fireinit'
+import { DB, auth, firestore, authProviders } from '@/server/fireinit'
 
 const firebasePlugin = {
   install() {
@@ -9,9 +9,9 @@ const firebasePlugin = {
     Vue.__nuxt_firebase_installed__ = true
 
     if (!Vue.prototype.$DB) {
-      Vue.prototype.$firestore = DB
+      Vue.prototype.$DB = DB
       Vue.prototype.$AUTH = auth
-      Vue.prototype.$storage = storage
+      Vue.prototype.$firestore = firestore
       Vue.prototype.$Providers = authProviders
     }
   }
@@ -28,8 +28,8 @@ export default ctx => {
   app.$AUTH = Vue.prototype.$AUTH
   ctx.$AUTH = Vue.prototype.$AUTH
 
-  app.$storage = Vue.prototype.$storage
-  ctx.$storage = Vue.prototype.$storage
+  app.$DB = Vue.prototype.$DB
+  ctx.$DB = Vue.prototype.$DB
 
   app.$Providers = Vue.prototype.$Providers
   ctx.$Providers = Vue.prototype.$Providers
@@ -37,7 +37,7 @@ export default ctx => {
   if (store) {
     store.$firestore = Vue.prototype.$firestore
     store.$AUTH = Vue.prototype.$AUTH
-    store.$storage = Vue.prototype.$storage
+    store.$DB = Vue.prototype.$DB
     store.$Providers = Vue.prototype.$Providers
   }
 }
