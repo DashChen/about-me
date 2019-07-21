@@ -1,5 +1,5 @@
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
-const pkg = require('./package')
+const VuetifyLoaderPlugin = require("vuetify-loader/lib/plugin");
+const pkg = require("./package");
 
 // glob is a small module to read 'globs', useful to get
 // a filtered file list
@@ -18,24 +18,36 @@ const pkg = require('./package')
 // }
 
 module.exports = {
-  mode: 'universal',
-
+  srcDir: "app",
+  mode: "universal",
+  /*
+   * Build configuration
+   */
+  env: {
+    APIKEY: process.env.APIKEY,
+    AUTHDOMAIN: process.env.AUTHDOMAIN,
+    DATABASEURL: process.env.DATABASEURL,
+    PROJECTID: process.env.PROJECTID,
+    STORAGEBUCKET: process.env.STORAGEBUCKET,
+    MESSAGINGSENDERID: process.env.MESSAGINGSENDERID,
+    APPID: process.env.APPID
+  },
   /*
    ** Headers of the page
    */
   head: {
     title: pkg.name,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
-        rel: 'stylesheet',
+        rel: "stylesheet",
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+          "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
       }
     ]
   },
@@ -43,22 +55,22 @@ module.exports = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: "#fff" },
 
   /*
    ** Global CSS
    */
-  css: ['~/assets/style/app.styl', 'firebaseui/dist/firebaseui.css'],
+  css: ["~/assets/style/app.styl", "firebaseui/dist/firebaseui.css"],
 
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '@/plugins/vuetify',
-    '@/plugins/markdownit',
-    '@/plugins/firebase.js',
-    '@/plugins/firestore.js',
-    '@/plugins/lodash.js'
+    "@/plugins/vuetify",
+    "@/plugins/markdownit",
+    "@/plugins/firebase.js",
+    "@/plugins/firestore.js",
+    "@/plugins/lodash.js"
   ],
 
   /*
@@ -66,12 +78,12 @@ module.exports = {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    '@nuxtjs/dotenv'
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
+    "@nuxtjs/dotenv"
   ],
   router: {
-    middleware: 'router-auth'
+    middleware: "router-auth"
   },
   /*
    ** Axios module configuration
@@ -83,11 +95,11 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    transpile: ['vuetify/lib'],
+    transpile: ["vuetify/lib"],
     plugins: [new VuetifyLoaderPlugin()],
     loaders: {
       stylus: {
-        import: ['~assets/style/variables.styl']
+        import: ["~assets/style/variables.styl"]
       }
     },
     /*
@@ -97,25 +109,37 @@ module.exports = {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/
-        })
+        });
       }
       config.module.rules.push({
         test: /\.md$/,
         // https://www.npmjs.com/package/frontmatter-markdown-loader
-        loader: 'frontmatter-markdown-loader',
+        loader: "frontmatter-markdown-loader",
         options: {
           vue: true
         }
-      })
-    }
+      });
+    },
+    presets({ isServer }) {
+      return [
+        [
+          require.resolve("@nuxt/babel-preset-app"),
+          {
+            buildTarget: isServer ? "server" : "client",
+            corejs: { version: 3 }
+          }
+        ]
+      ];
+    },
+    publicPath: "/assets/"
   },
   generate: {
     routes: function() {
       // return files.map(getSlugs)
     }
   }
-}
+};

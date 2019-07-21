@@ -23,12 +23,10 @@
               <tr @click="transMD(props)">
                 <td v-for="(val, key) in props.item" :key="key">{{ val }}</td>
                 <td class="justify-center layout px-0">
-                  <v-icon small class="mr-2" @click="editItem(props.item)">
-                    edit
-                  </v-icon>
-                  <v-icon small @click="deleteItem(props.item)">
-                    delete
-                  </v-icon>
+                  <v-icon small class="mr-2" @click="editItem(props.item)"
+                    >edit</v-icon
+                  >
+                  <v-icon small @click="deleteItem(props.item)">delete</v-icon>
                 </td>
               </tr>
             </template>
@@ -164,19 +162,86 @@
               </v-menu>
               <v-layout v-if="item.type == 'markdown'" row fill-height>
                 <v-flex xs12 sm6 class="px-1">
-                  <v-textarea
-                    v-model="editedItem[item.value]"
-                    :name="item.text"
-                    :label="item.text"
-                    :rows="item.rows ? item.rows : 5"
-                    box
-                  ></v-textarea>
+                  <v-layout align-end justify-space-between row fill-height>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-btn fab dark color="red" @click.stop="delMDTab">
+                          <v-icon dark>clear</v-icon>
+                        </v-btn>
+                      </template>
+                      <span>刪除當前步驟</span>
+                    </v-tooltip>
+
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-btn fab dark color="indago" @click.stop="addMDTab">
+                          <v-icon dark>add</v-icon>
+                        </v-btn>
+                      </template>
+                      <span>新增步驟</span>
+                    </v-tooltip>
+                  </v-layout>
+                  <v-tabs dark color="cyan" show-arrows>
+                    <v-tabs-slider color="yellow"></v-tabs-slider>
+
+                    <v-tab
+                      v-for="(tab, tabIndex) in editItem[item.value]"
+                      :key="tabIndex"
+                      :href="'#tab-' + tabIndex"
+                      @click.stop="choiceMDTabIndex = tabIndex"
+                      >{{ tabIndex + 1 }}</v-tab
+                    >
+
+                    <v-tabs-items>
+                      <v-tab-item
+                        v-for="(tab, tabIndex) in editItem[item.value]"
+                        :key="tabIndex"
+                        :href="'#tab-' + tabIndex"
+                      >
+                        <v-flex xs12 sm6 md3>
+                          <v-text-field
+                            v-model="
+                              editedItem[item.value][choiceMDTabIndex].title
+                            "
+                            label="標題"
+                            placeholder="此步驟的標題"
+                            outline
+                          ></v-text-field>
+                        </v-flex>
+                        <v-textarea
+                          v-model="
+                            editedItem[item.value][choiceMDTabIndex].content
+                          "
+                          :name="item.value[choiceMDTabIndex].title"
+                          :label="item.value[choiceMDTabIndex].title"
+                          :rows="item.rows ? item.rows : 5"
+                          box
+                        ></v-textarea>
+                      </v-tab-item>
+                    </v-tabs-items>
+                  </v-tabs>
                 </v-flex>
                 <v-flex xs12 sm6 class="px-1">
                   <div class="subheading text-xs-center grey darken-1">
                     預覽
                   </div>
-                  <div v-html="render(editedItem[item.value])"></div>
+                  <div>
+                    <v-card>
+                      <v-card-title>
+                        <v-badge left>
+                          <template v-slot:badge>
+                            <span>{{ choiceMDTabIndex }}</span>
+                          </template>
+                        </v-badge>
+                        <span>{{ item.value[choiceMDTabIndex].title }}</span>
+                      </v-card-title>
+                    </v-card>
+                  </div>
+                  <div
+                    v-html="
+                      render(editedItem[item.value][choiceMDTabIndex].content)
+                    "
+                  ></div>
                 </v-flex>
               </v-layout>
             </v-flex>
@@ -322,11 +387,16 @@ export default {
         },
         {
           text: 'MD內容',
-          value: 'content',
+          value: 'contents',
           sortable: false,
           align: 'left',
           type: 'markdown',
           rows: 30
+        },
+        {
+          text: '編/刪',
+          value: 'actions',
+          sortable: false
         }
       ],
       items: [],
@@ -340,7 +410,12 @@ export default {
         locale: '',
         created_at: '',
         updated_at: '',
-        content: ''
+        contents: [
+          {
+            title: '',
+            content: ''
+          }
+        ]
       },
       defaultItem: {
         url: '',
@@ -351,9 +426,15 @@ export default {
         locale: '',
         created_at: '',
         updated_at: '',
-        content: ''
+        content: [
+          {
+            title: '',
+            content: ''
+          }
+        ]
       },
-      html: ''
+      html: '',
+      choiceMDTabIndex: 0
     }
   },
   computed: {
@@ -391,6 +472,15 @@ export default {
     },
     getComboboxItems(namespaced, key) {
       return this.$store.state[namespaced][key]
+    },
+    addMDTab() {
+      this.editItem.contents.push({
+        title: '',
+        content: ''
+      })
+    },
+    delMDTab() {
+      this.$delete(this.editItem.content, this.choiceMDTabIndex)
     },
     editItem(item) {
       this.editedIndex = this.items.indexOf(item)
