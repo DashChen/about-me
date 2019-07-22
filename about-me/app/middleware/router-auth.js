@@ -4,17 +4,18 @@ function isAdminRoute(route) {
   }
 }
 
-export default function({ isServer, store, redirect, route, req, $AUTH }) {
+export default function({ isServer, store, redirect, route, req }) {
   // If nuxt generate, pass this middleware
   if (isServer && !req) {
     return
   }
   if (isAdminRoute(route)) {
-    $AUTH.onAuthStateChanged(function(user) {
+    store.$AUTH.onAuthStateChanged(function(user) {
       if (!user) {
         redirect('/login')
-      } else if (!store.state.auth.isLoggedIn) {
+      } else {
         store.dispatch('auth/gotUser', user)
+        redirect('/admin')
       }
     })
   }

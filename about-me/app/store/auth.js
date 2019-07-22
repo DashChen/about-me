@@ -8,7 +8,8 @@ if (process.browser) {
 export const state = () => ({
   status: '',
   token: token,
-  username: ''
+  username: '',
+  email: ''
 })
 
 export const getters = {
@@ -30,9 +31,19 @@ export const mutations = {
   setUser(state, user) {
     state.status = 'loggedIn'
     state.username = user.displayName
+    state.email = user.email
+    state.token = user.refreshToken
+    if (process.browser) {
+      localStorage.setItem('token', user.refreshToken)
+    }
   },
   logout(state) {
     state.status = 'loggedOut'
     state.username = ''
+    state.email = ''
+    state.token = ''
+    if (process.browser) {
+      localStorage.setItem('token', '')
+    }
   }
 }

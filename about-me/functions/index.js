@@ -4,12 +4,15 @@ const express = require("express");
 const admin = require("firebase-admin");
 const app = express();
 
-admin.initializeApp();
-
 const envs = functions.config().environment;
 
-Object.entries(envs).forEach((k, v) => {
-  process.env[`${k}`.toUpperCase()] = v;
+Object.keys(envs).forEach(v => {
+  process.env[`${v}`.toUpperCase()] = envs[v];
+});
+
+const defaultApp = admin.initializeApp({
+  credential: admin.credential.applicationDefault(),
+  databaseURL: `https://${envs.projectid}.firebaseio.com`
 });
 
 const config = {
@@ -35,6 +38,10 @@ async function handleRequest(req, res) {
   if (!isReady) {
     await readyPromise;
   }
+  console.log(req);
   res.set("Cache-Control", "public, max-age=120, s-maxage=10");
   await nuxt.render(req, res);
 }
+
+app.use(handleRequest);
+exports.ssr = functions.https.onRequest(app);

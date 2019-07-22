@@ -66,11 +66,11 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    "@/plugins/vuetify",
-    "@/plugins/markdownit",
+    "@/plugins/vuetify", // ssr 預設 true , false 代表只在客戶端打包
     "@/plugins/firebase.js",
-    "@/plugins/firestore.js",
-    "@/plugins/lodash.js"
+    { src: "@/plugins/markdownit", ssr: false },
+    { src: "@/plugins/lodash.js", ssr: false },
+    { src: "@/plugins/auth-cookie.js", ssr: false }
   ],
 
   /*
@@ -91,6 +91,7 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
+  serverMiddleware: ["@/serverMiddleware/validateFirebaseToken"],
   /*
    ** Build configuration
    */

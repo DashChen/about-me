@@ -1,0 +1,11 @@
+{
+  "environment": {
+    "databaseurl": "https://self-blog.firebaseio.com",
+    "projectid": "self-blog",
+    "appid": "1:652926792990:web:10da787d38202734",
+    "storagebucket": "self-blog.appspot.com",
+    "apikey": "AIzaSyCv1dVnzgPYdOzpFnXg3JfNV5vIBXL5h50",
+    "authdomain": "self-blog.firebaseapp.com",
+    "messagingsenderid": "652926792990"
+  }
+}
