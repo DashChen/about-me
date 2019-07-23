@@ -48,6 +48,10 @@ module.exports = {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://www.w3schools.com/w3css/4/w3.css"
       }
     ]
   },
@@ -80,7 +84,8 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
-    "@nuxtjs/dotenv"
+    "@nuxtjs/dotenv",
+    "vue-sweetalert2/nuxt"
   ],
   router: {
     middleware: "router-auth"

@@ -13,9 +13,8 @@ export default function({ isServer, store, redirect, route, req }) {
     store.$AUTH.onAuthStateChanged(function(user) {
       if (!user) {
         redirect('/login')
-      } else {
+      } else if (!store.getters['auth/isLoggedIn']) {
         store.dispatch('auth/gotUser', user)
-        redirect('/admin')
       }
     })
   }

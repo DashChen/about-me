@@ -31,9 +31,7 @@
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
     <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list>
@@ -47,7 +45,9 @@
     </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
       <div class="mx-auto">
-        <span class="body-2 mr-2">Made: Nuxt + Vuetify + Firebase</span>
+        <span class="body-2 mr-2"
+          >Made: Nuxt + Vuetify + Firebase + Serverless</span
+        >
         <span>&copy; 2019</span>
       </div>
     </v-footer>

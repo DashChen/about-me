@@ -8,8 +8,8 @@
             <v-divider class="mx-2" inset vertical></v-divider>
             <v-spacer></v-spacer>
             <v-btn color="primary" dark class="mb-2" @click="window = 2"
-              >新增文章</v-btn
-            >
+              >新增文章
+            </v-btn>
           </v-toolbar>
           <v-data-table
             :headers="headers"
@@ -24,15 +24,15 @@
                 <td v-for="(val, key) in props.item" :key="key">{{ val }}</td>
                 <td class="justify-center layout px-0">
                   <v-icon small class="mr-2" @click="editItem(props.item)"
-                    >edit</v-icon
-                  >
+                    >edit
+                  </v-icon>
                   <v-icon small @click="deleteItem(props.item)">delete</v-icon>
                 </td>
               </tr>
             </template>
             <template v-slot:expand="props">
               <v-card flat>
-                <div v-html="html"></div>
+                <code-labs :contents="contents"></code-labs>
               </v-card>
             </template>
           </v-data-table>
@@ -56,9 +56,6 @@
                 v-if="item.type == 'text'"
                 v-model="editedItem[item.value]"
                 :label="item.text"
-                :solo="item.option.solo"
-                :box="item.option.box"
-                :outline="item.option.outline"
                 :rules="
                   item.value == 'url'
                     ? [checkUrl]
@@ -67,6 +64,7 @@
                     : Array()
                 "
                 :disabled="item.value == 'url' && editedIndex != -1"
+                v-bind="options(item)"
                 clearable
               ></v-text-field>
               <v-combobox
@@ -74,25 +72,14 @@
                 v-model="editedItem[item.value]"
                 :label="item.text"
                 :items="getComboboxItems(item.namespaced, item.stateKey)"
-                :chips="item.option.chips"
-                :multiple="item.option.multiple"
-                :placeholder="item.option.placeholder"
-                :type="item.option.type ? item.option.type : 'text'"
-                :rules="item.option.rules ? item.option.rules : Array()"
+                v-bind="options(item)"
               ></v-combobox>
               <v-select
                 v-if="item.type == 'select'"
                 v-model="editedItem[item.value]"
                 :label="item.text"
                 :items="item.option.items"
-                :chips="item.option.chips"
-                :multiple="item.option.multiple"
-                :placeholder="item.option.placeholder"
-                :solo="item.option.solo"
-                :box="item.option.box"
-                :outline="item.option.outline"
-                :type="item.option.type ? item.option.type : 'text'"
-                :rules="item.option.rules ? item.option.rules : Array()"
+                v-bind="options(item)"
                 clearable
               ></v-select>
               <v-checkbox
@@ -120,20 +107,14 @@
                 v-if="item.type == 'slider'"
                 v-model="editedItem[item.value]"
                 :label="item.text"
-                :inverse-label="item.option.inverseLabel"
-                :rules="item.option.rules ? item.option.rules : Array()"
+                v-bind="options(item)"
               ></v-slider>
               <v-textarea
                 v-if="item.type == 'textarea'"
                 v-model="editedItem[item.value]"
                 :name="item.text"
                 :label="item.text"
-                :hint="item.option.hint"
-                :solo="item.option.solo"
-                :box="item.option.box"
-                :outline="item.option.outline"
-                :type="item.option.type ? item.option.type : 'text'"
-                :rules="item.option.rules ? item.option.rules : Array()"
+                v-bind="options(item)"
               ></v-textarea>
               <v-menu
                 v-if="item.type == 'date'"
@@ -160,84 +141,78 @@
                   @input="item.menu = false"
                 ></v-date-picker>
               </v-menu>
-              <v-layout v-if="item.type == 'markdown'" row fill-height>
+              <v-layout
+                v-if="item.type == 'markdown'"
+                row
+                class="brown lighten-4"
+              >
                 <v-flex xs12 sm6 class="px-1">
-                  <v-layout align-end justify-space-between row fill-height>
-                    <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                        <v-btn fab dark color="red" @click.stop="delMDTab">
-                          <v-icon dark>clear</v-icon>
-                        </v-btn>
-                      </template>
-                      <span>刪除當前步驟</span>
-                    </v-tooltip>
-
-                    <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                        <v-btn fab dark color="indago" @click.stop="addMDTab">
-                          <v-icon dark>add</v-icon>
-                        </v-btn>
-                      </template>
-                      <span>新增步驟</span>
-                    </v-tooltip>
-                  </v-layout>
-                  <v-tabs dark color="cyan" show-arrows>
-                    <v-tabs-slider color="yellow"></v-tabs-slider>
-
+                  <v-tabs dark color="cyan" slider-color="yellow" show-arrows>
                     <v-tab
-                      v-for="(tab, tabIndex) in editItem[item.value]"
+                      v-for="(tab, tabIndex) in editedItem[item.value]"
                       :key="tabIndex"
                       :href="'#tab-' + tabIndex"
                       @click.stop="choiceMDTabIndex = tabIndex"
-                      >{{ tabIndex + 1 }}</v-tab
-                    >
-
-                    <v-tabs-items>
-                      <v-tab-item
-                        v-for="(tab, tabIndex) in editItem[item.value]"
-                        :key="tabIndex"
-                        :href="'#tab-' + tabIndex"
-                      >
-                        <v-flex xs12 sm6 md3>
-                          <v-text-field
-                            v-model="
-                              editedItem[item.value][choiceMDTabIndex].title
-                            "
-                            label="標題"
-                            placeholder="此步驟的標題"
-                            outline
-                          ></v-text-field>
-                        </v-flex>
-                        <v-textarea
-                          v-model="
-                            editedItem[item.value][choiceMDTabIndex].content
-                          "
-                          :name="item.value[choiceMDTabIndex].title"
-                          :label="item.value[choiceMDTabIndex].title"
-                          :rows="item.rows ? item.rows : 5"
-                          box
-                        ></v-textarea>
-                      </v-tab-item>
-                    </v-tabs-items>
+                      >{{ '步驟' + (tabIndex + 1) }}
+                    </v-tab>
                   </v-tabs>
+                  <v-layout row>
+                    <v-flex xs4>
+                      <v-subheader>此步驟的標題</v-subheader>
+                    </v-flex>
+                    <v-flex xs8>
+                      <v-text-field
+                        v-model="editedItem[item.value][choiceMDTabIndex].title"
+                        label="標題"
+                        placeholder="請輸入標題"
+                      ></v-text-field>
+                    </v-flex>
+                  </v-layout>
+                  <v-textarea
+                    id="markdown-editor-area"
+                    v-model="editedItem[item.value][choiceMDTabIndex].content"
+                    :rows="item.rows ? item.rows : 5"
+                    box
+                    auto-grow
+                    @resize="changePreview"
+                  ></v-textarea>
+                  <v-layout align-end justify-space-between row>
+                    <v-btn
+                      v-show="choiceMDTabIndex > 0"
+                      small
+                      dark
+                      color="red"
+                      @click.stop="delMDTab"
+                    >
+                      <v-icon dark>clear</v-icon>
+                    </v-btn>
+
+                    <v-btn small dark color="indago" @click.stop="addMDTab">
+                      <v-icon dark>add</v-icon>
+                    </v-btn>
+                  </v-layout>
                 </v-flex>
                 <v-flex xs12 sm6 class="px-1">
-                  <div class="subheading text-xs-center grey darken-1">
+                  <div
+                    class="subheading text-xs-center grey darken-1"
+                    style="height: 48px;"
+                  >
                     預覽
                   </div>
                   <div>
                     <v-card>
                       <v-card-title>
-                        <v-badge left>
-                          <template v-slot:badge>
-                            <span>{{ choiceMDTabIndex }}</span>
-                          </template>
-                        </v-badge>
-                        <span>{{ item.value[choiceMDTabIndex].title }}</span>
+                        <v-layout row justify-center>
+                          <span class="w3-badge mr-1">
+                            {{ choiceMDTabIndex }}
+                          </span>
+                          <span>{{ choiceMDTabTitle }}</span>
+                        </v-layout>
                       </v-card-title>
                     </v-card>
                   </div>
                   <div
+                    id="markdown-preview"
                     v-html="
                       render(editedItem[item.value][choiceMDTabIndex].content)
                     "
@@ -248,8 +223,8 @@
           </v-card-title>
           <v-card-actions>
             <v-btn color="success" class="white--text" @click="save"
-              >保存</v-btn
-            >
+              >保存
+            </v-btn>
             <v-btn color="info" class="white--text" @click="close">取消</v-btn>
           </v-card-actions>
         </v-card>
@@ -259,9 +234,13 @@
 </template>
 
 <script>
+import CodeLabs from '@/components/CodeLabs'
 export default {
   name: 'Admin',
   layout: 'admin',
+  components: {
+    CodeLabs
+  },
   data() {
     return {
       window: 1,
@@ -391,6 +370,7 @@ export default {
           sortable: false,
           align: 'left',
           type: 'markdown',
+          colClass: 'xs12 px-2',
           rows: 30
         },
         {
@@ -426,14 +406,14 @@ export default {
         locale: '',
         created_at: '',
         updated_at: '',
-        content: [
+        contents: [
           {
             title: '',
             content: ''
           }
         ]
       },
-      html: '',
+      contents: [],
       choiceMDTabIndex: 0
     }
   },
@@ -446,6 +426,12 @@ export default {
         return 0
 
       return Math.ceil(this.pagination.totalItems / this.pagination.rowsPerPage)
+    },
+    choiceMDTabTitle() {
+      if (!this.editedItem.contents[this.choiceMDTabIndex]) {
+        return ''
+      }
+      return this.editedItem.contents[this.choiceMDTabIndex].title
     }
   },
   asyncData({ store }) {
@@ -455,6 +441,12 @@ export default {
     this.items = this.$_.map(this.articles, this.$_clone)
   },
   methods: {
+    options(item) {
+      return item.option ? item.option : {}
+    },
+    changePreview() {
+      console.log('change')
+    },
     checkUrl(value) {
       // 檢查是否有不合法字元
       if (
@@ -474,13 +466,27 @@ export default {
       return this.$store.state[namespaced][key]
     },
     addMDTab() {
-      this.editItem.contents.push({
+      this.editedItem.contents.push({
         title: '',
         content: ''
       })
     },
     delMDTab() {
-      this.$delete(this.editItem.content, this.choiceMDTabIndex)
+      this.$swal
+        .fire({
+          type: 'info',
+          title: '刪除步驟',
+          text: '您確定要刪除當前步驟',
+          showCancelButton: true,
+          confirmButtonText: '確定',
+          cancelButtonText: '取消'
+        })
+        .then(res => {
+          if (res.value) {
+            this.$delete(this.editedItem.contents, this.choiceMDTabIndex)
+            this.choiceMDTabIndex -= 1
+          }
+        })
     },
     editItem(item) {
       this.editedIndex = this.items.indexOf(item)
@@ -489,8 +495,20 @@ export default {
     },
     deleteItem(item) {
       const index = this.items.indexOf(item)
-      confirm('Are you sure you want to delete this item?') &&
-        this.items.splice(index, 1)
+      this.$swal
+        .fire({
+          type: 'info',
+          title: '刪除資料',
+          text: '您確定要刪除當前資料',
+          showCancelButton: true,
+          confirmButtonText: '確定',
+          cancelButtonText: '取消'
+        })
+        .then(res => {
+          if (res.value) {
+            this.items.splice(index, 1)
+          }
+        })
     },
     close() {
       this.window = 1
@@ -517,7 +535,7 @@ export default {
     transMD(props) {
       props.expanded = !props.expanded
       this.editedIndex = this.items.indexOf(props.item)
-      this.html = this.$md.render(this.items[this.editedIndex].content)
+      this.contents = props.item.contents
     },
     render(md) {
       return this.$md.render(md)

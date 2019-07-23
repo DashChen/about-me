@@ -31,16 +31,16 @@
               <v-divider vertical></v-divider>
               <v-btn disabled flat>
                 <v-icon small left>far fa-file-word</v-icon>
-                字數統計{{ wordLength(a.content) }}
+                字數統計{{ wordLength(a.contents) }}
               </v-btn>
               <v-divider vertical></v-divider>
               <v-btn disabled flat>
                 <v-icon small flat>access_time</v-icon>
-                閱讀時間 ≒ {{ readTime(a.content) }}
+                閱讀時間 ≒ {{ readTime(a.contents) }}
               </v-btn>
             </v-layout>
           </v-card-title>
-          <v-card-text v-html="render(a.content)" />
+          <v-card-text v-html="render(a.contents[0].content)" />
           <v-card-actions>
             <v-btn class="mx-auto" :to="go(a, index)" nuxt>
               <v-icon>chrome_reader_mode</v-icon>
@@ -65,15 +65,21 @@ export default {
     return {}
   },
   methods: {
-    wordLength(content) {
-      return content
-        .replace(/\s/g, '')
-        .replace(/<s*[^>]*>|<\/s*[^>]*>|[#*`>\-~![\]]/g, '').length
+    wordLength(contents) {
+      let len = 0
+      contents.forEach(function(val) {
+        len += val.content
+          .replace(/\s/g, '')
+          .replace(/<s*[^>]*>|<\/s*[^>]*>|[#*`>\-~![\]]/g, '').length
+      })
+      return len
     },
-    readTime(content) {
-      return Math.ceil(this.wordLength(content) / 300)
+    readTime(contents) {
+      return Math.ceil(this.wordLength(contents) / 300)
     },
     render(md) {
+      // 只取出 150 字
+      md = md.slice(0, 150) + '...'
       return this.$md.render(md)
     },
     go(item, index) {

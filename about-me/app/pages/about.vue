@@ -1,33 +1,29 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <v-layout row fill-height>
-        <v-flex xs12 md8>
-          <v-card style="height: 100%;">
-            <v-card-title primary-title>
-              <h3 class="display-2 mb-3 mx-auto">{{ motto }}</h3>
-              <div
-                class="title"
-                style="line-height: 34px !important;"
-                v-html="introduction"
-              ></div>
-            </v-card-title>
-          </v-card>
-        </v-flex>
-        <v-flex xs12 md4>
-          <v-card>
-            <v-img src="/dash.jpg">
-              <v-container fill-height fluid pa-2>
-                <v-layout fill-height>
-                  <v-flex xs12 align-end flexbox>
-                    <span class="headline white--text" v-text="name"></span>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-img>
-          </v-card>
-        </v-flex>
-      </v-layout>
+  <v-layout row justify-center align-center>
+    <v-flex xs12 md8>
+      <v-card style="height: 100%;">
+        <v-card-title primary-title>
+          <h3 class="display-2 mb-3 mx-auto">{{ motto }}</h3>
+          <div
+            class="title"
+            style="line-height: 34px !important;"
+            v-html="introduction"
+          ></div>
+        </v-card-title>
+      </v-card>
+    </v-flex>
+    <v-flex xs12 md4>
+      <v-card>
+        <v-img src="/dash.jpg">
+          <v-container fill-height fluid pa-2>
+            <v-layout fill-height>
+              <v-flex xs12 align-end flexbox>
+                <span class="headline white--text" v-text="name"></span>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-img>
+      </v-card>
     </v-flex>
   </v-layout>
 </template>
