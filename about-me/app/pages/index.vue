@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <v-container fluid>
     <v-layout
-      v-for="(a, index) in $store.state.articles.articles"
+      v-for="(a, index) in articles"
       :key="index"
       row
       justify-center
@@ -50,19 +50,21 @@
         </v-card>
       </v-flex>
     </v-layout>
-  </div>
+  </v-container>
 </template>
 
 <script>
 export default {
   name: 'Index',
   async asyncData({ store, $firestore }) {
+    console.log(store.state.articles)
     // 取回所有資料
     if (store.state.articles.articles.length === 0) {
       await store.dispatch('articles/getList', $firestore)
       await store.dispatch('setting/getData', $firestore)
+      await store.dispatch('project/getData', $firestore)
     }
-    return {}
+    return store.state.articles
   },
   methods: {
     wordLength(contents) {

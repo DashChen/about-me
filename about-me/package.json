@@ -27,8 +27,13 @@
     "glob": "^7.1.4",
     "highlight.js": "^9.15.8",
     "lodash": "^4.17.14",
+    "node-sass": "^4.12.0",
     "nuxt": "^2.4.0",
+    "sass-loader": "^7.1.0",
+    "sass-resources-loader": "^2.0.1",
     "sweetalert2": "^8.14.0",
+    "tiptap": "^1.23.4",
+    "tiptap-extensions": "^1.24.4",
     "vue-sweetalert2": "^2.1.1",
     "vuetify": "^1.5.5",
     "vuetify-loader": "^1.2.1"

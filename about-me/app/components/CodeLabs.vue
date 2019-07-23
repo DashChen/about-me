@@ -21,6 +21,7 @@
           <v-card
             v-for="(item, index) in contents"
             :key="item.title"
+            color="white"
             class="mb-2"
             @click="nowstep = index + 1"
           >
@@ -34,21 +35,42 @@
               >
                 {{ index + 1 }}
               </span>
-              <span>{{ item.title }}</span>
+              <span
+                :class="{
+                  'grey--text': index + 1 > nowstep,
+                  'grey--text text--darken-2': index + 1 < nowstep,
+                  'black--text font-weight-bold': index + 1 === nowstep
+                }"
+                >{{ item.title }}</span
+              >
             </v-card-title>
           </v-card>
         </div>
       </v-flex>
-      <v-flex id="main" xs12 md9>
+      <v-flex xs12 md9>
         <v-card light class="mx-4 mb-5">
           <v-card-text v-html="render(content)"></v-card-text>
         </v-card>
-        <div class="fixed-bottom">
+        <div
+          class="fixed-bottom"
+          :class="{ 'margin-left': $vuetify.breakpoint.mdAndUp }"
+        >
           <div id="fabs">
-            <v-btn fab color="white">
+            <v-btn
+              fab
+              color="white"
+              :disabled="nowstep === 1"
+              @click.stop="back"
+            >
               <v-icon dark color="black">navigate_before</v-icon>
             </v-btn>
-            <v-btn fab color="primary" class="ml-auto">
+            <v-btn
+              fab
+              color="primary"
+              class="ml-auto"
+              :disabled="nowstep >= contents.length"
+              @click.stop="next"
+            >
               <v-icon dark>navigate_next</v-icon>
             </v-btn>
           </div>
@@ -97,21 +119,25 @@ export default {
     },
     render(md) {
       return this.$md.render(md)
+    },
+    back() {
+      if (this.nowstep !== 1) {
+        this.nowstep -= 1
+      }
+    },
+    next() {
+      if (this.nowstep < this.contents.length) {
+        this.nowstep += 1
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-#main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  position: relative;
-}
 div.fixed-bottom {
-  position: absolute;
-  bottom: 0px;
+  position: fixed;
+  bottom: 40px;
   left: 0;
   right: 0;
   display: flex;
@@ -119,6 +145,9 @@ div.fixed-bottom {
   padding: 0;
   flex-direction: column;
   z-index: 1001;
+}
+div.margin-left {
+  margin-left: 25%;
 }
 #fabs {
   display: flex;

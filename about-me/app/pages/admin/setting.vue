@@ -58,10 +58,272 @@
             label="自我介紹"
             auto-grow
           ></v-textarea>
+          <v-card class="elevation-0">
+            <v-card-title class="pa-0">
+              <span class="headline">能力</span>
+            </v-card-title>
+            <v-card-text class="pa-0">
+              <v-layout v-for="(skill, index) in skills" :key="index" row>
+                <v-flex xs12 sm6 class="px-1">
+                  <v-text-field
+                    v-model="skills[index].title"
+                    label="標題"
+                    clearable
+                  ></v-text-field>
+                </v-flex>
+                <v-flex xs12 sm6 class="px-1">
+                  <v-text-field
+                    v-model="skills[index].content"
+                    label="內容"
+                    clearable
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn
+                fab
+                dark
+                small
+                color="red"
+                class="ml-auto"
+                :disabled="skills.length < 2"
+                @click="del('skills')"
+              >
+                <v-icon>delete</v-icon>
+              </v-btn>
+              <v-btn fab dark small color="primary" @click="add('skills')">
+                <v-icon>add</v-icon>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+          <v-card class="elevation-0">
+            <v-card-title class="pa-0">
+              <span class="headline">重要經歷</span>
+            </v-card-title>
+            <v-card-text class="pa-0">
+              <v-layout
+                v-for="(experience, index) in experiences"
+                :key="index"
+                row
+              >
+                <v-flex xs12 sm10 class="px-1">
+                  <v-layout column>
+                    <v-flex xs12>
+                      <v-text-field
+                        v-model="experiences[index].title"
+                        label="標題"
+                        clearable
+                      ></v-text-field>
+                    </v-flex>
+                    <v-flex xs12>
+                      <v-text-field
+                        v-model="experiences[index].content"
+                        label="內容"
+                        clearable
+                      ></v-text-field>
+                    </v-flex>
+                  </v-layout>
+                </v-flex>
+                <v-flex xs12 sm2 class="px-1 my-auto">
+                  <v-img
+                    :src="experiences[index].img"
+                    aspect-ratio="1"
+                    class="grey lighten-2"
+                    @click.stop.prevent="openUpload"
+                  ></v-img>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    class="d-none upload"
+                    @change="upload($event, 'experiences', index)"
+                  />
+                </v-flex>
+              </v-layout>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn
+                fab
+                dark
+                small
+                color="red"
+                class="ml-auto"
+                :disabled="experiences.length < 2"
+                @click="del('experiences')"
+              >
+                <v-icon>delete</v-icon>
+              </v-btn>
+              <v-btn fab dark small color="primary" @click="add('experiences')">
+                <v-icon>add</v-icon>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+          <v-card class="elevation-0">
+            <v-card-title class="pa-0">
+              <span class="headline">競賽</span>
+            </v-card-title>
+            <v-card-text class="pa-0">
+              <v-layout v-for="(contest, index) in contests" :key="index" row>
+                <v-flex xs12 sm6 class="px-1">
+                  <v-text-field
+                    v-model="contests[index].title"
+                    label="標題(含時間)"
+                    clearable
+                  ></v-text-field>
+                </v-flex>
+                <v-flex xs12 sm6 class="px-1">
+                  <v-text-field
+                    v-model="contests[index].content"
+                    label="內容"
+                    clearable
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn
+                fab
+                dark
+                small
+                color="red"
+                class="ml-auto"
+                :disabled="contests.length < 2"
+                @click="del('contests')"
+              >
+                <v-icon>delete</v-icon>
+              </v-btn>
+              <v-btn fab dark small color="primary" @click="add('contests')">
+                <v-icon>add</v-icon>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+          <v-card class="elevation-0">
+            <v-card-title class="pa-0">
+              <span class="headline">活動</span>
+            </v-card-title>
+            <v-card-text class="pa-0">
+              <v-layout
+                v-for="(activity, index) in activities"
+                :key="index"
+                row
+              >
+                <v-flex xs12 sm6 class="px-1">
+                  <v-text-field
+                    v-model="activities[index].title"
+                    label="標題"
+                    clearable
+                  ></v-text-field>
+                </v-flex>
+                <v-flex xs12 sm6 class="px-1">
+                  <v-text-field
+                    v-model="activities[index].content"
+                    label="內容"
+                    clearable
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn
+                fab
+                dark
+                small
+                color="red"
+                class="ml-auto"
+                :disabled="activities.length < 2"
+                @click="del('activities')"
+              >
+                <v-icon>delete</v-icon>
+              </v-btn>
+              <v-btn fab dark small color="primary" @click="add('activities')">
+                <v-icon>add</v-icon>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+          <v-card class="elevation-0">
+            <v-card-title class="pa-0">
+              <span class="headline">相關證明</span>
+            </v-card-title>
+            <v-card-text class="pa-0">
+              <v-layout
+                v-for="(certification, index) in certifications"
+                :key="index"
+                column
+              >
+                <v-flex xs12>
+                  <v-text-field
+                    v-model="certifications[index].title"
+                    label="標題"
+                    clearable
+                  ></v-text-field>
+                </v-flex>
+                <v-flex xs12>
+                  <v-text-field
+                    v-model="certifications[index].content"
+                    label="內容"
+                    clearable
+                  ></v-text-field>
+                </v-flex>
+                <v-flex xs12 class="px-1 my-auto">
+                  <v-btn
+                    color="blue-grey"
+                    class="white--text ml-auto"
+                    small
+                    @click.stop.prevent="openUpload"
+                  >
+                    上傳多張照片
+                    <v-icon right dark>cloud_upload</v-icon>
+                  </v-btn>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    class="d-none upload"
+                    @change="upload($event, 'certifications', index, true)"
+                  />
+                  <v-layout row>
+                    <v-flex
+                      v-for="(img, i) in certifications[index].img"
+                      :key="i"
+                      xs4
+                    >
+                      <v-img
+                        :src="img"
+                        aspect-ratio="1"
+                        class="grey lighten-2"
+                      ></v-img>
+                    </v-flex>
+                  </v-layout>
+                </v-flex>
+              </v-layout>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn
+                fab
+                dark
+                small
+                color="red"
+                class="ml-auto"
+                :disabled="certifications.length < 2"
+                @click="del('certifications')"
+              >
+                <v-icon>delete</v-icon>
+              </v-btn>
+              <v-btn
+                fab
+                dark
+                small
+                color="primary"
+                @click="add('certifications')"
+              >
+                <v-icon>add</v-icon>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
         </v-card-text>
         <v-divider class="mt-5"></v-divider>
         <v-card-actions>
-          <v-btn flat @click="resetForm">取消</v-btn>
+          <v-btn flat nuxt to="/admin">取消</v-btn>
           <v-spacer></v-spacer>
           <v-slide-x-reverse-transition>
             <v-tooltip v-if="formHasErrors" left>
@@ -84,256 +346,278 @@
 export default {
   name: 'Setting',
   layout: 'admin',
-  data: () => ({
-    countries: [
-      'Afghanistan',
-      'Albania',
-      'Algeria',
-      'Andorra',
-      'Angola',
-      'Anguilla',
-      'Antigua &amp; Barbuda',
-      'Argentina',
-      'Armenia',
-      'Aruba',
-      'Australia',
-      'Austria',
-      'Azerbaijan',
-      'Bahamas',
-      'Bahrain',
-      'Bangladesh',
-      'Barbados',
-      'Belarus',
-      'Belgium',
-      'Belize',
-      'Benin',
-      'Bermuda',
-      'Bhutan',
-      'Bolivia',
-      'Bosnia &amp; Herzegovina',
-      'Botswana',
-      'Brazil',
-      'British Virgin Islands',
-      'Brunei',
-      'Bulgaria',
-      'Burkina Faso',
-      'Burundi',
-      'Cambodia',
-      'Cameroon',
-      'Cape Verde',
-      'Cayman Islands',
-      'Chad',
-      'Chile',
-      'China',
-      'Colombia',
-      'Congo',
-      'Cook Islands',
-      'Costa Rica',
-      'Cote D Ivoire',
-      'Croatia',
-      'Cruise Ship',
-      'Cuba',
-      'Cyprus',
-      'Czech Republic',
-      'Denmark',
-      'Djibouti',
-      'Dominica',
-      'Dominican Republic',
-      'Ecuador',
-      'Egypt',
-      'El Salvador',
-      'Equatorial Guinea',
-      'Estonia',
-      'Ethiopia',
-      'Falkland Islands',
-      'Faroe Islands',
-      'Fiji',
-      'Finland',
-      'France',
-      'French Polynesia',
-      'French West Indies',
-      'Gabon',
-      'Gambia',
-      'Georgia',
-      'Germany',
-      'Ghana',
-      'Gibraltar',
-      'Greece',
-      'Greenland',
-      'Grenada',
-      'Guam',
-      'Guatemala',
-      'Guernsey',
-      'Guinea',
-      'Guinea Bissau',
-      'Guyana',
-      'Haiti',
-      'Honduras',
-      'Hong Kong',
-      'Hungary',
-      'Iceland',
-      'India',
-      'Indonesia',
-      'Iran',
-      'Iraq',
-      'Ireland',
-      'Isle of Man',
-      'Israel',
-      'Italy',
-      'Jamaica',
-      'Japan',
-      'Jersey',
-      'Jordan',
-      'Kazakhstan',
-      'Kenya',
-      'Kuwait',
-      'Kyrgyz Republic',
-      'Laos',
-      'Latvia',
-      'Lebanon',
-      'Lesotho',
-      'Liberia',
-      'Libya',
-      'Liechtenstein',
-      'Lithuania',
-      'Luxembourg',
-      'Macau',
-      'Macedonia',
-      'Madagascar',
-      'Malawi',
-      'Malaysia',
-      'Maldives',
-      'Mali',
-      'Malta',
-      'Mauritania',
-      'Mauritius',
-      'Mexico',
-      'Moldova',
-      'Monaco',
-      'Mongolia',
-      'Montenegro',
-      'Montserrat',
-      'Morocco',
-      'Mozambique',
-      'Namibia',
-      'Nepal',
-      'Netherlands',
-      'Netherlands Antilles',
-      'New Caledonia',
-      'New Zealand',
-      'Nicaragua',
-      'Niger',
-      'Nigeria',
-      'Norway',
-      'Oman',
-      'Pakistan',
-      'Palestine',
-      'Panama',
-      'Papua New Guinea',
-      'Paraguay',
-      'Peru',
-      'Philippines',
-      'Poland',
-      'Portugal',
-      'Puerto Rico',
-      'Qatar',
-      'Reunion',
-      'Romania',
-      'Russia',
-      'Rwanda',
-      'Saint Pierre &amp; Miquelon',
-      'Samoa',
-      'San Marino',
-      'Satellite',
-      'Saudi Arabia',
-      'Senegal',
-      'Serbia',
-      'Seychelles',
-      'Sierra Leone',
-      'Singapore',
-      'Slovakia',
-      'Slovenia',
-      'South Africa',
-      'South Korea',
-      'Spain',
-      'Sri Lanka',
-      'St Kitts &amp; Nevis',
-      'St Lucia',
-      'St Vincent',
-      'St. Lucia',
-      'Sudan',
-      'Suriname',
-      'Swaziland',
-      'Sweden',
-      'Switzerland',
-      'Syria',
-      'Taiwan',
-      'Tajikistan',
-      'Tanzania',
-      'Thailand',
-      "Timor L'Este",
-      'Togo',
-      'Tonga',
-      'Trinidad &amp; Tobago',
-      'Tunisia',
-      'Turkey',
-      'Turkmenistan',
-      'Turks &amp; Caicos',
-      'Uganda',
-      'Ukraine',
-      'United Arab Emirates',
-      'United Kingdom',
-      'United States',
-      'Uruguay',
-      'Uzbekistan',
-      'Venezuela',
-      'Vietnam',
-      'Virgin Islands (US)',
-      'Yemen',
-      'Zambia',
-      'Zimbabwe'
-    ],
-    rules: {
-      required: value => !!value || 'Required.',
-      counter: value => value.length <= 20 || 'Max 20 characters',
-      email: value => {
-        const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        return pattern.test(value) || 'Invalid e-mail.'
-      }
-    },
-    formHasErrors: false
-  }),
-  computed: {
-    form() {
-      return {
-        about: this.about,
-        motto: this.motto,
-        name: this.name,
-        englishName: this.englishName,
-        country: this.country,
-        email: this.email,
-        cellphone: this.cellphone,
-        community: this.community
-      }
+  data: () => {
+    return {
+      countries: [
+        'Afghanistan',
+        'Albania',
+        'Algeria',
+        'Andorra',
+        'Angola',
+        'Anguilla',
+        'Antigua &amp; Barbuda',
+        'Argentina',
+        'Armenia',
+        'Aruba',
+        'Australia',
+        'Austria',
+        'Azerbaijan',
+        'Bahamas',
+        'Bahrain',
+        'Bangladesh',
+        'Barbados',
+        'Belarus',
+        'Belgium',
+        'Belize',
+        'Benin',
+        'Bermuda',
+        'Bhutan',
+        'Bolivia',
+        'Bosnia &amp; Herzegovina',
+        'Botswana',
+        'Brazil',
+        'British Virgin Islands',
+        'Brunei',
+        'Bulgaria',
+        'Burkina Faso',
+        'Burundi',
+        'Cambodia',
+        'Cameroon',
+        'Cape Verde',
+        'Cayman Islands',
+        'Chad',
+        'Chile',
+        'China',
+        'Colombia',
+        'Congo',
+        'Cook Islands',
+        'Costa Rica',
+        'Cote D Ivoire',
+        'Croatia',
+        'Cruise Ship',
+        'Cuba',
+        'Cyprus',
+        'Czech Republic',
+        'Denmark',
+        'Djibouti',
+        'Dominica',
+        'Dominican Republic',
+        'Ecuador',
+        'Egypt',
+        'El Salvador',
+        'Equatorial Guinea',
+        'Estonia',
+        'Ethiopia',
+        'Falkland Islands',
+        'Faroe Islands',
+        'Fiji',
+        'Finland',
+        'France',
+        'French Polynesia',
+        'French West Indies',
+        'Gabon',
+        'Gambia',
+        'Georgia',
+        'Germany',
+        'Ghana',
+        'Gibraltar',
+        'Greece',
+        'Greenland',
+        'Grenada',
+        'Guam',
+        'Guatemala',
+        'Guernsey',
+        'Guinea',
+        'Guinea Bissau',
+        'Guyana',
+        'Haiti',
+        'Honduras',
+        'Hong Kong',
+        'Hungary',
+        'Iceland',
+        'India',
+        'Indonesia',
+        'Iran',
+        'Iraq',
+        'Ireland',
+        'Isle of Man',
+        'Israel',
+        'Italy',
+        'Jamaica',
+        'Japan',
+        'Jersey',
+        'Jordan',
+        'Kazakhstan',
+        'Kenya',
+        'Kuwait',
+        'Kyrgyz Republic',
+        'Laos',
+        'Latvia',
+        'Lebanon',
+        'Lesotho',
+        'Liberia',
+        'Libya',
+        'Liechtenstein',
+        'Lithuania',
+        'Luxembourg',
+        'Macau',
+        'Macedonia',
+        'Madagascar',
+        'Malawi',
+        'Malaysia',
+        'Maldives',
+        'Mali',
+        'Malta',
+        'Mauritania',
+        'Mauritius',
+        'Mexico',
+        'Moldova',
+        'Monaco',
+        'Mongolia',
+        'Montenegro',
+        'Montserrat',
+        'Morocco',
+        'Mozambique',
+        'Namibia',
+        'Nepal',
+        'Netherlands',
+        'Netherlands Antilles',
+        'New Caledonia',
+        'New Zealand',
+        'Nicaragua',
+        'Niger',
+        'Nigeria',
+        'Norway',
+        'Oman',
+        'Pakistan',
+        'Palestine',
+        'Panama',
+        'Papua New Guinea',
+        'Paraguay',
+        'Peru',
+        'Philippines',
+        'Poland',
+        'Portugal',
+        'Puerto Rico',
+        'Qatar',
+        'Reunion',
+        'Romania',
+        'Russia',
+        'Rwanda',
+        'Saint Pierre &amp; Miquelon',
+        'Samoa',
+        'San Marino',
+        'Satellite',
+        'Saudi Arabia',
+        'Senegal',
+        'Serbia',
+        'Seychelles',
+        'Sierra Leone',
+        'Singapore',
+        'Slovakia',
+        'Slovenia',
+        'South Africa',
+        'South Korea',
+        'Spain',
+        'Sri Lanka',
+        'St Kitts &amp; Nevis',
+        'St Lucia',
+        'St Vincent',
+        'St. Lucia',
+        'Sudan',
+        'Suriname',
+        'Swaziland',
+        'Sweden',
+        'Switzerland',
+        'Syria',
+        'Taiwan',
+        'Tajikistan',
+        'Tanzania',
+        'Thailand',
+        "Timor L'Este",
+        'Togo',
+        'Tonga',
+        'Trinidad &amp; Tobago',
+        'Tunisia',
+        'Turkey',
+        'Turkmenistan',
+        'Turks &amp; Caicos',
+        'Uganda',
+        'Ukraine',
+        'United Arab Emirates',
+        'United Kingdom',
+        'United States',
+        'Uruguay',
+        'Uzbekistan',
+        'Venezuela',
+        'Vietnam',
+        'Virgin Islands (US)',
+        'Yemen',
+        'Zambia',
+        'Zimbabwe'
+      ],
+      rules: {
+        required: value => !!value || 'Required.',
+        counter: value => value.length <= 20 || 'Max 20 characters',
+        email: value => {
+          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          return pattern.test(value) || 'Invalid e-mail.'
+        }
+      },
+      formHasErrors: false
     }
   },
   asyncData({ store }) {
     console.log(store.state.setting)
-    return store.state.setting
+    return JSON.parse(JSON.stringify(store.state.setting))
   },
   methods: {
+    add(key) {
+      const item = this.$_.cloneDeep(this.$data[key][0])
+      const self = this
+      this.$_.forOwn(item, function(v, k) {
+        item[k] = self.$_.isArray(v) ? [] : ''
+      })
+      this.$data[key].push(item)
+    },
+    del(key) {
+      this.$data[key].splice(-1, 1)
+    },
+    openUpload(e) {
+      this.$_.forEach(e.target.parentElement.parentElement.children, function(
+        children
+      ) {
+        if (children.tagName === 'INPUT') {
+          children.click()
+        }
+      })
+    },
+    upload(e, key, index, mulit) {
+      if (mulit) {
+        const imgs = []
+        this.$_.forEach(e.target.files, function(file) {
+          imgs.push(URL.createObjectURL(file))
+        })
+        this.$data[key][index].img = imgs
+      } else {
+        this.$data[key][index].img = URL.createObjectURL(e.target.files[0])
+      }
+      e.target.value = null
+    },
     resetForm() {
       this.formHasErrors = false
-
-      Object.keys(this.form).forEach(f => {
+      const form = this.$_.cloneDeep(this.$data)
+      this.$_.omit(form, ['countries', 'rules', 'formHasErrors'])
+      Object.keys(form).forEach(f => {
         this.$refs[f].reset()
       })
     },
     save() {
       this.formHasErrors = false
-      Object.keys(this.form).forEach(f => {
-        if (!this.form[f]) this.formHasErrors = true
-
+      const form = this.$_.cloneDeep(this.$data)
+      this.$_.omit(form, ['countries', 'rules', 'formHasErrors'])
+      Object.keys(form).forEach(f => {
+        if (!form[f]) this.formHasErrors = true
         this.$refs[f].validate(true)
       })
     }

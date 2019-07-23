@@ -1,6 +1,6 @@
 /**
  * 關於作者的相關資料
- * @returns {{englishName: string, mail: string, contry: string, about: string, name: string, motto: string, cellphone: string, front: {layout: string}, community: Array}}
+ * @returns {{englishName: string, country: string, about: string, experience: Array, community: Array, certifications: Array, abilities: Array, contests: Array, activities: Array, name: string, motto: string, cellphone: string, front: {layout: string}, communication: Array, email: string}}
  */
 export const state = () => ({
   about: '',
@@ -10,7 +10,11 @@ export const state = () => ({
   country: '',
   email: '',
   cellphone: '',
-  community: [],
+  skills: [{ title: '', content: '' }],
+  experiences: [{ title: '', content: '', img: '' }],
+  contests: [{ title: '', content: '' }],
+  activities: [{ title: '', content: '' }],
+  certifications: [{ title: '', content: '', img: [] }],
   front: {
     layout: 'defualt'
   }

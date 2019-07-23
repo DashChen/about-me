@@ -1,4 +1,4 @@
-<template>
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
   <v-layout align-start justify-center row fill-height>
     <v-window v-model="window" class="elevation-0">
       <v-window-item :value="1">
@@ -14,14 +14,30 @@
           <v-data-table
             :headers="headers"
             :items="items"
-            class="elevation-0"
+            item-key="url"
+            class="elevation-1"
             :search="search"
             hide-actions
             :pagination.sync="pagination"
           >
             <template v-slot:items="props">
-              <tr @click="transMD(props)">
-                <td v-for="(val, key) in props.item" :key="key">{{ val }}</td>
+              <tr @click="props.expanded = !props.expanded">
+                <td v-for="(val, key) in defaultItem" :key="key">
+                  <div v-if="key === 'contents'">
+                    <span>請點列表展開觀看</span>
+                  </div>
+                  <div v-else-if="Array.isArray(props.item[key])">
+                    <v-chip
+                      v-for="label in props.item[key]"
+                      :key="label"
+                      label
+                      v-text="label"
+                    ></v-chip>
+                  </div>
+                  <div v-else>
+                    {{ props.item[key] }}
+                  </div>
+                </td>
                 <td class="justify-center layout px-0">
                   <v-icon small class="mr-2" @click="editItem(props.item)"
                     >edit
@@ -32,7 +48,9 @@
             </template>
             <template v-slot:expand="props">
               <v-card flat>
-                <code-labs :contents="contents"></code-labs>
+                <v-card-text>
+                  <code-labs :contents="props.item.contents"></code-labs>
+                </v-card-text>
               </v-card>
             </template>
           </v-data-table>
@@ -531,11 +549,6 @@ export default {
         vm: this
       })
       this.close()
-    },
-    transMD(props) {
-      props.expanded = !props.expanded
-      this.editedIndex = this.items.indexOf(props.item)
-      this.contents = props.item.contents
     },
     render(md) {
       return this.$md.render(md)

@@ -43,7 +43,7 @@ module.exports = {
       { hid: "description", name: "description", content: pkg.description }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "Icon.vue", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
         href:
@@ -127,6 +127,19 @@ module.exports = {
         loader: "frontmatter-markdown-loader",
         options: {
           vue: true
+        }
+      });
+      const sassResourcesLoader = {
+        loader: "sass-resources-loader"
+      }
+      // 遍历nuxt定义的loader配置，向里面添加新的配置。
+      config.module.rules.forEach(rule => {
+        if (rule.test.toString() === "/\\.vue$/") {
+          rule.options.loaders.sass.push(sassResourcesLoader)
+          rule.options.loaders.scss.push(sassResourcesLoader);
+        }
+        if (["/\\.sass$/", "/\\.scss$/"].indexOf(rule.test.toString()) !== -1) {
+          rule.use.push(sassResourcesLoader);
         }
       });
     },

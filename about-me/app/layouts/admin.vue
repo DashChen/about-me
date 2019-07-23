@@ -39,8 +39,8 @@
               :key="i"
               @click="go(child.url)"
             >
-              <v-list-tile-action v-if="child.icon">
-                <v-icon>{{ child.icon }}</v-icon>
+              <v-list-tile-action v-if="child.Icon">
+                <v-icon>{{ child.Icon }}</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>
@@ -101,6 +101,7 @@ export default {
       items: [
         { icon: 'table_chart', text: '文章', url: '/admin' },
         { icon: 'settings', text: '設定', url: '/admin/setting' },
+        { icon: 'assignment', text: '專案', url: '/admin/project' },
         { icon: 'home', text: '回首頁', url: '/' },
         { icon: 'exit_to_app', text: '登出', url: '/logout' }
       ]
