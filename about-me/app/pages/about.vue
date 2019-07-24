@@ -1,14 +1,14 @@
 <template>
   <v-container fluid>
-    <v-layout column>
-      <v-flex xs12 md10 offset-md1>
-        <v-card>
+    <v-layout row fill-height>
+      <v-flex xs12 md10 offset-md1 lg8 offset-lg2 xl6 offset-xl3>
+        <v-card class="mb-3">
           <v-card-title>
             <h3 class="display-2 mb-3 mx-auto">{{ motto }}</h3>
             <v-tooltip bottom style="float: right;">
               <template v-slot:activator="{ on }">
                 <v-avatar size="100" v-on="on">
-                  <v-img src="/dash.jpg"></v-img>
+                  <v-img :src="photo"></v-img>
                 </v-avatar>
               </template>
               <span class="headline white--text" v-text="name"></span>
@@ -19,13 +19,85 @@
               <div
                 class="title"
                 style="line-height: 34px !important;"
-                v-html="introduction"
+                v-html="about"
               ></div>
             </v-card-text>
           </v-layout>
         </v-card>
+        <v-card v-for="info in infos" :key="info.title" class="mb-3">
+          <v-card-title class="teal--text text--darken-1 headline">
+            {{ info.title }}
+          </v-card-title>
+          <v-divider></v-divider>
+          <v-card-text>
+            <v-layout row fill-height>
+              <v-flex v-if="info.type == 'list'" xs6 md4 lg3>
+                <v-card v-for="(item, key) in info.items" :key="key">
+                  <v-subheader>{{ item.title }}</v-subheader>
+                  <v-list>
+                    <v-list-item
+                      v-for="(content, ci) in item.content"
+                      :key="ci"
+                    >
+                      <v-list-item-content
+                        v-text="content"
+                      ></v-list-item-content>
+                    </v-list-item>
+                  </v-list>
+                </v-card>
+              </v-flex>
+              <v-flex xs12 v-else-if="info.type == 'timeline'">
+                <v-timeline dense align-top>
+                  <v-slide-x-reverse-transition group hide-on-leave>
+                    <v-timeline-item
+                      v-for="(item, i) in info.items"
+                      :key="item.title"
+                      small
+                      fill-dot
+                    >
+                      <template v-slot:icon>
+                        <span>{{ i }}</span>
+                      </template>
+                      <v-card>
+                        <v-layout row>
+                          <v-flex xs10>
+                            <v-subheader>{{ item.title }}</v-subheader>
+                            <span>{{ item.content }}</span>
+                          </v-flex>
+                          <v-flex xs2 v-show="item.img">
+                            <v-img :src="item.img"></v-img>
+                          </v-flex>
+                        </v-layout>
+                      </v-card>
+                    </v-timeline-item>
+                  </v-slide-x-reverse-transition>
+                </v-timeline>
+              </v-flex>
+              <v-flex xs12 v-else>
+                <v-layout row>
+                  <v-flex xs6 v-for="(item, i) in info.items" :key="i">
+                    <div v-if="i % 2 == 0">
+                      <v-carousel>
+                        <v-carousel-item
+                          v-for="(img, ii) in item.img"
+                          :key="ii"
+                          :src="img"
+                          reverse-transition="fade-transition"
+                          transition="fade-transition"
+                        ></v-carousel-item>
+                      </v-carousel>
+                    </div>
+                    <div v-else>
+                      <v-subheader>{{ item.title }}</v-subheader>
+                      <span>{{ item.content }}</span>
+                    </div>
+                  </v-flex>
+                </v-layout>
+              </v-flex>
+            </v-layout>
+          </v-card-text>
+        </v-card>
       </v-flex>
-      <v-flex xs12 md10 offset-md1></v-flex>
     </v-layout>
   </v-container>
 </template>
@@ -33,18 +105,50 @@
 <script>
 export default {
   name: 'About',
-  asyncData(context) {
-    return {
-      name: '民凰',
-      motto: '為明日科技獻一份力',
-      introduction: `
-        \n2016年12月從海軍司令部少校退伍，期間經歷學習過投資匯市、自寫過交易程式(MT4)，直到2017年10月才正式踏入軟體業大門。
-        \n透過自學完成C#、PHP、Python等語言，使用過Unity寫Hololens;Visual studio 2017 寫 WPF、Service、WCF、Opencv 人臉偵測;
-        \nPhp-laravel、yii2，javascript Vue framework，npm package 等，都有相關專案作品可以呈現。
-        <br/>我會去主動與團隊溝通、持續學習新知並持續貢獻所學的人，因為我希望團隊是不斷進步的。
-        <br/>我相信在每天有限的時間內，團隊的合作與共享，才能讓企業持續發展與強大。
-        <br/>『踏實向前一步，勝過空話百千』，每天都是全新的自己，學習是讓自己更大，才能跟上世界齒輪的轉動，我持續的勉勵自己，我能為科技獻一份力。
-      `
+  computed: {
+    infos() {
+      const items = [
+        {
+          title: '能力 Skills',
+          items: this.checkVal(this.skills),
+          type: 'list'
+        },
+        {
+          title: '重要經歷 Experience',
+          items: this.checkVal(this.experiences),
+          type: 'timeline'
+        },
+        {
+          title: '競賽 Contests',
+          items: this.checkVal(this.contests),
+          type: 'timeline'
+        },
+        {
+          title: '活動 Activities',
+          items: this.checkVal(this.activities),
+          type: 'timeline'
+        },
+        {
+          title: '相關證明 Certifications',
+          items: this.checkVal(this.certifications),
+          type: 'other'
+        }
+      ]
+      return this.$_.remove(items, function(n) {
+        return n.items.length !== 0
+      })
+    }
+  },
+  asyncData({ store }) {
+    console.log(store.state.setting)
+    return JSON.parse(JSON.stringify(store.state.setting))
+  },
+  methods: {
+    checkVal(items) {
+      if (this.$_.isArray(items) && !this.$_.isEmpty(items[0].title)) {
+        return items
+      }
+      return []
     }
   }
 }

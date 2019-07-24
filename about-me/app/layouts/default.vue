@@ -6,7 +6,7 @@
       class="hidden-md-and-up"
       clipped
       dark
-      fixed
+      temporary
     >
       <v-list dense nav dark>
         <v-list-item

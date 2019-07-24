@@ -3,7 +3,7 @@
     <v-navigation-drawer
       v-model="drawer"
       :clipped="$vuetify.breakpoint.lgAndUp"
-      fixed
+      temporary
       app
     >
       <v-list dense nav dark>
@@ -13,6 +13,7 @@
           :to="item.to"
           nuxt
           exact
+          dark
         >
           <v-layout v-if="item.heading" :key="item.heading" row align-center>
             <v-flex xs6>

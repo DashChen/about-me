@@ -2,7 +2,7 @@
   <v-layout align-start justify-center row fill-height>
     <v-window v-model="window" class="elevation-0">
       <v-window-item :value="1">
-        <div>
+        <div class="pa-3">
           <v-data-table
             :headers="headers"
             :items="items"
@@ -26,31 +26,31 @@
                 </v-btn>
               </v-toolbar>
             </template>
-            <template v-slot:body="{ items }">
-              <tbody>
-                <tr v-for="item in items" :key="item.value">
-                  <td v-for="(val, key) in defaultItem" :key="key">
-                    <div v-if="key == 'contents'">
-                      <span>請點列表展開觀看</span>
-                    </div>
-                    <div v-else-if="Array.isArray(item[key])">
-                      <v-chip
-                        v-for="label in item[key]"
-                        :key="label"
-                        label
-                        v-text="label"
-                      ></v-chip>
-                    </div>
-                    <div v-else>
-                      {{ item[key] }}
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </template>
-            <template v-slot:item.action="{ item }">
-              <v-icon small class="mr-2" @click="editItem(item)">edit </v-icon>
-              <v-icon small @click="deleteItem(item)">delete</v-icon>
+            <template v-slot:item="{ item, headers }">
+              <tr>
+                <td v-for="header in headers" :key="header.value">
+                  <div v-if="header.value == 'contents'">
+                    <span>請點列表展開觀看</span>
+                  </div>
+                  <div v-else-if="Array.isArray(item[header.value])">
+                    <v-chip
+                      v-for="label in item[header.value]"
+                      :key="label"
+                      label
+                      v-text="label"
+                    ></v-chip>
+                  </div>
+                  <div v-else-if="header.value == 'action'">
+                    <v-icon small class="mr-2" @click="editItem(item)"
+                      >edit
+                    </v-icon>
+                    <v-icon small @click="deleteItem(item)">delete</v-icon>
+                  </div>
+                  <div v-else>
+                    {{ item[header.value] }}
+                  </div>
+                </td>
+              </tr>
             </template>
             <template v-slot:expanded-item="{ headers, item }">
               <td :colspan="headers.length">
@@ -400,7 +400,7 @@ export default {
         },
         {
           text: '編/刪',
-          value: 'actions',
+          value: 'action',
           sortable: false
         }
       ],

@@ -4,37 +4,55 @@
       <v-card ref="form">
         <v-card-title>設定個人資訊</v-card-title>
         <v-card-text>
-          <v-text-field
-            ref="name"
-            v-model="name"
-            :rules="[() => !!name || 'This field is required']"
-            label="姓名"
-            placeholder="陳民凰"
-            required
-          ></v-text-field>
-          <v-text-field
-            ref="englishName"
-            v-model="englishName"
-            :rules="[() => !!englishName || 'This field is required']"
-            label="英文名"
-            placeholder="Dash Chen"
-            required
-          ></v-text-field>
+          <v-layout row>
+            <v-flex xs8 class="px-2">
+              <v-text-field
+                ref="name"
+                v-model="name"
+                :rules="[() => !!name || 'This field is required']"
+                label="姓名"
+                placeholder="陳民凰"
+                required
+              ></v-text-field>
+              <v-text-field
+                ref="englishName"
+                v-model="englishName"
+                :rules="[() => !!englishName || 'This field is required']"
+                label="英文名"
+                placeholder="Dash Chen"
+                required
+              ></v-text-field>
+              <v-autocomplete
+                ref="country"
+                v-model="country"
+                :rules="[() => !!country || 'This field is required']"
+                :items="countries"
+                label="Country"
+                placeholder="請選擇..."
+                required
+              ></v-autocomplete>
+            </v-flex>
+            <v-flex xs4>
+              <v-img
+                :src="photo"
+                aspect-ratio="1"
+                class="grey lighten-2"
+                @click.stop.prevent="openUpload"
+              ></v-img>
+              <input
+                type="file"
+                accept="image/*"
+                class="d-none upload"
+                @change="upload($event, 'photo', -1)"
+              />
+            </v-flex>
+          </v-layout>
           <v-text-field
             ref="motto"
             v-model="motto"
             label="座右銘"
             placeholder="生命不是要超越別人，而是要超越自己"
           ></v-text-field>
-          <v-autocomplete
-            ref="country"
-            v-model="country"
-            :rules="[() => !!country || 'This field is required']"
-            :items="countries"
-            label="Country"
-            placeholder="請選擇..."
-            required
-          ></v-autocomplete>
           <v-text-field
             ref="email"
             v-model="email"
@@ -63,36 +81,54 @@
               <span class="headline">能力</span>
             </v-card-title>
             <v-card-text class="pa-0">
-              <v-layout v-for="(skill, index) in skills" :key="index" row>
-                <v-flex xs12 sm6 class="px-1">
+              <v-layout
+                v-for="(skill, index) in skills"
+                :key="index"
+                row
+                class="elevation-1"
+              >
+                <v-flex xs12 class="px-1">
                   <v-text-field
                     v-model="skills[index].title"
                     label="標題"
                     clearable
                   ></v-text-field>
                 </v-flex>
-                <v-flex xs12 sm6 class="px-1">
+                <v-flex xs12 class="px-1">
                   <v-text-field
-                    v-model="skills[index].content"
+                    v-for="(content, ci) in skills[index].content"
+                    :key="ci"
+                    v-model="skills[index].content[ci]"
                     label="內容"
                     clearable
+                    :append-outer-icon="
+                      ci + 1 == skills[index].content.length ? 'add' : 'delete'
+                    "
+                    @click:append-outer="addOrDel(index, ci)"
                   ></v-text-field>
                 </v-flex>
               </v-layout>
             </v-card-text>
             <v-card-actions>
               <v-btn
+                v-show="skills.length > 1"
                 fab
                 dark
                 small
                 color="red"
                 class="ml-auto"
-                :disabled="skills.length < 2"
                 @click="del('skills')"
               >
                 <v-icon>delete</v-icon>
               </v-btn>
-              <v-btn fab dark small color="primary" @click="add('skills')">
+              <v-btn
+                fab
+                dark
+                small
+                color="primary"
+                :class="{ 'ml-auto': skills.length < 2 }"
+                @click="add('skills')"
+              >
                 <v-icon>add</v-icon>
               </v-btn>
             </v-card-actions>
@@ -143,17 +179,24 @@
             </v-card-text>
             <v-card-actions>
               <v-btn
+                v-show="experiences.length > 1"
                 fab
                 dark
                 small
                 color="red"
                 class="ml-auto"
-                :disabled="experiences.length < 2"
                 @click="del('experiences')"
               >
                 <v-icon>delete</v-icon>
               </v-btn>
-              <v-btn fab dark small color="primary" @click="add('experiences')">
+              <v-btn
+                fab
+                dark
+                small
+                color="primary"
+                :class="{ 'ml-auto': experiences.length < 2 }"
+                @click="add('experiences')"
+              >
                 <v-icon>add</v-icon>
               </v-btn>
             </v-card-actions>
@@ -182,17 +225,24 @@
             </v-card-text>
             <v-card-actions>
               <v-btn
+                v-show="contests.length > 1"
                 fab
                 dark
                 small
                 color="red"
                 class="ml-auto"
-                :disabled="contests.length < 2"
                 @click="del('contests')"
               >
                 <v-icon>delete</v-icon>
               </v-btn>
-              <v-btn fab dark small color="primary" @click="add('contests')">
+              <v-btn
+                fab
+                dark
+                small
+                color="primary"
+                :class="{ 'ml-auto': contests.length < 2 }"
+                @click="add('contests')"
+              >
                 <v-icon>add</v-icon>
               </v-btn>
             </v-card-actions>
@@ -225,17 +275,24 @@
             </v-card-text>
             <v-card-actions>
               <v-btn
+                v-show="activities.length > 1"
                 fab
                 dark
                 small
                 color="red"
                 class="ml-auto"
-                :disabled="activities.length < 2"
                 @click="del('activities')"
               >
                 <v-icon>delete</v-icon>
               </v-btn>
-              <v-btn fab dark small color="primary" @click="add('activities')">
+              <v-btn
+                fab
+                dark
+                small
+                color="primary"
+                :class="{ 'ml-auto': activities.length < 2 }"
+                @click="add('activities')"
+              >
                 <v-icon>add</v-icon>
               </v-btn>
             </v-card-actions>
@@ -299,12 +356,12 @@
             </v-card-text>
             <v-card-actions>
               <v-btn
+                v-show="certifications.length > 1"
                 fab
                 dark
                 small
                 color="red"
                 class="ml-auto"
-                :disabled="certifications.length < 2"
                 @click="del('certifications')"
               >
                 <v-icon>delete</v-icon>
@@ -314,6 +371,7 @@
                 dark
                 small
                 color="primary"
+                :class="{ 'ml-auto': certifications.length < 2 }"
                 @click="add('certifications')"
               >
                 <v-icon>add</v-icon>
@@ -568,7 +626,6 @@ export default {
     }
   },
   asyncData({ store }) {
-    console.log(store.state.setting)
     return JSON.parse(JSON.stringify(store.state.setting))
   },
   methods: {
@@ -582,6 +639,13 @@ export default {
     },
     del(key) {
       this.$data[key].splice(-1, 1)
+    },
+    addOrDel(index, ci) {
+      if (ci + 1 === this.skills[index].content.length) {
+        this.skills[index].content.push('??')
+      } else {
+        this.$delete(this.skills[index].content, ci)
+      }
     },
     openUpload(e) {
       this.$_.forEach(e.target.parentElement.parentElement.children, function(
@@ -599,6 +663,8 @@ export default {
           imgs.push(URL.createObjectURL(file))
         })
         this.$data[key][index].img = imgs
+      } else if (index === -1) {
+        this[key] = URL.createObjectURL(e.target.files[0])
       } else {
         this.$data[key][index].img = URL.createObjectURL(e.target.files[0])
       }
