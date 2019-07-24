@@ -125,7 +125,6 @@
 </template>
 
 <script>
-import Icon from '@/components/Icon'
 import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
 import {
   Blockquote,
@@ -146,6 +145,7 @@ import {
   Underline,
   History
 } from 'tiptap-extensions'
+import Icon from '@/components/Icon'
 export default {
   name: 'Project',
   layout: 'admin',

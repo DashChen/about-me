@@ -77,7 +77,7 @@ export const actions = {
  */
 export const mutations = {
   changeState(state, { key, data, index }) {
-    if (!state.hasOwnProperty(key)) {
+    if (!Object.prototype.hasOwnProperty.call(state, key)) {
       return false
     }
     if (index > -1) {

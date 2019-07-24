@@ -1,49 +1,53 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer v-model="drawer" clipped fixed app>
-      <v-list>
-        <v-list-tile
+  <v-app>
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      class="hidden-md-and-up"
+      clipped
+      dark
+      fixed
+    >
+      <v-list dense nav dark>
+        <v-list-item
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
-          router
+          nuxt
           exact
         >
-          <v-list-tile-action>
+          <v-list-item-icon>
             <v-icon>{{ item.Icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title" />
-          </v-list-tile-content>
-        </v-list-tile>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title" />
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar clipped-left fixed app>
-      <v-toolbar-side-icon class="hidden-md-and-up" @click="drawer = !drawer" />
+    <v-app-bar dense dark app clipped-left fixed hide-on-scroll>
+      <v-app-bar-nav-icon
+        class="hidden-md-and-up"
+        @click="drawer = !drawer"
+      ></v-app-bar-nav-icon>
       <v-toolbar-title>
-        <v-btn flat large nuxt to="/admin">{{ title }}</v-btn>
+        <v-btn text large nuxt to="/admin">{{ title }}</v-btn>
       </v-toolbar-title>
       <v-spacer />
-      <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn v-for="(item, i) in items" :key="i" :to="item.to" flat>
-          {{ item.title }}
-        </v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
+      <v-btn
+        v-for="(item, i) in items"
+        :key="i"
+        :to="item.to"
+        text
+        class="hidden-sm-and-down"
+      >
+        {{ item.title }}
+      </v-btn>
+    </v-app-bar>
     <v-content>
       <nuxt />
     </v-content>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
+    <v-footer :fixed="fixed" dark app>
       <div class="mx-auto">
         <span class="body-2 mr-2"
           >Made: Nuxt + Vuetify + Firebase + Serverless</span

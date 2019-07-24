@@ -4,9 +4,9 @@ function isAdminRoute(route) {
   }
 }
 
-export default function({ isServer, store, redirect, route, req }) {
+export default function({ store, redirect, route, req }) {
   // If nuxt generate, pass this middleware
-  if (isServer && !req) {
+  if (process.server && !req) {
     return
   }
   if (isAdminRoute(route)) {

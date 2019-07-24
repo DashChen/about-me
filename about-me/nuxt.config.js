@@ -1,4 +1,3 @@
-const VuetifyLoaderPlugin = require("vuetify-loader/lib/plugin");
 const pkg = require("./package");
 
 // glob is a small module to read 'globs', useful to get
@@ -64,16 +63,19 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ["~/assets/style/app.styl", "firebaseui/dist/firebaseui.css"],
+  css: [
+    "firebaseui/dist/firebaseui.css",
+    "@fortawesome/fontawesome-free/css/all.css"
+  ],
 
   /*
    ** Plugins to load before mounting the App
+   * ssr 預設 true , false 代表只在客戶端打包
    */
   plugins: [
-    "@/plugins/vuetify", // ssr 預設 true , false 代表只在客戶端打包
     "@/plugins/firebase.js",
+    "@/plugins/lodash.js",
     { src: "@/plugins/markdownit", ssr: false },
-    { src: "@/plugins/lodash.js", ssr: false },
     { src: "@/plugins/auth-cookie.js", ssr: false }
   ],
 
@@ -96,18 +98,21 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
+
+  devModules: ["@nuxtjs/vuetify"],
+
+  vuetify: {
+    /* module options */
+    icons: {
+      iconfont: "fa"
+    }
+  },
+
   serverMiddleware: ["@/serverMiddleware/validateFirebaseToken"],
   /*
    ** Build configuration
    */
   build: {
-    transpile: ["vuetify/lib"],
-    plugins: [new VuetifyLoaderPlugin()],
-    loaders: {
-      stylus: {
-        import: ["~assets/style/variables.styl"]
-      }
-    },
     /*
      ** You can extend webpack config here
      */
@@ -121,6 +126,7 @@ module.exports = {
           exclude: /(node_modules)/
         });
       }
+
       config.module.rules.push({
         test: /\.md$/,
         // https://www.npmjs.com/package/frontmatter-markdown-loader
@@ -129,30 +135,19 @@ module.exports = {
           vue: true
         }
       });
-      const sassResourcesLoader = {
-        loader: "sass-resources-loader"
-      }
-      // 遍历nuxt定义的loader配置，向里面添加新的配置。
-      config.module.rules.forEach(rule => {
-        if (rule.test.toString() === "/\\.vue$/") {
-          rule.options.loaders.sass.push(sassResourcesLoader)
-          rule.options.loaders.scss.push(sassResourcesLoader);
-        }
-        if (["/\\.sass$/", "/\\.scss$/"].indexOf(rule.test.toString()) !== -1) {
-          rule.use.push(sassResourcesLoader);
-        }
-      });
     },
-    presets({ isServer }) {
-      return [
-        [
-          require.resolve("@nuxt/babel-preset-app"),
-          {
-            buildTarget: isServer ? "server" : "client",
-            corejs: { version: 3 }
-          }
-        ]
-      ];
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            require.resolve("@nuxt/babel-preset-app"),
+            {
+              buildTarget: isServer ? "server" : "client",
+              corejs: { version: 3 }
+            }
+          ]
+        ];
+      }
     },
     publicPath: "/assets/"
   },

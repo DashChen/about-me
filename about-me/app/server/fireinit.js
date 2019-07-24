@@ -1,7 +1,9 @@
-import * as firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/firestore'
-import 'firebase/database'
+const app = require('@firebase/app')
+require('@firebase/auth')
+require('@firebase/firestore')
+require('@firebase/database')
+
+const firebase = app.firebase
 
 const config = {
   apiKey: process.env.APIKEY,

@@ -6,8 +6,14 @@
       fixed
       app
     >
-      <v-list dense>
-        <template v-for="item in items">
+      <v-list dense nav dark>
+        <v-list-item
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          nuxt
+          exact
+        >
           <v-layout v-if="item.heading" :key="item.heading" row align-center>
             <v-flex xs6>
               <v-subheader v-if="item.heading">
@@ -20,73 +26,64 @@
           </v-layout>
           <v-list-group
             v-else-if="item.children"
-            :key="item.text"
+            :key="item.title"
             v-model="item.model"
             :prepend-icon="item.model ? item.icon : item['icon-alt']"
             append-icon=""
           >
             <template v-slot:activator>
-              <v-list-tile>
-                <v-list-tile-content>
-                  <v-list-tile-title>
-                    {{ item.text }}
-                  </v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
             </template>
-            <v-list-tile
-              v-for="(child, i) in item.children"
-              :key="i"
-              @click="go(child.url)"
+            <v-list-item
+              v-for="(child, ci) in item.children"
+              :key="ci"
+              link
+              @click="go(child.to)"
             >
-              <v-list-tile-action v-if="child.Icon">
-                <v-icon>{{ child.Icon }}</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-title>
-                  {{ child.text }}
-                </v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
+              <v-list-item-title v-text="child.title"></v-list-item-title>
+              <v-list-item-icon v-if="child.icon">
+                <v-icon v-text="child.icon"></v-icon>
+              </v-list-item-icon>
+            </v-list-item>
           </v-list-group>
-          <v-list-tile v-else :key="item.text" @click="go(item.url)">
-            <v-list-tile-action>
+          <v-layout v-else :key="item.title" @click="go(item.to)">
+            <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>
-                {{ item.text }}
-              </v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </template>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title v-text="item.title" />
+            </v-list-item-content>
+          </v-layout>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar
-      :clipped-left="$vuetify.breakpoint.lgAndUp"
-      color="blue darken-3"
+    <v-app-bar
+      dense
       dark
       app
+      clipped-left
       fixed
+      hide-on-scroll
+      color="blue darken-3"
     >
-      <v-toolbar-title style="width: 300px;" class="ml-0 pl-3">
-        <v-toolbar-side-icon
-          @click.stop="drawer = !drawer"
-        ></v-toolbar-side-icon>
-        <span class="hidden-sm-and-down">{{ header }}</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>apps</v-icon>
+      <v-app-bar-nav-icon
+        class="hidden-md-and-up"
+        @click="drawer = !drawer"
+      ></v-app-bar-nav-icon>
+      {{ header }}
+      <v-spacer />
+      <v-btn
+        v-for="(item, i) in items"
+        :key="i"
+        :to="item.to"
+        text
+        class="hidden-sm-and-down ml-2"
+      >
+        {{ item.title }}
       </v-btn>
-      <v-btn icon>
-        <v-icon>notifications</v-icon>
-      </v-btn>
-    </v-toolbar>
+    </v-app-bar>
     <v-content>
-      <v-container fluid align-start>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
   </v-app>
 </template>
@@ -97,13 +94,13 @@ export default {
   data: function() {
     return {
       header: '後台管理',
-      drawer: null,
+      drawer: false,
       items: [
-        { icon: 'table_chart', text: '文章', url: '/admin' },
-        { icon: 'settings', text: '設定', url: '/admin/setting' },
-        { icon: 'assignment', text: '專案', url: '/admin/project' },
-        { icon: 'home', text: '回首頁', url: '/' },
-        { icon: 'exit_to_app', text: '登出', url: '/logout' }
+        { icon: 'table_chart', title: '文章', to: '/admin/list' },
+        { icon: 'settings', title: '設定', to: '/admin/setting' },
+        { icon: 'assignment', title: '專案', to: '/admin/project' },
+        { icon: 'home', title: '回首頁', to: '/' },
+        { icon: 'exit_to_app', title: '登出', to: '/logout' }
       ]
     }
   },

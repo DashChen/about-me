@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-layout row align-center>
+    <v-layout column>
       <v-flex xs12 md10 offset-md1>
         <v-card>
           <v-card-title>
@@ -25,6 +25,7 @@
           </v-layout>
         </v-card>
       </v-flex>
+      <v-flex xs12 md10 offset-md1></v-flex>
     </v-layout>
   </v-container>
 </template>

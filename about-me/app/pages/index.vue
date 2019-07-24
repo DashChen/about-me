@@ -14,28 +14,28 @@
               {{ a.subject }}
             </v-flex>
             <v-layout justify-center align-center row wrap>
-              <v-btn disabled flat>
+              <v-btn disabled text>
                 <v-icon small left>calendar_today</v-icon>
                 發表於{{ a.created_at }}
               </v-btn>
               <v-divider vertical></v-divider>
-              <v-btn disabled flat>
+              <v-btn disabled text>
                 <v-icon small left>update</v-icon>
                 更新於{{ a.updated_at }}
               </v-btn>
               <v-divider vertical></v-divider>
-              <v-btn disabled flat>
+              <v-btn disabled text>
                 <v-icon small left>tab</v-icon>
                 分類於{{ a.type }}
               </v-btn>
               <v-divider vertical></v-divider>
-              <v-btn disabled flat>
+              <v-btn disabled text>
                 <v-icon small left>far fa-file-word</v-icon>
                 字數統計{{ wordLength(a.contents) }}
               </v-btn>
               <v-divider vertical></v-divider>
-              <v-btn disabled flat>
-                <v-icon small flat>access_time</v-icon>
+              <v-btn disabled text>
+                <v-icon small text>access_time</v-icon>
                 閱讀時間 ≒ {{ readTime(a.contents) }}
               </v-btn>
             </v-layout>
@@ -56,15 +56,16 @@
 <script>
 export default {
   name: 'Index',
-  async asyncData({ store, $firestore }) {
-    console.log(store.state.articles)
+  asyncData({ store }) {
+    return store.state.articles
+  },
+  async fetch({ store, $firestore }) {
     // 取回所有資料
     if (store.state.articles.articles.length === 0) {
       await store.dispatch('articles/getList', $firestore)
       await store.dispatch('setting/getData', $firestore)
       await store.dispatch('project/getData', $firestore)
     }
-    return store.state.articles
   },
   methods: {
     wordLength(contents) {
