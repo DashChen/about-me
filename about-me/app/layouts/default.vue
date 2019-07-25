@@ -17,7 +17,7 @@
           exact
         >
           <v-list-item-icon>
-            <v-icon>{{ item.Icon }}</v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />

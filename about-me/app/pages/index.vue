@@ -10,7 +10,7 @@
       <v-flex xs12 sm10 md8>
         <v-card dark>
           <v-card-title>
-            <v-flex xs12 tag="h1" class="display-1 text-xs-center">
+            <v-flex xs12 tag="h1" class="display-1 text-center">
               {{ a.subject }}
             </v-flex>
             <v-layout justify-center align-center row wrap>

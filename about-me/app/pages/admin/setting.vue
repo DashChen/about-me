@@ -69,24 +69,43 @@
             placeholder="(886)9XX-XXXXXX"
             required
           ></v-text-field>
-          <v-textarea
-            v-model="about"
-            name="input-7-1"
-            filled
-            label="自我介紹"
-            auto-grow
-          ></v-textarea>
+          <rich-text
+            :original-content="$store.state.setting.about"
+            menubar-class="elevation-0"
+            content-class="grey lighten-5"
+            @change-content="about = $event"
+          >
+          </rich-text>
+          <v-card class="elevation-0">
+            <v-card-title class="pa-0">
+              <span class="headline">社群媒體</span>
+            </v-card-title>
+            <v-card-text class="pa-0">
+              <v-layout
+                v-for="(item, index) in communities"
+                :key="index"
+                row
+                class="px-2"
+              >
+                <v-flex xs2 class="px-1 ma-auto">
+                  <v-icon v-text="item.icon"></v-icon>
+                </v-flex>
+                <v-flex xs10 class="px-1">
+                  <v-text-field
+                    v-model="communities[index].href"
+                    label="網址"
+                    clearable
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+            </v-card-text>
+          </v-card>
           <v-card class="elevation-0">
             <v-card-title class="pa-0">
               <span class="headline">能力</span>
             </v-card-title>
-            <v-card-text class="pa-0">
-              <v-layout
-                v-for="(skill, index) in skills"
-                :key="index"
-                row
-                class="elevation-1"
-              >
+            <v-card-text class="pa-2">
+              <v-layout v-for="(skill, index) in skills" :key="index" row>
                 <v-flex xs12 class="px-1">
                   <v-text-field
                     v-model="skills[index].title"
@@ -401,9 +420,13 @@
 </template>
 
 <script>
+import RichText from '@/components/RichTextEditor'
 export default {
   name: 'Setting',
   layout: 'admin',
+  components: {
+    RichText
+  },
   data: () => {
     return {
       countries: [
@@ -686,6 +709,8 @@ export default {
         if (!form[f]) this.formHasErrors = true
         this.$refs[f].validate(true)
       })
+      // 逐一比對不同處，因為圖片要上傳到雲端空間，要先將圖片上傳後取回 url
+      // 有變更圖片要重新上傳，顯示上傳畫面
     }
   }
 }

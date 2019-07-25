@@ -4,6 +4,7 @@
       v-model="drawer"
       :clipped="$vuetify.breakpoint.lgAndUp"
       temporary
+      dark
       app
     >
       <v-list dense nav dark>

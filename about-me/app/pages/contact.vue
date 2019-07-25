@@ -18,17 +18,13 @@
             }}
           </v-flex>
           <v-flex>
-            <a class="mx-2" :href="$store.state.setting.facebook">
-              <v-icon dark>fab fa-facebook-square</v-icon>
-            </a>
-            <a class="mx-2" :href="$store.state.setting.linkedin">
-              <v-icon dark>fab fa-linkedin</v-icon>
-            </a>
-            <a class="mx-2" :href="$store.state.setting.line">
-              <v-icon dark>fab fa-line</v-icon>
-            </a>
-            <a class="mx-2" :href="$store.state.setting.github">
-              <v-icon dark>fab fa-github-square</v-icon>
+            <a
+              v-for="(item, index) in $store.state.setting.communities"
+              :key="index"
+              class="mx-2"
+              :href="item.href"
+            >
+              <v-icon dark v-text="item.icon"></v-icon>
             </a>
           </v-flex>
           <v-flex>

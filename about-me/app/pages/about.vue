@@ -46,7 +46,7 @@
                   </v-list>
                 </v-card>
               </v-flex>
-              <v-flex xs12 v-else-if="info.type == 'timeline'">
+              <v-flex v-else-if="info.type == 'timeline'" xs12>
                 <v-timeline dense align-top>
                   <v-slide-x-reverse-transition group hide-on-leave>
                     <v-timeline-item
@@ -64,7 +64,7 @@
                             <v-subheader>{{ item.title }}</v-subheader>
                             <span>{{ item.content }}</span>
                           </v-flex>
-                          <v-flex xs2 v-show="item.img">
+                          <v-flex v-show="item.img" xs2>
                             <v-img :src="item.img"></v-img>
                           </v-flex>
                         </v-layout>
@@ -73,9 +73,9 @@
                   </v-slide-x-reverse-transition>
                 </v-timeline>
               </v-flex>
-              <v-flex xs12 v-else>
+              <v-flex v-else xs12>
                 <v-layout row>
-                  <v-flex xs6 v-for="(item, i) in info.items" :key="i">
+                  <v-flex v-for="(item, i) in info.items" :key="i" xs6>
                     <div v-if="i % 2 == 0">
                       <v-carousel>
                         <v-carousel-item

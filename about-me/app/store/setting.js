@@ -18,6 +18,24 @@ export const state = () => ({
   country: 'Taiwain',
   email: '',
   cellphone: '',
+  communities: [
+    {
+      icon: 'fab fa-facebook-square',
+      href: ''
+    },
+    {
+      icon: 'fab fa-linkedin',
+      href: ''
+    },
+    {
+      icon: 'fab fa-line',
+      href: ''
+    },
+    {
+      icon: 'fab fa-github-square',
+      href: ''
+    }
+  ],
   skills: [{ title: '', content: ['??'] }],
   experiences: [{ title: '', content: '', img: '' }],
   contests: [{ title: '', content: '' }],
