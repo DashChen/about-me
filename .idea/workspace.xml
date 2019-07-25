@@ -5,27 +5,16 @@
       <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" beforeDir="false" afterPath="$PROJECT_DIR$/../AboutMe12/dashchen.tw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Voyager/CustomersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/config/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/config/voyager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/member/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/member/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-me/app/components/RichTextEditor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/components/RichTextEditor.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/app/layouts/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/layouts/admin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/app/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/app/middleware/router-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/middleware/router-auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/app/pages/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/pages/about.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/app/pages/admin/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/pages/admin/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/app/pages/admin/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/pages/admin/list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/app/pages/admin/project.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/pages/admin/project.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/app/pages/admin/setting.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/pages/admin/setting.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/app/pages/contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/pages/contact.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/app/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/app/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/plugins/vuetify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/app/server/fireinit.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/server/fireinit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/app/store/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/store/articles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-me/app/store/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/store/project.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-me/app/store/setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/about-me/app/store/setting.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,11 +25,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/about-me/app/pages/admin/list.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="256">
+              <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+              <folding>
+                <element signature="n#v-card#0;n#v-window-item#1;n#v-window#0;n#v-layout#0;n#template#0;n#!!top" />
+                <element signature="e#9788#12798#0" />
+                <element signature="e#12858#13130#0" />
+                <element signature="e#13151#13423#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-me/app/store/articles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -48,11 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/about-me/app/pages/admin/setting.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="644" column="45" selection-start-line="644" selection-start-column="45" selection-end-line="644" selection-end-column="45" />
-              <folding>
-                <element signature="e#11512#16256#0" />
-              </folding>
+            <state relative-caret-position="12006">
+              <caret line="667" column="45" selection-start-line="667" selection-start-column="45" selection-end-line="667" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -60,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/about-me/app/pages/about.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="137" column="35" lean-forward="true" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
+            <state relative-caret-position="2466">
+              <caret line="137" column="35" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#v-tooltip#0;n#v-card-title#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#v-card-text#0;n#v-layout#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
@@ -73,16 +74,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/about-me/app/pages/contact.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="252">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/about-me/app/store/setting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="306">
               <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
             </state>
           </provider>
@@ -100,7 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>has</find>
       <find>checkedIndex</find>
       <find>col-xs-12</find>
       <find>re_pay</find>
@@ -127,6 +127,10 @@
       <find>a.data</find>
       <find>community</find>
       <find>sass</find>
+      <find>box</find>
+      <find>lazy</find>
+      <find>slice</find>
+      <find>items</find>
     </findStrings>
     <replaceStrings>
       <replace>col-12</replace>
@@ -142,8 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Beitunzhaoshun/app/Http/Controllers/Financial/LotteryController.php" />
-        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/lottery/lottery.blade.php" />
         <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php" />
         <option value="$PROJECT_DIR$/about-me/generateFileInfos.js" />
         <option value="$PROJECT_DIR$/about-me/pages/blog/_post/index.vue" />
@@ -186,13 +188,15 @@
         <option value="$PROJECT_DIR$/about-me/app/components/icon.vue" />
         <option value="$PROJECT_DIR$/about-me/app/pages/admin/project.vue" />
         <option value="$PROJECT_DIR$/about-me/nuxt.config.js" />
-        <option value="$PROJECT_DIR$/about-me/app/pages/admin/list.vue" />
         <option value="$PROJECT_DIR$/about-me/app/layouts/admin.vue" />
         <option value="$PROJECT_DIR$/about-me/app/layouts/default.vue" />
         <option value="$PROJECT_DIR$/about-me/app/pages/admin/setting.vue" />
         <option value="$PROJECT_DIR$/about-me/app/pages/about.vue" />
         <option value="$PROJECT_DIR$/about-me/app/pages/contact.vue" />
         <option value="$PROJECT_DIR$/about-me/app/store/setting.js" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/menu/default.blade.php" />
+        <option value="$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/about-me/app/pages/admin/list.vue" />
       </list>
     </option>
   </component>
@@ -228,27 +232,6 @@
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
               <item name="about-me" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="about-me" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="middleware" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="about-me" type="b2602c69:ProjectViewProjectNode" />
@@ -361,12 +344,13 @@
       <workItem from="1561880812948" duration="1651000" />
       <workItem from="1563879928905" duration="21377000" />
       <workItem from="1563964562414" duration="1651000" />
-      <workItem from="1563976968003" duration="9456000" />
+      <workItem from="1563976968003" duration="9697000" />
+      <workItem from="1564065033082" duration="2744000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240434000" />
+    <option name="totallyTimeSpent" value="243419000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -381,7 +365,7 @@
     <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2272118" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22989276" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -394,7 +378,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32960895" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22905028" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22905028" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Migrations" order="12" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.329718" />
@@ -424,60 +408,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/bread/browse.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6102">
-          <caret line="339" column="83" selection-end-line="383" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/bread/partials/actions.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/tools/database/edit-add.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/resources/views/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Http/Controllers/VoyagerBreadController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3887">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="60" column="39" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Http/Controllers/VoyagerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Http/Controllers/VoyagerBaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="240" column="72" selection-start-line="240" selection-start-column="65" selection-end-line="240" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Providers/VoyagerEventServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding>
-            <element signature="e#41#125#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/vendor/tcg/voyager/src/Providers/VoyagerDummyServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-525">
@@ -567,13 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/app/store/articles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/about-me/app/components/CodeLabs.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -653,23 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/app/pages/admin/list.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about-me/app/pages/admin/setting.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="644" column="45" selection-start-line="644" selection-start-column="45" selection-end-line="644" selection-end-column="45" />
-          <folding>
-            <element signature="e#11512#16256#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/about-me/app/layouts/default.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -677,10 +583,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/app/pages/admin/setting.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12006">
+          <caret line="667" column="45" selection-start-line="667" selection-start-column="45" selection-end-line="667" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/about-me/app/pages/about.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="137" column="35" lean-forward="true" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
+        <state relative-caret-position="2466">
+          <caret line="137" column="35" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#v-tooltip#0;n#v-card-title#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#v-card-text#0;n#v-layout#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
@@ -690,15 +603,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/about-me/app/pages/contact.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
+        <state relative-caret-position="252">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/public/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/js/common.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/public/js/common/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1060" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/payment/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Beitunzhaoshun/resources/views/vendor/voyager/menu/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/app/store/articles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/about-me/app/store/setting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="306">
           <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-me/app/pages/admin/list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+          <folding>
+            <element signature="n#v-card#0;n#v-window-item#1;n#v-window#0;n#v-layout#0;n#template#0;n#!!top" />
+            <element signature="e#9788#12798#0" />
+            <element signature="e#12858#13130#0" />
+            <element signature="e#13151#13423#0" />
+          </folding>
         </state>
       </provider>
     </entry>

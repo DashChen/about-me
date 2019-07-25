@@ -26,31 +26,20 @@
                 </v-btn>
               </v-toolbar>
             </template>
-            <template v-slot:item="{ item, headers }">
-              <tr>
-                <td v-for="header in headers" :key="header.value">
-                  <div v-if="header.value == 'contents'">
-                    <span>請點列表展開觀看</span>
-                  </div>
-                  <div v-else-if="Array.isArray(item[header.value])">
-                    <v-chip
-                      v-for="label in item[header.value]"
-                      :key="label"
-                      label
-                      v-text="label"
-                    ></v-chip>
-                  </div>
-                  <div v-else-if="header.value == 'action'">
-                    <v-icon small class="mr-2" @click="editItem(item)"
-                      >edit
-                    </v-icon>
-                    <v-icon small @click="deleteItem(item)">delete</v-icon>
-                  </div>
-                  <div v-else>
-                    {{ item[header.value] }}
-                  </div>
-                </td>
-              </tr>
+            <template v-slot:item.contents="{ value }">
+              <span>請點列表展開觀看</span>
+            </template>
+            <template v-slot:item.tag="{ value }">
+              <v-chip
+                v-for="label in value"
+                :key="label"
+                label
+                v-text="label"
+              ></v-chip>
+            </template>
+            <template v-slot:item.action="{ item }">
+              <v-icon small class="mr-2" @click="editItem(item)">edit </v-icon>
+              <v-icon small @click="deleteItem(item)">delete</v-icon>
             </template>
             <template v-slot:expanded-item="{ headers, item }">
               <td :colspan="headers.length">
@@ -67,190 +56,195 @@
           </div>
         </div>
       </v-window-item>
-      <v-window-item :value="2">
-        <v-card class="elevation-0">
-          <v-card-title>
-            <v-flex
-              v-for="(item, index) in headers"
-              :key="index"
-              :class="[item.colClass]"
-            >
-              <v-text-field
-                v-if="item.type == 'text'"
-                v-model="editedItem[item.value]"
-                :label="item.text"
-                :rules="
-                  item.value == 'url'
-                    ? [checkUrl]
-                    : item.option.rules
-                    ? item.option.rules
-                    : Array()
-                "
-                :disabled="item.value == 'url' && editedIndex != -1"
-                v-bind="options(item)"
-                clearable
-              ></v-text-field>
-              <v-combobox
-                v-if="item.type == 'combobox'"
-                v-model="editedItem[item.value]"
-                :label="item.text"
-                :items="getComboboxItems(item.namespaced, item.stateKey)"
-                v-bind="options(item)"
-              ></v-combobox>
-              <v-select
-                v-if="item.type == 'select'"
-                v-model="editedItem[item.value]"
-                :label="item.text"
-                :items="item.option.items"
-                v-bind="options(item)"
-                clearable
-              ></v-select>
-              <v-checkbox
-                v-if="item.type == 'checkbox'"
-                v-model="editedItem[item.value]"
-                :label="item.text"
-              ></v-checkbox>
-              <v-radio-group
-                v-if="item.type == 'radio'"
-                v-model="editedItem[item.value]"
+      <v-window-item :value="2" class="pa-3">
+        <v-flex xs12 md10 offset-md1 lg8 offset-lg2>
+          <v-card class="elevation-0">
+            <v-card-title>
+              <v-flex
+                v-for="(item, index) in headers"
+                :key="index"
+                :class="[item.colClass]"
               >
-                <v-radio
-                  v-for="n in item.option.items"
-                  :key="n.text"
-                  :label="n.text"
-                  :value="n.value"
-                ></v-radio>
-              </v-radio-group>
-              <v-switch
-                v-if="item.type == 'switch'"
-                v-model="editedItem[item.value]"
-                :label="item.text"
-              ></v-switch>
-              <v-slider
-                v-if="item.type == 'slider'"
-                v-model="editedItem[item.value]"
-                :label="item.text"
-                v-bind="options(item)"
-              ></v-slider>
-              <v-textarea
-                v-if="item.type == 'textarea'"
-                v-model="editedItem[item.value]"
-                :name="item.text"
-                :label="item.text"
-                v-bind="options(item)"
-              ></v-textarea>
-              <v-menu
-                v-if="item.type == 'date'"
-                v-model="item.menu"
-                :close-on-content-click="false"
-                :nudge-right="40"
-                lazy
-                transition="scale-transition"
-                offset-y
-                full-width
-                min-width="290px"
-              >
-                <template v-slot:activator="{ on }">
-                  <v-text-field
-                    v-model="editedItem[item.value]"
-                    :label="item.text"
-                    prepend-icon="event"
-                    readonly
-                    v-on="on"
-                  ></v-text-field>
-                </template>
-                <v-date-picker
+                <v-text-field
+                  v-if="item.type == 'text'"
                   v-model="editedItem[item.value]"
-                  @input="item.menu = false"
-                ></v-date-picker>
-              </v-menu>
-              <v-layout
-                v-if="item.type == 'markdown'"
-                row
-                class="brown lighten-4"
-              >
-                <v-flex xs12 sm6 class="px-1">
-                  <v-tabs dark color="cyan" slider-color="yellow" show-arrows>
-                    <v-tab
-                      v-for="(tab, tabIndex) in editedItem[item.value]"
-                      :key="tabIndex"
-                      :href="'#tab-' + tabIndex"
-                      @click.stop="choiceMDTabIndex = tabIndex"
-                      >{{ '步驟' + (tabIndex + 1) }}
-                    </v-tab>
-                  </v-tabs>
-                  <v-layout row>
-                    <v-flex xs4>
-                      <v-subheader>此步驟的標題</v-subheader>
-                    </v-flex>
-                    <v-flex xs8>
-                      <v-text-field
-                        v-model="editedItem[item.value][choiceMDTabIndex].title"
-                        label="標題"
-                        placeholder="請輸入標題"
-                      ></v-text-field>
-                    </v-flex>
-                  </v-layout>
-                  <v-textarea
-                    id="markdown-editor-area"
-                    v-model="editedItem[item.value][choiceMDTabIndex].content"
-                    :rows="item.rows ? item.rows : 5"
-                    box
-                    auto-grow
-                    @resize="changePreview"
-                  ></v-textarea>
-                  <v-layout align-end justify-space-between row>
-                    <v-btn
-                      v-show="choiceMDTabIndex > 0"
-                      small
-                      dark
-                      color="red"
-                      @click.stop="delMDTab"
-                    >
-                      <v-icon dark>clear</v-icon>
-                    </v-btn>
+                  :label="item.text"
+                  :rules="
+                    item.value == 'url'
+                      ? [checkUrl]
+                      : item.option.rules
+                      ? item.option.rules
+                      : Array()
+                  "
+                  :disabled="item.value == 'url' && editedIndex != -1"
+                  v-bind="options(item)"
+                  clearable
+                ></v-text-field>
+                <v-combobox
+                  v-if="item.type == 'combobox'"
+                  v-model="editedItem[item.value]"
+                  :label="item.text"
+                  :items="getComboboxItems(item.namespaced, item.stateKey)"
+                  v-bind="options(item)"
+                ></v-combobox>
+                <v-select
+                  v-if="item.type == 'select'"
+                  v-model="editedItem[item.value]"
+                  :label="item.text"
+                  :items="item.option.items"
+                  v-bind="options(item)"
+                  clearable
+                ></v-select>
+                <v-checkbox
+                  v-if="item.type == 'checkbox'"
+                  v-model="editedItem[item.value]"
+                  :label="item.text"
+                ></v-checkbox>
+                <v-radio-group
+                  v-if="item.type == 'radio'"
+                  v-model="editedItem[item.value]"
+                >
+                  <v-radio
+                    v-for="n in item.option.items"
+                    :key="n.text"
+                    :label="n.text"
+                    :value="n.value"
+                  ></v-radio>
+                </v-radio-group>
+                <v-switch
+                  v-if="item.type == 'switch'"
+                  v-model="editedItem[item.value]"
+                  :label="item.text"
+                ></v-switch>
+                <v-slider
+                  v-if="item.type == 'slider'"
+                  v-model="editedItem[item.value]"
+                  :label="item.text"
+                  v-bind="options(item)"
+                ></v-slider>
+                <v-textarea
+                  v-if="item.type == 'textarea'"
+                  v-model="editedItem[item.value]"
+                  :name="item.text"
+                  :label="item.text"
+                  v-bind="options(item)"
+                ></v-textarea>
+                <v-menu
+                  v-if="item.type == 'date'"
+                  v-model="item.menu"
+                  :close-on-content-click="false"
+                  :nudge-right="40"
+                  transition="scale-transition"
+                  offset-y
+                  full-width
+                  min-width="290px"
+                >
+                  <template v-slot:activator="{ on }">
+                    <v-text-field
+                      v-model="editedItem[item.value]"
+                      :label="item.text"
+                      prepend-icon="event"
+                      readonly
+                      v-on="on"
+                    ></v-text-field>
+                  </template>
+                  <v-date-picker
+                    v-model="editedItem[item.value]"
+                    @input="item.menu = false"
+                  ></v-date-picker>
+                </v-menu>
+                <v-layout
+                  v-if="item.type == 'markdown'"
+                  row
+                  class="brown lighten-4"
+                >
+                  <v-flex xs12 sm6 class="px-1">
+                    <v-tabs dark color="cyan" slider-color="yellow" show-arrows>
+                      <v-tab
+                        v-for="(tab, tabIndex) in editedItem[item.value]"
+                        :key="tabIndex"
+                        :href="'#tab-' + tabIndex"
+                        @click.stop="choiceMDTabIndex = tabIndex"
+                        >{{ '步驟' + (tabIndex + 1) }}
+                      </v-tab>
+                    </v-tabs>
+                    <v-layout row>
+                      <v-flex xs4>
+                        <v-subheader>此步驟的標題</v-subheader>
+                      </v-flex>
+                      <v-flex xs8>
+                        <v-text-field
+                          v-model="
+                            editedItem[item.value][choiceMDTabIndex].title
+                          "
+                          label="標題"
+                          placeholder="請輸入標題"
+                        ></v-text-field>
+                      </v-flex>
+                    </v-layout>
+                    <v-textarea
+                      id="markdown-editor-area"
+                      v-model="editedItem[item.value][choiceMDTabIndex].content"
+                      :rows="item.rows ? item.rows : 5"
+                      filled
+                      auto-grow
+                      @resize="changePreview"
+                    ></v-textarea>
+                    <v-layout align-end justify-space-between row>
+                      <v-btn
+                        v-show="choiceMDTabIndex > 0"
+                        small
+                        dark
+                        color="red"
+                        @click.stop="delMDTab"
+                      >
+                        <v-icon dark>clear</v-icon>
+                      </v-btn>
 
-                    <v-btn small dark color="indago" @click.stop="addMDTab">
-                      <v-icon dark>add</v-icon>
-                    </v-btn>
-                  </v-layout>
-                </v-flex>
-                <v-flex xs12 sm6 class="px-1">
-                  <div
-                    class="subheading text-xs-center grey darken-1"
-                    style="height: 48px;"
-                  >
-                    預覽
-                  </div>
-                  <div>
-                    <v-card>
-                      <v-card-title>
-                        <v-layout row justify-center>
-                          <span class="w3-badge mr-1">
-                            {{ choiceMDTabIndex }}
-                          </span>
-                          <span>{{ choiceMDTabTitle }}</span>
-                        </v-layout>
-                      </v-card-title>
-                    </v-card>
-                  </div>
-                  <div
-                    id="markdown-preview"
-                    v-html="
-                      render(editedItem[item.value][choiceMDTabIndex].content)
-                    "
-                  ></div>
-                </v-flex>
-              </v-layout>
-            </v-flex>
-          </v-card-title>
-          <v-card-actions>
-            <v-btn color="success" class="white--text" @click="save"
-              >保存
-            </v-btn>
-            <v-btn color="info" class="white--text" @click="close">取消</v-btn>
-          </v-card-actions>
-        </v-card>
+                      <v-btn small dark color="indago" @click.stop="addMDTab">
+                        <v-icon dark>add</v-icon>
+                      </v-btn>
+                    </v-layout>
+                  </v-flex>
+                  <v-flex xs12 sm6 class="px-1">
+                    <div
+                      class="subheading text-xs-center grey darken-1"
+                      style="height: 48px;"
+                    >
+                      預覽
+                    </div>
+                    <div>
+                      <v-card>
+                        <v-card-title>
+                          <v-layout row justify-center>
+                            <span class="w3-badge mr-1">
+                              {{ choiceMDTabIndex }}
+                            </span>
+                            <span>{{ choiceMDTabTitle }}</span>
+                          </v-layout>
+                        </v-card-title>
+                      </v-card>
+                    </div>
+                    <div
+                      id="markdown-preview"
+                      v-html="
+                        render(editedItem[item.value][choiceMDTabIndex].content)
+                      "
+                    ></div>
+                  </v-flex>
+                </v-layout>
+              </v-flex>
+            </v-card-title>
+            <v-card-actions>
+              <v-btn color="success" class="white--text" @click="save"
+                >保存
+              </v-btn>
+              <v-btn color="info" class="white--text" @click="close"
+                >取消</v-btn
+              >
+            </v-card-actions>
+          </v-card>
+        </v-flex>
       </v-window-item>
     </v-window>
   </v-layout>
@@ -282,7 +276,7 @@ export default {
           colClass: 'xs12 sm6 px-2',
           option: {
             solo: false,
-            box: false,
+            filled: false,
             outline: false
           }
         },
@@ -295,7 +289,7 @@ export default {
           colClass: 'xs12 sm6 px-2',
           option: {
             solo: false,
-            box: false,
+            filled: false,
             outline: false
           }
         },
@@ -308,7 +302,7 @@ export default {
           colClass: 'xs12 px-2',
           option: {
             solo: false,
-            box: false,
+            filled: false,
             outline: false,
             hint: ''
           }
@@ -324,7 +318,7 @@ export default {
           colClass: 'xs12 sm4 pl-2 pr-1',
           option: {
             solo: false,
-            box: false,
+            filled: false,
             outline: false,
             multiple: false
           }
@@ -340,7 +334,7 @@ export default {
           colClass: 'xs12 sm4 px-1',
           option: {
             solo: false,
-            box: false,
+            filled: false,
             outline: false,
             multiple: true
           }
@@ -364,7 +358,7 @@ export default {
               }
             ],
             solo: false,
-            box: false,
+            filled: false,
             outline: false,
             chips: false,
             multiple: false,
@@ -450,11 +444,11 @@ export default {
       return this.editedItem.contents[this.choiceMDTabIndex].title
     }
   },
-  asyncData({ store }) {
-    return store.state.articles
+  asyncData: function({ store }) {
+    return JSON.parse(JSON.stringify(store.state.articles))
   },
   mounted() {
-    this.items = this.$_.map(this.articles, this.$_clone)
+    this.items = this.articles
   },
   methods: {
     options(item) {
