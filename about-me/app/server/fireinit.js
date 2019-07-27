@@ -2,6 +2,7 @@ const app = require('@firebase/app')
 require('@firebase/auth')
 require('@firebase/firestore')
 require('@firebase/database')
+require('@firebase/storage')
 
 const firebase = app.firebase
 
@@ -28,4 +29,5 @@ export const authProviders = {
 export const auth = firebase.auth()
 export const DB = firebase.database()
 export const firestore = firebase.firestore()
+export const storage = firebase.storage()
 export default firebase

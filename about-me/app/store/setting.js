@@ -13,7 +13,10 @@ export const state = () => ({
       `,
   motto: '為明日科技獻一份力',
   name: '民凰',
-  photo: '/dash.jpg',
+  photo: {
+    src: '/dash.jpg',
+    name: 'dash.jpg'
+  },
   englishName: 'Dash Chen',
   country: 'Taiwain',
   email: '',
@@ -37,7 +40,16 @@ export const state = () => ({
     }
   ],
   skills: [{ title: '', content: ['??'] }],
-  experiences: [{ title: '', content: '', img: '' }],
+  experiences: [
+    {
+      title: '',
+      content: '',
+      img: {
+        src: '',
+        name: ''
+      }
+    }
+  ],
   contests: [{ title: '', content: '' }],
   activities: [{ title: '', content: '' }],
   certifications: [{ title: '', content: '', img: [] }],

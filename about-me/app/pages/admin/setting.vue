@@ -34,7 +34,7 @@
             </v-flex>
             <v-flex xs4>
               <v-img
-                :src="photo"
+                :src="photo.src"
                 aspect-ratio="1"
                 class="grey lighten-2"
                 @click.stop.prevent="openUpload"
@@ -182,7 +182,7 @@
                 </v-flex>
                 <v-flex xs12 sm2 class="px-1 my-auto">
                   <v-img
-                    :src="experiences[index].img"
+                    :src="experiences[index].img.src"
                     aspect-ratio="1"
                     class="grey lighten-2"
                     @click.stop.prevent="openUpload"
@@ -416,6 +416,21 @@
         </v-card-actions>
       </v-card>
     </v-flex>
+    <v-overlay :value="showUpload" opacity="0.8" z-index="100">
+      <v-layout row justify-center aligen-center fill-height>
+        <v-card v-for="(img, index) in uploadImgs" :key="index">
+          <v-card-text>
+            <v-img :src="img.src"></v-img>
+          </v-card-text>
+          <v-card-actions>
+            <span v-if="img.progress < 100" class="red--text">
+              上傳中: {{ img.progress + '%' }}
+            </span>
+            <span v-else>上傳完畢</span>
+          </v-card-actions>
+        </v-card>
+      </v-layout>
+    </v-overlay>
   </v-layout>
 </template>
 
@@ -645,7 +660,9 @@ export default {
           return pattern.test(value) || 'Invalid e-mail.'
         }
       },
-      formHasErrors: false
+      formHasErrors: false,
+      showUpload: false,
+      uploadImgs: []
     }
   },
   asyncData({ store }) {
@@ -683,13 +700,22 @@ export default {
       if (mulit) {
         const imgs = []
         this.$_.forEach(e.target.files, function(file) {
-          imgs.push(URL.createObjectURL(file))
+          imgs.push({
+            src: URL.createObjectURL(file),
+            name: file.name
+          })
         })
         this.$data[key][index].img = imgs
       } else if (index === -1) {
-        this[key] = URL.createObjectURL(e.target.files[0])
+        this[key] = {
+          src: URL.createObjectURL(e.target.files[0]),
+          name: e.target.files[0].name
+        }
       } else {
-        this.$data[key][index].img = URL.createObjectURL(e.target.files[0])
+        this.$data[key][index].img = {
+          src: URL.createObjectURL(e.target.files[0]),
+          name: e.target.files[0].name
+        }
       }
       e.target.value = null
     },
@@ -701,16 +727,108 @@ export default {
         this.$refs[f].reset()
       })
     },
-    save() {
+    async save() {
       this.formHasErrors = false
-      const form = this.$_.cloneDeep(this.$data)
-      this.$_.omit(form, ['countries', 'rules', 'formHasErrors'])
+      const form = this.$_.omit(this.$data, ['countries', 'rules', 'formHasErrors'])
       Object.keys(form).forEach(f => {
         if (!form[f]) this.formHasErrors = true
         this.$refs[f].validate(true)
       })
+      if(this.formHasErrors) return
       // 逐一比對不同處，因為圖片要上傳到雲端空間，要先將圖片上傳後取回 url
       // 有變更圖片要重新上傳，顯示上傳畫面
+      // 需要比對的有 photo 、experiences 多筆單張、certifications 多筆多張
+      const storageRef = this.$storage.ref()
+      if (this.$store.state.setting.photo.src !== this.photo.src) {
+        this.showUpload = true
+        const photoRef = storageRef
+          .child(`setting/imgs/photo/${this.photo.name}`)
+          .put(this.photo.src)
+        const img = {
+          src: this.photo.src,
+          name: this.photo.name,
+          progress: 0
+        }
+        this.uploadImgs.push(img)
+        let self = this
+        photoRef.on(
+          'state_changed',
+          function(snapshot) {
+            img.progress =
+              (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+          },
+          function(error) {
+            console.log(error)
+          },
+          function() {
+            photoRef.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+              console.log(downloadURL)
+              self.photo.src = downloadURL
+            })
+          }
+        )
+      }
+      if (
+        JSON.stringify(this.$store.state.setting.experiences) !==
+        JSON.stringify(this.experiences)
+      ) {
+        let self = this
+        this.$_.forEach(this.experiences, function(e, index) {
+          if(e.img instanceof Blob) {
+            self.showUpload = true
+            let experienceRef = storageRef
+              .child(`setting/imgs/experiences/${e.img.name}`)
+              .put(e.img.src)
+            let img = {
+              src: e.img.src,
+              name: e.img.name,
+              progress: 0
+            }
+            self.uploadImgs.push(img)
+            experienceRef.on('state_change', function(snapshot){
+              img.progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+            }, function(error){
+              console.log('experience', index, error)
+            }, function(){
+              experienceRef.snapshot.ref().getDownloadURL().then(function(downloadURL){
+                self.experiences[index].img.src = downloadURL
+              })
+            })
+          }
+        })
+      }
+      if(JSON.stringify(this.$store.state.setting.certifications) !== JSON.stringify(this.certifications)) {
+        let self = this
+        let i = 1
+        this.$_.forEach(this.certifications, function(c, index){
+          self.$_.forEach(c, function(img, i){
+            if(img.src instanceof Blob) {
+              self.showUpload = true
+              let certificationRef = storageRef
+                .child(`setting/imgs/certifications/${i}-${img.name}`)
+                .put(e.img.src)
+              let img = {
+                src: img.src,
+                name: img.name,
+                progress: 0
+              }
+              self.uploadImgs.push(img)
+              certificationRef.on('state_change', function(snapshot){
+                img.progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+              }, function(error){
+                console.log('certifications', index, i, error)
+              }, function(){
+                certificationRef.snapshot.ref().getDownloadURL().then(function(downloadURL){
+                  self.certifications[index].img[i].src = downloadURL
+                })
+              })
+            }
+          })
+        })
+      }
+      await this.$store.dispitch('setting/setData', {
+        data: form, vm: this
+      })
     }
   }
 }

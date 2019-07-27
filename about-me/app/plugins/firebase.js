@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { DB, auth, firestore, authProviders } from '@/server/fireinit'
+import { DB, auth, firestore, storage, authProviders } from '@/server/fireinit'
 
 function getRef(path) {
   let ref = firestore
@@ -24,6 +24,7 @@ const firebasePlugin = {
       Vue.prototype.$DB = DB
       Vue.prototype.$AUTH = auth
       Vue.prototype.$firestore = firestore
+      Vue.prototype.$storage = storage
       Vue.prototype.$Providers = authProviders
       Vue.prototype.$GetFromFirestore = function(path) {
         return getRef(path.split('/'))
@@ -98,6 +99,9 @@ export default ctx => {
   app.$firestore = Vue.prototype.$firestore
   ctx.$firestore = Vue.prototype.$firestore
 
+  app.$storage = Vue.prototype.$storage
+  ctx.$storage = Vue.prototype.$storage
+
   app.$AUTH = Vue.prototype.$AUTH
   ctx.$AUTH = Vue.prototype.$AUTH
 
@@ -109,6 +113,7 @@ export default ctx => {
 
   if (store) {
     store.$firestore = Vue.prototype.$firestore
+    store.$storage = Vue.prototype.$storage
     store.$AUTH = Vue.prototype.$AUTH
     store.$DB = Vue.prototype.$DB
     store.$Providers = Vue.prototype.$Providers
