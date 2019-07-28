@@ -420,7 +420,7 @@
       <v-layout row justify-center aligen-center fill-height>
         <v-card v-for="(img, index) in uploadImgs" :key="index">
           <v-card-text>
-            <v-img :src="img.src"></v-img>
+            <v-img :src="img.src" class="upload-img"></v-img>
           </v-card-text>
           <v-card-actions>
             <span v-if="img.progress < 100" class="red--text">
@@ -752,7 +752,7 @@ export default {
         this.$refs[f].reset()
       })
     },
-    save: async function() {
+    save: function() {
       this.formHasErrors = false
       const form = this.$_.omit(this.$data, [
         'countries',
@@ -769,6 +769,7 @@ export default {
       // 有變更圖片要重新上傳，顯示上傳畫面
       // 需要比對的有 photo 、experiences 多筆單張、certifications 多筆多張
       const storageRef = this.$storage.ref()
+      const uploadImgsPromises = []
       if (this.$store.state.setting.photo.src !== this.photo.src) {
         this.showUpload = true
         if (this.photo.src.includes('data:image/')) {
@@ -783,23 +784,27 @@ export default {
             .child(`images/${this.photo.name}`)
             .putString(this.photo.src, 'data_url')
 
-          photoRef.on(
-            'state_changed',
-            function(snapshot) {
-              img.progress =
-                (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-            },
-            function(error) {
-              console.log(error)
-            },
-            function() {
-              photoRef.snapshot.ref
-                .getDownloadURL()
-                .then(function(downloadURL) {
-                  console.log(downloadURL)
-                  self.photo.src = downloadURL
-                })
-            }
+          uploadImgsPromises.push(
+            new Promise((resolve, reject) => {
+              photoRef.on(
+                'state_changed',
+                function(snapshot) {
+                  img.progress =
+                    (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                },
+                function(error) {
+                  console.log(error)
+                },
+                function() {
+                  photoRef.snapshot.ref
+                    .getDownloadURL()
+                    .then(function(downloadURL) {
+                      self.photo.src = downloadURL
+                      resolve(downloadURL)
+                    })
+                }
+              )
+            })
           )
         }
       }
@@ -821,23 +826,29 @@ export default {
               progress: 0
             }
             self.uploadImgs.push(img)
-            experienceRef.on(
-              'state_change',
-              function(snapshot) {
-                img.progress =
-                  (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-              },
-              function(error) {
-                console.log('experience', index, error)
-              },
-              function() {
-                experienceRef.snapshot
-                  .ref()
-                  .getDownloadURL()
-                  .then(function(downloadURL) {
-                    self.experiences[index].img.src = downloadURL
-                  })
-              }
+
+            uploadImgsPromises.push(
+              new Promise((resolve, reject) => {
+                experienceRef.on(
+                  'state_change',
+                  function(snapshot) {
+                    img.progress =
+                      (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                  },
+                  function(error) {
+                    console.log('experience', index, error)
+                  },
+                  function() {
+                    experienceRef.snapshot
+                      .ref()
+                      .getDownloadURL()
+                      .then(function(downloadURL) {
+                        self.experiences[index].img.src = downloadURL
+                        resolve(downloadURL)
+                      })
+                  }
+                )
+              })
             )
           }
         })
@@ -864,39 +875,51 @@ export default {
               progress: 0
             }
             self.uploadImgs.push(cimg)
-            certificationRef.on(
-              'state_change',
-              function(snapshot) {
-                cimg.progress =
-                  (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-              },
-              function(error) {
-                console.log('certifications', index, i, error)
-              },
-              function() {
-                certificationRef.snapshot
-                  .ref()
-                  .getDownloadURL()
-                  .then(function(downloadURL) {
-                    self.certifications[index].img[i].src = downloadURL
-                  })
-              }
+            uploadImgsPromises.push(
+              new Promise((resolve, reject) => {
+                certificationRef.on(
+                  'state_change',
+                  function(snapshot) {
+                    cimg.progress =
+                      (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                  },
+                  function(error) {
+                    console.log('certifications', index, i, error)
+                  },
+                  function() {
+                    certificationRef.snapshot
+                      .ref()
+                      .getDownloadURL()
+                      .then(function(downloadURL) {
+                        self.certifications[index].img[i].src = downloadURL
+                        resolve(downloadURL)
+                      })
+                  }
+                )
+              })
             )
             i++
           })
         })
       }
-      await this.$store.dispatch('setting/setData', {
-        data: form,
-        vm: this
+      Promise.all(uploadImgsPromises).then(values => {
+        self.$store.dispatch('setting/setData', {
+          data: form,
+          vm: self
+        })
+        setTimeout(function() {
+          self.showUpload = false
+          self.$router.push('/admin')
+        }, 500)
       })
-      setTimeout(function() {
-        self.showUpload = false
-        self.$route.push('/admin')
-      }, 500)
     }
   }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.upload-img {
+  max-width: 200px;
+  max-height: 200px;
+}
+</style>
