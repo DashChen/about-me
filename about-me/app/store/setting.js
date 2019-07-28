@@ -18,7 +18,7 @@ export const state = () => ({
     name: 'dash.jpg'
   },
   englishName: 'Dash Chen',
-  country: 'Taiwain',
+  country: 'Taiwan',
   email: '',
   cellphone: '',
   communities: [

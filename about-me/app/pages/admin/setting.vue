@@ -697,27 +697,52 @@ export default {
       })
     },
     upload(e, key, index, mulit) {
+      const self = this
+      const imgs = []
       if (mulit) {
-        const imgs = []
-        this.$_.forEach(e.target.files, function(file) {
-          imgs.push({
-            src: URL.createObjectURL(file),
-            name: file.name
-          })
+        this.$_.forEach(e.target.files, function(file, index) {
+          // eslint-disable-next-line
+          let fr = new FileReader()
+          fr.onload = function() {
+            imgs.push({
+              src: fr.result,
+              name: file.name
+            })
+            if (index === e.target.files.length - 1) {
+              self.$data[key][index].img = imgs
+            }
+          }
+          fr.readAsDataURL(file)
         })
-        this.$data[key][index].img = imgs
       } else if (index === -1) {
-        this[key] = {
-          src: URL.createObjectURL(e.target.files[0]),
-          name: e.target.files[0].name
+        const fr = new FileReader()
+        fr.onload = function() {
+          imgs.push({
+            src: fr.result,
+            name: e.target.files[0].name
+          })
+          self.$data[key] = {
+            src: fr.result,
+            name: e.target.files[0].name
+          }
+          e.target.value = null
         }
+        fr.readAsDataURL(e.target.files[0])
       } else {
-        this.$data[key][index].img = {
-          src: URL.createObjectURL(e.target.files[0]),
-          name: e.target.files[0].name
+        const fr = new FileReader()
+        fr.onload = function() {
+          imgs.push({
+            src: fr.result,
+            name: e.target.files[0].name
+          })
+          self.$data[key][index].img = {
+            src: fr.result,
+            name: e.target.files[0].name
+          }
+          e.target.value = null
         }
+        fr.readAsDataURL(e.target.files[0])
       }
-      e.target.value = null
     },
     resetForm() {
       this.formHasErrors = false
@@ -727,108 +752,148 @@ export default {
         this.$refs[f].reset()
       })
     },
-    async save() {
+    save: async function() {
       this.formHasErrors = false
-      const form = this.$_.omit(this.$data, ['countries', 'rules', 'formHasErrors'])
+      const form = this.$_.omit(this.$data, [
+        'countries',
+        'rules',
+        'formHasErrors'
+      ])
       Object.keys(form).forEach(f => {
-        if (!form[f]) this.formHasErrors = true
-        this.$refs[f].validate(true)
+        if (this.$refs[f] && !this.$refs[f].validate(true)) {
+          this.formHasErrors = true
+        }
       })
-      if(this.formHasErrors) return
+      if (this.formHasErrors) return
       // 逐一比對不同處，因為圖片要上傳到雲端空間，要先將圖片上傳後取回 url
       // 有變更圖片要重新上傳，顯示上傳畫面
       // 需要比對的有 photo 、experiences 多筆單張、certifications 多筆多張
       const storageRef = this.$storage.ref()
       if (this.$store.state.setting.photo.src !== this.photo.src) {
         this.showUpload = true
-        const photoRef = storageRef
-          .child(`setting/imgs/photo/${this.photo.name}`)
-          .put(this.photo.src)
-        const img = {
-          src: this.photo.src,
-          name: this.photo.name,
-          progress: 0
-        }
-        this.uploadImgs.push(img)
-        let self = this
-        photoRef.on(
-          'state_changed',
-          function(snapshot) {
-            img.progress =
-              (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-          },
-          function(error) {
-            console.log(error)
-          },
-          function() {
-            photoRef.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-              console.log(downloadURL)
-              self.photo.src = downloadURL
-            })
+        if (this.photo.src.includes('data:image/')) {
+          const img = {
+            src: this.photo.src,
+            name: this.photo.name,
+            progress: 0
           }
-        )
+          this.uploadImgs.push(img)
+          const self = this
+          const photoRef = storageRef
+            .child(`images/${this.photo.name}`)
+            .putString(this.photo.src, 'data_url')
+
+          photoRef.on(
+            'state_changed',
+            function(snapshot) {
+              img.progress =
+                (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+            },
+            function(error) {
+              console.log(error)
+            },
+            function() {
+              photoRef.snapshot.ref
+                .getDownloadURL()
+                .then(function(downloadURL) {
+                  console.log(downloadURL)
+                  self.photo.src = downloadURL
+                })
+            }
+          )
+        }
       }
+      const self = this
       if (
         JSON.stringify(this.$store.state.setting.experiences) !==
         JSON.stringify(this.experiences)
       ) {
-        let self = this
         this.$_.forEach(this.experiences, function(e, index) {
-          if(e.img instanceof Blob) {
+          if (e.img instanceof Blob) {
             self.showUpload = true
-            let experienceRef = storageRef
+            const experienceRef = storageRef
               .child(`setting/imgs/experiences/${e.img.name}`)
               .put(e.img.src)
+            // eslint-disable-next-line
             let img = {
               src: e.img.src,
               name: e.img.name,
               progress: 0
             }
             self.uploadImgs.push(img)
-            experienceRef.on('state_change', function(snapshot){
-              img.progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-            }, function(error){
-              console.log('experience', index, error)
-            }, function(){
-              experienceRef.snapshot.ref().getDownloadURL().then(function(downloadURL){
-                self.experiences[index].img.src = downloadURL
-              })
-            })
+            experienceRef.on(
+              'state_change',
+              function(snapshot) {
+                img.progress =
+                  (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+              },
+              function(error) {
+                console.log('experience', index, error)
+              },
+              function() {
+                experienceRef.snapshot
+                  .ref()
+                  .getDownloadURL()
+                  .then(function(downloadURL) {
+                    self.experiences[index].img.src = downloadURL
+                  })
+              }
+            )
           }
         })
       }
-      if(JSON.stringify(this.$store.state.setting.certifications) !== JSON.stringify(this.certifications)) {
-        let self = this
-        let i = 1
-        this.$_.forEach(this.certifications, function(c, index){
-          self.$_.forEach(c, function(img, i){
-            if(img.src instanceof Blob) {
-              self.showUpload = true
-              let certificationRef = storageRef
-                .child(`setting/imgs/certifications/${i}-${img.name}`)
-                .put(e.img.src)
-              let img = {
-                src: img.src,
-                name: img.name,
-                progress: 0
-              }
-              self.uploadImgs.push(img)
-              certificationRef.on('state_change', function(snapshot){
-                img.progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-              }, function(error){
-                console.log('certifications', index, i, error)
-              }, function(){
-                certificationRef.snapshot.ref().getDownloadURL().then(function(downloadURL){
-                  self.certifications[index].img[i].src = downloadURL
-                })
-              })
+      if (
+        JSON.stringify(this.$store.state.setting.certifications) !==
+        JSON.stringify(this.certifications)
+      ) {
+        this.$_.forEach(this.certifications, function(c, index) {
+          // eslint-disable-next-line no-unused-vars
+          const i = 1
+          self.$_.forEach(c, function(img, i) {
+            if (!(img.src instanceof Blob)) {
+              return
             }
+            self.showUpload = true
+            const certificationRef = storageRef
+              .child(`setting/imgs/certifications/${i}-${img.name}`)
+              .put(img.src)
+            // eslint-disable-next-line
+            let cimg = {
+              src: img.src,
+              name: img.name,
+              progress: 0
+            }
+            self.uploadImgs.push(cimg)
+            certificationRef.on(
+              'state_change',
+              function(snapshot) {
+                cimg.progress =
+                  (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+              },
+              function(error) {
+                console.log('certifications', index, i, error)
+              },
+              function() {
+                certificationRef.snapshot
+                  .ref()
+                  .getDownloadURL()
+                  .then(function(downloadURL) {
+                    self.certifications[index].img[i].src = downloadURL
+                  })
+              }
+            )
+            i++
           })
         })
       }
-      await this.$store.dispitch('setting/setData', {
-        data: form, vm: this
+      await this.$store.dispatch('setting/setData', {
+        data: form,
+        vm: this
       })
+      setTimeout(function() {
+        self.showUpload = false
+        self.$route.push('/admin')
+      }, 500)
     }
   }
 }
