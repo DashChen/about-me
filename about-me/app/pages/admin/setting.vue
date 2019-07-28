@@ -757,7 +757,8 @@ export default {
       const form = this.$_.omit(this.$data, [
         'countries',
         'rules',
-        'formHasErrors'
+        'formHasErrors',
+        'uploadImgs'
       ])
       Object.keys(form).forEach(f => {
         if (this.$refs[f] && !this.$refs[f].validate(true)) {
